@@ -207,16 +207,16 @@
             modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFunc(); });
 
             const form = document.forms['booking_form'];
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const fd = new FormData(form);
-            const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
-            const d = fd.get('date');
-            if (d) { lines.push('التاريخ المفضل: ' + d); }
-            window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('
-')), '_blank');
-            form.reset();
-            closeModalFunc();
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
+                const d = fd.get('date');
+                if (d) { lines.push('التاريخ المفضل: ' + d); }
+                window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+                form.reset();
+                closeModalFunc();
+            });
         });
     </script>
     <!-- PWA: تسجيل عامل الخدمة وزر تثبيت التطبيق -->

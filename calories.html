@@ -262,16 +262,42 @@
             modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFunc(); });
 
             const form = document.forms['booking_form'];
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const fd = new FormData(form);
-            const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
-            const d = fd.get('date');
-            if (d) { lines.push('التاريخ المفضل: ' + d); }
-            window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('
-')), '_blank');
-            form.reset();
-            closeModalFunc();
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
+                const d = fd.get('date');
+                if (d) { lines.push('التاريخ المفضل: ' + d); }
+                window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+                form.reset();
+                closeModalFunc();
+            });
+
+            const caloriesForm = document.getElementById('caloriesForm');
+            caloriesForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const age = parseInt(document.getElementById('age').value);
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+                const activity = parseFloat(document.getElementById('activity').value);
+                
+                let bmr = 0;
+                if (gender === 'male') {
+                    bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+                } else {
+                    bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+                }
+                
+                const tdee = bmr * activity;
+                
+                document.getElementById('bmr-result').innerText = Math.round(bmr);
+                document.getElementById('tdee-result').innerText = Math.round(tdee);
+                document.getElementById('lose-weight').innerText = Math.round(tdee - 500) + " Kcal";
+                document.getElementById('gain-weight').innerText = Math.round(tdee + 500) + " Kcal";
+                
+                document.getElementById('results-section').classList.remove('hidden');
+            });
         });
     </script>
     <!-- PWA: تسجيل عامل الخدمة وزر تثبيت التطبيق -->

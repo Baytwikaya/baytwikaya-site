@@ -350,8 +350,7 @@
             const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
             const d = fd.get('date');
             if (d) { lines.push('التاريخ المفضل: ' + d); }
-            window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('
-')), '_blank');
+            window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('\n')), '_blank');
             form.reset();
             closeModalFunc();
         });
