@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4fbfa">
+<title>بطاقة بيت الوقاية الرقمية</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{
+    --teal-700:#0f766e;
+    --teal-600:#0d9488;
+    --teal-500:#14b8a6;
+    --teal-100:#ccfbf1;
+    --teal-50:#f0fdfa;
+    --mint:#e6f7f3;
+    --cyan-600:#0284c7;
+    --cyan-500:#0ea5e9;
+    --slate-900:#0f172a;
+    --slate-700:#334155;
+    --slate-500:#64748b;
+    --line:#d7ecec;
+    --card-border:#dcefee;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;
+    background:
+      radial-gradient(120% 55% at 50% -10%, rgba(20,184,166,.12), transparent 60%),
+      radial-gradient(90% 45% at 50% 115%, rgba(14,165,233,.10), transparent 65%),
+      linear-gradient(180deg, #ffffff 0%, #f4fbfa 55%, #eef8f6 100%);
+    color:var(--slate-700);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:28px 16px 44px;
+  }
+  .card{
+    width:100%;
+    max-width:460px;
+    position:relative;
+    text-align:center;
+    padding:38px 24px 30px;
+    background:#ffffff;
+    border:1px solid var(--card-border);
+    border-radius:26px;
+    box-shadow:0 24px 50px rgba(13,148,136,.12), 0 4px 14px rgba(15,23,42,.05);
+    overflow:hidden;
+  }
+  /* subtle arch motif */
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-130px; left:50%;
+    transform:translateX(-50%);
+    width:340px; height:340px;
+    border:1px solid rgba(20,184,166,.20);
+    border-radius:170px 170px 18px 18px;
+    background:radial-gradient(closest-side, rgba(20,184,166,.08), transparent);
+    pointer-events:none;
+  }
+  .card::after{
+    content:"";
+    position:absolute;
+    top:-104px; left:50%;
+    transform:translateX(-50%);
+    width:280px; height:280px;
+    border:1px solid rgba(14,165,233,.14);
+    border-radius:140px 140px 14px 14px;
+    pointer-events:none;
+  }
+  .logo-panel{
+    position:relative;
+    background:linear-gradient(180deg, var(--teal-50), var(--mint));
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:20px 16px 14px;
+    margin-bottom:6px;
+  }
+  .logo{
+    position:relative;
+    width:min(250px, 78%);
+    height:auto;
+    margin:0 auto;
+    display:block;
+  }
+  h1{
+    position:relative;
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:.2px;
+    color:var(--slate-900);
+    margin-top:14px;
+  }
+  .tagline{
+    position:relative;
+    margin-top:8px;
+    font-size:1.02rem;
+    color:var(--teal-700);
+    font-weight:600;
+  }
+  .divider{
+    position:relative;
+    display:flex; align-items:center; gap:12px;
+    margin:22px auto 4px; max-width:300px;
+  }
+  .divider::before,.divider::after{
+    content:""; flex:1; height:1px;
+    background:linear-gradient(90deg, transparent, var(--teal-500), transparent);
+  }
+  .divider span{
+    width:8px;height:8px; transform:rotate(45deg);
+    background:var(--teal-500);
+    box-shadow:0 0 0 4px rgba(20,184,166,.14);
+  }
+  .actions{
+    position:relative;
+    margin-top:26px;
+    display:flex; flex-direction:column; gap:11px;
+  }
+  .btn{
+    display:flex; align-items:center; gap:13px;
+    min-height:58px;
+    padding:12px 18px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:#ffffff;
+    color:var(--slate-700);
+    text-decoration:none;
+    font-size:1.02rem;
+    font-weight:700;
+    text-align:right;
+    cursor:pointer;
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    font-family:inherit;
+    width:100%;
+    box-shadow:0 2px 8px rgba(13,148,136,.06);
+  }
+  .btn:hover,.btn:active{transform:translateY(-1px); border-color:var(--teal-500); box-shadow:0 6px 16px rgba(13,148,136,.14)}
+  .btn svg{flex:0 0 auto; color:var(--teal-600)}
+  .btn .sub{
+    display:block;
+    font-size:.78rem; font-weight:400; color:var(--slate-500); margin-top:2px;
+  }
+  .btn.primary{
+    background:linear-gradient(180deg, var(--teal-500), var(--teal-600));
+    color:#ffffff;
+    border-color:var(--teal-600);
+    justify-content:center;
+    font-size:1.08rem;
+    box-shadow:0 12px 26px rgba(13,148,136,.30);
+  }
+  .btn.primary svg{color:#ffffff}
+  .btn.whatsapp{
+    background:linear-gradient(180deg, rgba(37,211,102,.10), rgba(37,211,102,.04));
+    border-color:rgba(37,211,102,.45);
+  }
+  .btn.whatsapp svg{color:#1eb85a}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:11px}
+  .grid2 .btn{justify-content:center; text-align:center}
+  .info{
+    position:relative;
+    margin-top:30px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .info h2{
+    font-size:1.05rem;
+    font-weight:800;
+    color:var(--teal-700);
+    margin-bottom:16px;
+  }
+  .services{
+    position:relative;
+    display:flex; flex-wrap:wrap; gap:8px;
+    justify-content:center;
+  }
+  .chip{
+    font-size:.86rem;
+    color:var(--teal-700);
+    border:1px solid var(--line);
+    background:var(--teal-50);
+    padding:7px 13px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .meta{
+    position:relative;
+    margin-top:20px;
+    font-size:.95rem;
+    line-height:1.9;
+    color:var(--slate-500);
+  }
+  .meta strong{color:var(--slate-700); font-weight:700}
+  .meta .row{display:flex; align-items:flex-start; justify-content:center; gap:8px}
+  .meta svg{flex:0 0 auto; margin-top:5px; color:var(--teal-600)}
+  .foot{
+    position:relative;
+    margin-top:26px;
+    font-size:.8rem;
+    color:var(--slate-500);
+    letter-spacing:.4px;
+  }
+  .foot b{color:var(--teal-600); font-weight:700}
+  #toast{
+    position:fixed;
+    left:50%; bottom:26px;
+    transform:translate(-50%, 20px);
+    background:#ffffff;
+    color:var(--slate-700);
+    border:1px solid var(--teal-500);
+    padding:11px 20px;
+    border-radius:999px;
+    font-size:.92rem;
+    opacity:0; pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    z-index:50;
+    box-shadow:0 14px 30px rgba(13,148,136,.22);
+  }
+  #toast.show{opacity:1; transform:translate(-50%, 0)}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo-panel">
+      <img class="logo" src="baytwikaya-logo.png" alt="شعار بيت الوقاية">
+    </div>
+    <h1>بيت الوقاية</h1>
+    <p class="tagline">مركز الحجامة والطب التكميلي — الدار البيضاء</p>
+
+    <div class="divider"><span></span></div>
+
+    <div class="actions">
+      <a class="btn primary" href="bayt-wikaya.vcf" download>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.4"/><path d="M3.6 20c.6-3.3 3.1-5 6.4-5 1.5 0 2.9.35 4 1.05"/><path d="M18.6 4.6v6M15.6 7.6h6"/></svg>
+        حفظ جهة الاتصال
+      </a>
+
+      <div class="grid2">
+        <a class="btn" href="tel:+212664651301">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          اتصال
+        </a>
+        <a class="btn whatsapp" href="https://wa.me/212664651301" target="_blank" rel="noopener">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          واتساب
+        </a>
+      </div>
+
+      <a class="btn" href="https://baytwikaya.site" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>الموقع الإلكتروني<span class="sub">baytwikaya.site</span></span>
+      </a>
+
+      <a class="btn" href="https://baytwikaya.site/bayt-wikaya-v2.1.4.apk" download>
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 7v6m0 0 2.4-2.4M12 13l-2.4-2.4"/></svg>
+        <span>تحميل التطبيق<span class="sub">احجز وتابع خدماتنا من هاتفك</span></span>
+      </a>
+
+      <a class="btn" href="https://g.page/r/CX0FqE7NfgkNEAI/review" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+        <span>قيّمنا على Google<span class="sub">رأيك يساعدنا على التطور</span></span>
+      </a>
+
+      <a class="btn" href="https://www.instagram.com/baytwikaya" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span>إنستغرام<span class="sub">@baytwikaya</span></span>
+      </a>
+
+      <a class="btn" href="https://www.google.com/maps/place/بيت+الوقاية/@33.5612656,-7.5985689,17z" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        <span>الاتجاهات<span class="sub">افتح الموقع في خرائط Google</span></span>
+      </a>
+
+      <button class="btn" id="shareBtn" type="button">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4.2M8.6 13.4l6.8 4.2"/></svg>
+        <span>مشاركة الصفحة<span class="sub">أرسل البطاقة إلى من يهمه الأمر</span></span>
+      </button>
+    </div>
+
+    <section class="info">
+      <h2>معلومات</h2>
+
+      <div class="services">
+        <span class="chip">تقويم العظام والتشخيص الدقيق</span>
+        <span class="chip">الحجامة الدموية</span>
+        <span class="chip">الحجامة الجافة</span>
+        <span class="chip">باقة الحجامة الشاملة</span>
+        <span class="chip">التدليك الرياضي</span>
+      </div>
+
+      <div class="meta">
+        <div class="row">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>كل أيام الأسبوع <strong>8:30–16:30</strong> • الجمعة <strong>8:30–11:30</strong></span>
+        </div>
+        <div class="row">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>الفداء، القريعة، زنقة 57 رقم 46، خلف صيدلية العنبر، الدار البيضاء</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="foot">بيت الوقاية <b>•</b> الحجامة والطب التكميلي</p>
+  </main>
+
+  <div id="toast" role="status"></div>
+
+<script>
+(function () {
+  var toast = document.getElementById('toast');
+  var timer = null;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('show'); }, 2400);
+  }
+  document.getElementById('shareBtn').addEventListener('click', function () {
+    var data = {
+      title: document.title,
+      text: 'بطاقة بيت الوقاية الرقمية — مركز الحجامة والطب التكميلي، الدار البيضاء',
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(data).catch(function () { /* user dismissed */ });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(data.url).then(function () {
+        showToast('تم نسخ رابط البطاقة');
+      }, function () {
+        window.prompt('انسخ رابط البطاقة:', data.url);
+      });
+    } else {
+      window.prompt('انسخ رابط البطاقة:', data.url);
+    }
+  });
+})();
+</script>
+</body>
+</html>
