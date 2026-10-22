@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fdf3f1">
+<title>Meryem Lotfi — Carte numérique</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{
+    --rg:#b76e79;
+    --rg-deep:#96525e;
+    --rg-soft:#d69a9e;
+    --rg-light:#ecc9bf;
+    --rg-pale:#f9e9e1;
+    --plum:#5c323e;
+    --text:#4e2c36;
+    --body:#77525d;
+    --muted:#ad8b92;
+    --panel:#fffdfb;
+    --btn-bg:#fffafa;
+    --line:rgba(183,110,121,.38);
+    --line-soft:rgba(183,110,121,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;
+    background:
+      radial-gradient(110% 50% at 50% -10%, rgba(247,200,211,.45), transparent 60%),
+      radial-gradient(85% 42% at 50% 112%, rgba(242,167,186,.20), transparent 65%),
+      linear-gradient(180deg, #fef7f4 0%, #fceeea 55%, #fae6e0 100%);
+    background-color:#fdf3f1;
+    color:var(--body);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:28px 16px 44px;
+  }
+  /* faint paper grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:radial-gradient(rgba(183,110,121,.055) 1px, transparent 1.5px);
+    background-size:22px 22px;
+    pointer-events:none;
+  }
+  .card{
+    width:100%;
+    max-width:460px;
+    position:relative;
+    text-align:center;
+    padding:52px 24px 30px;
+    background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(255,253,251,.95) 45%, rgba(253,244,238,.96));
+    border:1px solid var(--line);
+    border-radius:26px;
+    box-shadow:0 24px 50px rgba(150,82,94,.16), 0 6px 24px rgba(183,110,121,.12);
+    overflow:hidden;
+  }
+  /* sakura corner branches */
+  .sakura{
+    position:absolute;
+    pointer-events:none;
+    z-index:0;
+  }
+  .sakura-tl{top:-8px; left:-10px; width:min(64%,268px); opacity:.95}
+  .sakura-br{bottom:-8px; right:-10px; width:min(56%,232px); transform:scale(-1,-1); opacity:.9}
+  /* language toggle */
+  .lang-toggle{
+    position:absolute;
+    top:14px; right:14px;
+    z-index:6;
+    display:flex; gap:6px;
+    padding:4px;
+    background:rgba(255,250,250,.85);
+    border:1px solid var(--line);
+    border-radius:999px;
+    box-shadow:0 4px 14px rgba(150,82,94,.12);
+    backdrop-filter:blur(3px);
+  }
+  .lang-toggle button{
+    appearance:none;
+    border:1px solid transparent;
+    background:transparent;
+    color:var(--rg-deep);
+    font-family:inherit;
+    font-size:.8rem;
+    font-weight:700;
+    line-height:1;
+    padding:7px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  .lang-toggle button.active{
+    background:linear-gradient(180deg, var(--rg-light), var(--rg-soft) 55%, var(--rg));
+    color:#571f2b;
+    border-color:var(--rg-deep);
+    box-shadow:0 4px 10px rgba(183,110,121,.30), inset 0 1px 0 rgba(255,255,255,.55);
+  }
+  .photo-wrap{
+    position:relative;
+    width:184px; height:184px;
+    margin:6px auto 0;
+    border-radius:50%;
+    padding:5px;
+    background:conic-gradient(from 210deg, var(--rg-deep), var(--rg-light), var(--rg), var(--rg-soft), var(--rg-deep));
+    box-shadow:0 16px 34px rgba(150,82,94,.25), 0 0 0 6px rgba(233,191,182,.35), 0 0 34px rgba(183,110,121,.22);
+  }
+  .photo{
+    width:100%; height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #fffdfb;
+  }
+  h1{
+    position:relative;
+    font-size:2.05rem;
+    font-weight:800;
+    letter-spacing:.2px;
+    color:var(--plum);
+    margin-top:18px;
+  }
+  .name-sub{
+    position:relative;
+    margin-top:2px;
+    font-weight:500;
+    color:var(--muted);
+  }
+  body.lang-fr .name-sub{font-size:1.05rem; letter-spacing:0; text-transform:none}
+  body.lang-ar .name-sub{font-size:.95rem; letter-spacing:2.5px; text-transform:uppercase}
+  .tagline{
+    position:relative;
+    margin-top:12px;
+    font-size:1.05rem;
+    color:var(--rg-deep);
+    font-weight:700;
+  }
+  .tagline2{
+    position:relative;
+    margin-top:3px;
+    font-size:.98rem;
+    color:var(--body);
+    font-weight:600;
+  }
+  .divider{
+    position:relative;
+    display:flex; align-items:center; gap:12px;
+    margin:22px auto 4px; max-width:300px;
+  }
+  .divider::before,.divider::after{
+    content:""; flex:1; height:1px;
+    background:linear-gradient(90deg, transparent, var(--rg), transparent);
+  }
+  .divider span{
+    width:8px;height:8px; transform:rotate(45deg);
+    background:var(--rg);
+    box-shadow:0 0 0 4px rgba(183,110,121,.14);
+  }
+  .specs{
+    position:relative;
+    margin-top:26px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .specs h2{
+    font-size:.85rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:var(--rg-deep);
+    margin-bottom:12px;
+  }
+  .chips{
+    display:flex; flex-wrap:wrap; gap:8px;
+    justify-content:center;
+  }
+  .chip{
+    background:var(--rg-pale);
+    border:1px solid rgba(183,110,121,.32);
+    color:var(--plum);
+    border-radius:999px;
+    padding:7px 15px;
+    font-size:.88rem;
+    font-weight:600;
+    line-height:1.5;
+  }
+  .actions{
+    position:relative;
+    margin-top:26px;
+    display:flex; flex-direction:column; gap:11px;
+  }
+  .btn{
+    display:flex; align-items:center; gap:13px;
+    min-height:58px;
+    padding:12px 18px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:var(--btn-bg);
+    color:var(--text);
+    text-decoration:none;
+    font-size:1.02rem;
+    font-weight:700;
+    text-align:start;
+    cursor:pointer;
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    font-family:inherit;
+    width:100%;
+    box-shadow:0 2px 10px rgba(150,82,94,.08);
+  }
+  .btn:hover,.btn:active{transform:translateY(-1px); border-color:var(--rg); box-shadow:0 8px 20px rgba(150,82,94,.16), 0 0 0 1px rgba(183,110,121,.12)}
+  .btn svg{flex:0 0 auto; color:var(--rg)}
+  .btn .sub{
+    display:block;
+    font-size:.78rem; font-weight:400; color:var(--muted); margin-top:2px;
+  }
+  .btn.primary{
+    background:linear-gradient(180deg, var(--rg-light), var(--rg-soft) 55%, var(--rg));
+    color:#571f2b;
+    border-color:var(--rg-deep);
+    justify-content:center;
+    font-size:1.08rem;
+    box-shadow:0 14px 28px rgba(183,110,121,.30), inset 0 1px 0 rgba(255,255,255,.55);
+  }
+  .btn.primary svg{color:#571f2b}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:11px}
+  .grid2 .btn{justify-content:center; text-align:center}
+  .foot{
+    position:relative;
+    margin-top:28px;
+    padding-top:20px;
+    border-top:1px solid var(--line-soft);
+    font-size:.8rem;
+    color:var(--muted);
+    letter-spacing:.4px;
+  }
+  .foot b{color:var(--rg); font-weight:700}
+  #toast{
+    position:fixed;
+    left:50%; bottom:26px;
+    transform:translate(-50%, 20px);
+    background:#fffdfb;
+    color:var(--plum);
+    border:1px solid var(--rg);
+    padding:11px 20px;
+    border-radius:999px;
+    font-size:.92rem;
+    opacity:0; pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    z-index:50;
+    box-shadow:0 14px 30px rgba(150,82,94,.25);
+  }
+  #toast.show{opacity:1; transform:translate(-50%, 0)}
+</style>
+</head>
+<body class="lang-fr">
+  <!-- shared sakura artwork (drawn once, used in both corners) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="blossom">
+        <g fill="currentColor">
+          <path d="M0,-10 C3,-6.5 3.6,-2.2 0,1.2 C-3.6,-2.2 -3,-6.5 0,-10 Z"/>
+          <path d="M0,-10 C3,-6.5 3.6,-2.2 0,1.2 C-3.6,-2.2 -3,-6.5 0,-10 Z" transform="rotate(72)"/>
+          <path d="M0,-10 C3,-6.5 3.6,-2.2 0,1.2 C-3.6,-2.2 -3,-6.5 0,-10 Z" transform="rotate(144)"/>
+          <path d="M0,-10 C3,-6.5 3.6,-2.2 0,1.2 C-3.6,-2.2 -3,-6.5 0,-10 Z" transform="rotate(216)"/>
+          <path d="M0,-10 C3,-6.5 3.6,-2.2 0,1.2 C-3.6,-2.2 -3,-6.5 0,-10 Z" transform="rotate(288)"/>
+        </g>
+        <circle r="1.9" fill="#e58aa0"/>
+        <circle cx="-2.6" cy="-1.4" r=".8" fill="#d96f87"/>
+        <circle cx="2.6" cy="-1.4" r=".8" fill="#d96f87"/>
+        <circle cx="0" cy="2.8" r=".8" fill="#d96f87"/>
+      </g>
+      <path id="petal" d="M0,-7.5 C3.8,-3.8 4.4,1 0,6.5 C-4.4,1 -3.8,-3.8 0,-7.5 Z" fill="currentColor"/>
+      <g id="sakuraArt">
+        <path d="M-12,26 C70,42 130,26 190,64 C226,86 268,94 332,78" fill="none" stroke="#8a5a4a" stroke-width="8" stroke-linecap="round"/>
+        <path d="M108,35 C138,58 147,88 140,124" fill="none" stroke="#8a5a4a" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M212,72 C234,94 241,120 234,150" fill="none" stroke="#966552" stroke-width="4" stroke-linecap="round"/>
+        <path d="M46,31 C66,48 73,68 68,92" fill="none" stroke="#966552" stroke-width="3.5" stroke-linecap="round"/>
+        <use href="#blossom" style="color:#f0a2b6" transform="translate(28,27) scale(1.25)"/>
+        <use href="#blossom" style="color:#f4b3c4" transform="translate(78,29) scale(1.02)"/>
+        <use href="#blossom" style="color:#eda0b4" transform="translate(122,42) scale(1.3)"/>
+        <use href="#blossom" style="color:#f6bccb" transform="translate(170,59) scale(1.05)"/>
+        <use href="#blossom" style="color:#f0a2b6" transform="translate(216,75) scale(1.22)"/>
+        <use href="#blossom" style="color:#f4b3c4" transform="translate(264,84) scale(.95)"/>
+        <use href="#blossom" style="color:#eda0b4" transform="translate(308,77) scale(1.12)"/>
+        <use href="#blossom" style="color:#f6bccb" transform="translate(140,112) scale(1)"/>
+        <use href="#blossom" style="color:#f8ccd8" transform="translate(126,84) scale(.8)"/>
+        <use href="#blossom" style="color:#f4b3c4" transform="translate(238,134) scale(.95)"/>
+        <use href="#blossom" style="color:#f8ccd8" transform="translate(226,105) scale(.72)"/>
+        <use href="#blossom" style="color:#f0a2b6" transform="translate(64,74) scale(.88)"/>
+        <use href="#blossom" style="color:#f8ccd8" transform="translate(94,57) scale(.68)"/>
+        <use href="#blossom" style="color:#f8ccd8" transform="translate(190,48) scale(.66)"/>
+        <use href="#blossom" style="color:#f6bccb" transform="translate(290,98) scale(.74)"/>
+        <use href="#blossom" style="color:#f8ccd8" transform="translate(106,132) scale(.66)"/>
+        <use href="#petal" style="color:#f2a7ba" transform="translate(252,158) rotate(24) scale(1.05)" opacity=".85"/>
+        <use href="#petal" style="color:#f6bccb" transform="translate(204,184) rotate(-18) scale(.9)" opacity=".8"/>
+        <use href="#petal" style="color:#eda0b4" transform="translate(294,146) rotate(42) scale(.8)" opacity=".75"/>
+      </g>
+    </defs>
+  </svg>
+
+  <main class="card">
+    <svg class="sakura sakura-tl" viewBox="0 0 320 240" aria-hidden="true"><use href="#sakuraArt"/></svg>
+    <svg class="sakura sakura-br" viewBox="0 0 320 240" aria-hidden="true"><use href="#sakuraArt"/></svg>
+
+    <div class="lang-toggle" role="group" aria-label="Langue / اللغة">
+      <button type="button" id="langFr" class="active" aria-pressed="true">FR</button>
+      <button type="button" id="langAr" aria-pressed="false">عربي</button>
+    </div>
+
+    <div class="photo-wrap">
+      <img class="photo" id="photo" src="meryem.jpg" alt="Meryem Lotfi">
+    </div>
+    <h1 class="flip" id="nameMain" dir="ltr">Meryem Lotfi</h1>
+    <p class="name-sub flip" id="nameSub" dir="rtl">مريم لطفي</p>
+    <p class="tagline flip" dir="ltr" data-fr="Formatrice en aide à la personne" data-ar="مُدرسة في مساعدة الأشخاص">Formatrice en aide à la personne</p>
+    <p class="tagline2 flip" dir="ltr" data-fr="équipe Bayt Wikaya" data-ar="أعمل ضمن فريق بيت الوقاية">équipe Bayt Wikaya</p>
+
+    <div class="divider"><span></span></div>
+
+    <div class="actions">
+      <a class="btn primary flip" dir="ltr" href="meryem.vcf" download>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.4"/><path d="M3.6 20c.6-3.3 3.1-5 6.4-5 1.5 0 2.9.35 4 1.05"/><path d="M18.6 4.6v6M15.6 7.6h6"/></svg>
+        <span data-fr="Enregistrer le contact" data-ar="حفظ جهة الاتصال">Enregistrer le contact</span>
+      </a>
+
+      <div class="grid2">
+        <a class="btn flip" dir="ltr" href="tel:+212662164720">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-fr="Appeler" data-ar="اتصال">Appeler</span>
+        </a>
+        <a class="btn flip" dir="ltr" href="https://wa.me/212662164720" target="_blank" rel="noopener">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span data-fr="WhatsApp" data-ar="واتساب">WhatsApp</span>
+        </a>
+      </div>
+
+      <a class="btn flip" dir="ltr" href="https://www.instagram.com/mery.emlotfi" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span><span data-fr="Instagram" data-ar="إنستغرام">Instagram</span><span class="sub" dir="ltr">@mery.emlotfi</span></span>
+      </a>
+
+      <a class="btn flip" dir="ltr" href="https://www.tiktok.com/@litakouniajmal" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span><span data-fr="TikTok" data-ar="تيك توك">TikTok</span><span class="sub" dir="ltr">@litakouniajmal</span></span>
+      </a>
+
+      <a class="btn flip" dir="ltr" href="https://baytwikaya.site/card" target="_blank" rel="noopener">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.6 16.6c.5-1.4 1.6-2.1 2.9-2.1s2.4.7 2.9 2.1"/><path d="M15.5 9.5H19M15.5 13H19"/></svg>
+        <span><span data-fr="Le centre — Bayt Wikaya" data-ar="بطاقة المركز — بيت الوقاية">Le centre — Bayt Wikaya</span><span class="sub" data-fr="Centre de hijama et de médecine complémentaire" data-ar="مركز الحجامة والطب التكميلي">Centre de hijama et de médecine complémentaire</span></span>
+      </a>
+
+      <button class="btn flip" dir="ltr" id="shareBtn" type="button">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4.2M8.6 13.4l6.8 4.2"/></svg>
+        <span><span data-fr="Partager la carte" data-ar="مشاركة الصفحة">Partager la carte</span><span class="sub" data-fr="Envoyez la carte à qui en a besoin" data-ar="أرسل البطاقة إلى من يهمه الأمر">Envoyez la carte à qui en a besoin</span></span>
+      </button>
+    </div>
+
+    <section class="specs">
+      <h2 class="flip" dir="ltr" data-fr="Spécialités et qualifications" data-ar="التخصصات والمؤهلات">Spécialités et qualifications</h2>
+      <div class="chips">
+        <span class="chip flip" dir="ltr" data-fr="Hygiène • Sécurité • Environnement (Licence)" data-ar="إجازة في الصحة والسلامة والبيئة">Hygiène • Sécurité • Environnement (Licence)</span>
+        <span class="chip flip" dir="ltr" data-fr="Secourisme" data-ar="الإسعافات الأولية">Secourisme</span>
+        <span class="chip flip" dir="ltr" data-fr="Aromathérapie" data-ar="العلاج بالروائح العطرية">Aromathérapie</span>
+        <span class="chip flip" dir="ltr" data-fr="Phytothérapie" data-ar="العلاج بالنباتات الطبية">Phytothérapie</span>
+        <span class="chip flip" dir="ltr" data-fr="Ostéopathie" data-ar="تقويم العظام">Ostéopathie</span>
+      </div>
+    </section>
+
+    <p class="foot flip" dir="ltr"><span data-fr="Meryem Lotfi" data-ar="مريم لطفي">Meryem Lotfi</span> <b>•</b> <span data-fr="Bayt Wikaya" data-ar="بيت الوقاية">Bayt Wikaya</span></p>
+  </main>
+
+  <div id="toast" role="status"></div>
+
+<script>
+(function () {
+  var STR = {
+    fr: {
+      title: 'Meryem Lotfi — Carte numérique',
+      alt: 'Meryem Lotfi',
+      shareText: 'Carte numérique de Meryem Lotfi — Formatrice en aide à la personne, équipe Bayt Wikaya',
+      copied: 'Lien de la carte copié',
+      copyPrompt: 'Copiez le lien de la carte :'
+    },
+    ar: {
+      title: 'مريم لطفي — بطاقة رقمية',
+      alt: 'مريم لطفي',
+      shareText: 'بطاقة مريم لطفي الرقمية — مُدرسة في مساعدة الأشخاص، أعمل ضمن فريق بيت الوقاية',
+      copied: 'تم نسخ رابط البطاقة',
+      copyPrompt: 'انسخ رابط البطاقة:'
+    }
+  };
+  var NAMES = {
+    fr: { main: 'Meryem Lotfi', sub: 'مريم لطفي' },
+    ar: { main: 'مريم لطفي', sub: 'Meryem Lotfi' }
+  };
+  var KEY = 'meryem-lang';
+  var current = 'fr';
+  try {
+    if (window.localStorage.getItem(KEY) === 'ar') current = 'ar';
+  } catch (e) { /* storage unavailable: keep default */ }
+
+  var toast = document.getElementById('toast');
+  var timer = null;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('show'); }, 2400);
+  }
+
+  function setLang(lang) {
+    current = lang;
+    var dir = lang === 'fr' ? 'ltr' : 'rtl';
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('lang-fr', lang === 'fr');
+    document.body.classList.toggle('lang-ar', lang === 'ar');
+    document.title = STR[lang].title;
+    document.getElementById('photo').alt = STR[lang].alt;
+
+    var nameMain = document.getElementById('nameMain');
+    var nameSub = document.getElementById('nameSub');
+    nameMain.textContent = NAMES[lang].main;
+    nameMain.dir = dir;
+    nameSub.textContent = NAMES[lang].sub;
+    nameSub.dir = lang === 'fr' ? 'rtl' : 'ltr';
+
+    var nodes = document.querySelectorAll('[data-fr]');
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].textContent = lang === 'fr' ? nodes[i].getAttribute('data-fr') : nodes[i].getAttribute('data-ar');
+    }
+    var flips = document.querySelectorAll('.flip');
+    for (var j = 0; j < flips.length; j++) {
+      if (flips[j].id !== 'nameSub') flips[j].dir = dir;
+    }
+
+    var frBtn = document.getElementById('langFr');
+    var arBtn = document.getElementById('langAr');
+    frBtn.classList.toggle('active', lang === 'fr');
+    arBtn.classList.toggle('active', lang === 'ar');
+    frBtn.setAttribute('aria-pressed', lang === 'fr' ? 'true' : 'false');
+    arBtn.setAttribute('aria-pressed', lang === 'ar' ? 'true' : 'false');
+
+    try { window.localStorage.setItem(KEY, lang); } catch (e) { /* ignore */ }
+  }
+
+  document.getElementById('langFr').addEventListener('click', function () { setLang('fr'); });
+  document.getElementById('langAr').addEventListener('click', function () { setLang('ar'); });
+
+  document.getElementById('shareBtn').addEventListener('click', function () {
+    var data = {
+      title: document.title,
+      text: STR[current].shareText,
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(data).catch(function () { /* user dismissed */ });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(data.url).then(function () {
+        showToast(STR[current].copied);
+      }, function () {
+        window.prompt(STR[current].copyPrompt, data.url);
+      });
+    } else {
+      window.prompt(STR[current].copyPrompt, data.url);
+    }
+  });
+
+  setLang(current);
+})();
+</script>
+</body>
+</html>
