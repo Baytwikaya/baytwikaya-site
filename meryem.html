@@ -132,9 +132,19 @@
   }
   body.lang-fr .name-sub{font-size:1.05rem; letter-spacing:0; text-transform:none}
   body.lang-ar .name-sub{font-size:.95rem; letter-spacing:2.5px; text-transform:uppercase}
+  .eyebrow{
+    position:relative;
+    margin-top:14px;
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--rg);
+  }
+  body.lang-ar .eyebrow{letter-spacing:0; text-transform:none; font-size:.95rem}
   .tagline{
     position:relative;
-    margin-top:12px;
+    margin-top:4px;
     font-size:1.05rem;
     color:var(--rg-deep);
     font-weight:700;
@@ -315,6 +325,7 @@
     </div>
     <h1 class="flip" id="nameMain" dir="ltr">Meryem Lotfi</h1>
     <p class="name-sub flip" id="nameSub" dir="rtl">مريم لطفي</p>
+    <p class="eyebrow flip" dir="ltr" data-fr="Aide-soignant" data-ar="مساعدة ممرضة">Aide-soignant</p>
     <p class="tagline flip" dir="ltr" data-fr="Formatrice en aide à la personne" data-ar="مُدرسة في مساعدة الأشخاص">Formatrice en aide à la personne</p>
     <p class="tagline2 flip" dir="ltr" data-fr="équipe Bayt Wikaya" data-ar="أعمل ضمن فريق بيت الوقاية">équipe Bayt Wikaya</p>
 
@@ -380,14 +391,14 @@
     fr: {
       title: 'Meryem Lotfi — Carte numérique',
       alt: 'Meryem Lotfi',
-      shareText: 'Carte numérique de Meryem Lotfi — Formatrice en aide à la personne, équipe Bayt Wikaya',
+      shareText: 'Carte numérique de Meryem Lotfi — Aide-soignant — Formatrice en aide à la personne, équipe Bayt Wikaya',
       copied: 'Lien de la carte copié',
       copyPrompt: 'Copiez le lien de la carte :'
     },
     ar: {
       title: 'مريم لطفي — بطاقة رقمية',
       alt: 'مريم لطفي',
-      shareText: 'بطاقة مريم لطفي الرقمية — مُدرسة في مساعدة الأشخاص، أعمل ضمن فريق بيت الوقاية',
+      shareText: 'بطاقة مريم لطفي الرقمية — مساعدة ممرضة — مُدرسة في مساعدة الأشخاص، أعمل ضمن فريق بيت الوقاية',
       copied: 'تم نسخ رابط البطاقة',
       copyPrompt: 'انسخ رابط البطاقة:'
     }
