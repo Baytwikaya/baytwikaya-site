@@ -1,14 +1,13 @@
 /* بيت الوقاية - Service Worker */
-const CACHE_NAME = 'baytwikaya-v5';
+const CACHE_NAME = 'baytwikaya-v6';
 const PRECACHE_URLS = [
     './',
-    'index.html',
-    'faq.html',
-    'prices.html',
-    'app.html',
-    'sunnah.html',
-    'calories.html',
-    'water.html',
+    'faq',
+    'prices',
+    'app',
+    'sunnah',
+    'calories',
+    'water',
     'baytwikaya-logo.png',
     'manifest.json',
     'icon-192.png',
@@ -58,7 +57,7 @@ self.addEventListener('fetch', (event) => {
                         .catch(() => {});
                     return response;
                 })
-                .catch(() => caches.match('index.html'));
+                .catch(() => caches.match('./'));
         })
     );
 });
