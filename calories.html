@@ -125,13 +125,37 @@
                     </div>
 
                     <div>
+                        <label class="block text-gray-700 font-bold mb-3">هل تمارس الرياضة؟</label>
+                        <div class="flex gap-6">
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                                <input type="radio" name="training" value="yes" class="w-5 h-5 text-teal-600 focus:ring-teal-500">
+                                <span class="font-bold">أمارس الرياضة 🏃</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                                <input type="radio" name="training" value="no" checked class="w-5 h-5 text-teal-600 focus:ring-teal-500">
+                                <span class="font-bold">لا أمارس الرياضة</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="daily-activity-block">
                         <label class="block text-gray-700 font-bold mb-2">مستوى النشاط البدني</label>
                         <select id="activity" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white">
                             <option value="1.2">خامل (قليل أو معدوم النشاط / عمل مكتبي)</option>
-                            <option value="1.375">نشاط خفيف (تمرين خفيف أو رياضة 1-3 أيام في الأسبوع)</option>
-                            <option value="1.55" selected>نشاط معتدل (تمرين معتدل أو رياضة 3-5 أيام في الأسبوع)</option>
-                            <option value="1.725">نشاط عالي (تمرين شاق أو رياضة 6-7 أيام في الأسبوع)</option>
-                            <option value="1.9">نشاط شديد (تمرين شاق جداً وعمل بدني متعب)</option>
+                            <option value="1.375">نشاط خفيف (حركة خفيفة خلال النهار / مشي قليل)</option>
+                            <option value="1.55" selected>نشاط معتدل (حركة منتظمة خلال النهار / عمل فيه تنقل)</option>
+                            <option value="1.725">نشاط عالي (حركة كثيرة أو عمل بدني خلال النهار)</option>
+                            <option value="1.9">نشاط شديد (عمل بدني شاق ومتعب)</option>
+                        </select>
+                    </div>
+
+                    <div id="sessions-block" class="hidden">
+                        <label class="block text-gray-700 font-bold mb-2">عدد الحصص في الأسبوع</label>
+                        <select id="sessions" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white">
+                            <option value="1.375">حصتان أو أقل</option>
+                            <option value="1.55" selected>3 إلى 4 حصص</option>
+                            <option value="1.725">5 إلى 6 حصص</option>
+                            <option value="1.9">7 حصص أو أكثر</option>
                         </select>
                     </div>
 
@@ -305,29 +329,63 @@
             });
 
             const caloriesForm = document.getElementById('caloriesForm');
-            caloriesForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+            const trainingRadios = document.querySelectorAll('input[name="training"]');
+            const dailyActivityBlock = document.getElementById('daily-activity-block');
+            const sessionsBlock = document.getElementById('sessions-block');
+            const resultsSection = document.getElementById('results-section');
+
+            function calculateCalories() {
                 const gender = document.querySelector('input[name="gender"]:checked').value;
                 const age = parseInt(document.getElementById('age').value);
                 const weight = parseFloat(document.getElementById('weight').value);
                 const height = parseFloat(document.getElementById('height').value);
-                const activity = parseFloat(document.getElementById('activity').value);
-                
+                const training = document.querySelector('input[name="training"]:checked').value;
+                const activity = training === 'yes'
+                    ? parseFloat(document.getElementById('sessions').value)
+                    : parseFloat(document.getElementById('activity').value);
+
                 let bmr = 0;
                 if (gender === 'male') {
                     bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
                 } else {
                     bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
                 }
-                
+
                 const tdee = bmr * activity;
-                
+
                 document.getElementById('bmr-result').innerText = Math.round(bmr);
                 document.getElementById('tdee-result').innerText = Math.round(tdee);
                 document.getElementById('lose-weight').innerText = Math.round(tdee - 500) + " Kcal";
                 document.getElementById('gain-weight').innerText = Math.round(tdee + 500) + " Kcal";
-                
-                document.getElementById('results-section').classList.remove('hidden');
+
+                resultsSection.classList.remove('hidden');
+            }
+
+            function updateTrainingBranch() {
+                const training = document.querySelector('input[name="training"]:checked').value;
+                if (training === 'yes') {
+                    dailyActivityBlock.classList.add('hidden');
+                    sessionsBlock.classList.remove('hidden');
+                } else {
+                    dailyActivityBlock.classList.remove('hidden');
+                    sessionsBlock.classList.add('hidden');
+                }
+                if (!resultsSection.classList.contains('hidden')) {
+                    calculateCalories();
+                }
+            }
+
+            trainingRadios.forEach(radio => radio.addEventListener('change', updateTrainingBranch));
+            document.getElementById('activity').addEventListener('change', function() {
+                if (!resultsSection.classList.contains('hidden')) { calculateCalories(); }
+            });
+            document.getElementById('sessions').addEventListener('change', function() {
+                if (!resultsSection.classList.contains('hidden')) { calculateCalories(); }
+            });
+
+            caloriesForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                calculateCalories();
             });
         });
     </script>
