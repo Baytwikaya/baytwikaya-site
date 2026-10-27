@@ -1,0 +1,25 @@
+# Sveltia CMS — لوحة تحكم مقالات موقع بيت الوقاية (خاصة، بلا رابط من الموقع)
+# الدخول: بحساب GitHub ديال مالك المستودع فقط، من المتصفح مباشرة.
+# سير العمل: مسودة → مراجعة مشتركة → نشر. لا نشر مباشر بلا مراجعة.
+backend:
+  name: github
+  repo: Baytwikaya/baytwikaya-site
+  branch: main
+site_url: https://baytwikaya.site/
+publish_mode: editorial_workflow
+media_folder: assets/uploads
+public_folder: /assets/uploads
+collections:
+  - name: articles
+    label: مقالات الأخبار
+    folder: content/articles
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - {label: العنوان, name: title, widget: string}
+      - {label: التاريخ, name: date, widget: datetime}
+      - {label: ملخص, name: excerpt, widget: text, required: false}
+      - {label: صورة الغلاف, name: cover, widget: image, required: false}
+      - {label: النص, name: body, widget: markdown}

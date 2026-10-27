@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقال — أخبار في عالم الصحة | بيت الوقاية</title>
+    <meta name="description" content="مقال من أخبار في عالم الصحة — بيت الوقاية.">
+    <link rel="canonical" href="https://baytwikaya.site/news">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
+        .primary-bg { background-color: #0f766e; }
+        .body h2 { font-size: 1.5rem; font-weight: 800; color: #134e4a; margin: 26px 0 8px; line-height: 1.6; }
+        .body h3 { font-size: 1.25rem; font-weight: 700; color: #134e4a; margin: 22px 0 6px; line-height: 1.6; }
+        .body p { margin: 0 0 14px; line-height: 1.9; }
+        .body ul, .body ol { margin: 0 0 14px; padding-inline-start: 22px; line-height: 1.9; }
+        .body li { margin-bottom: 6px; }
+        .body blockquote { border-inline-start: 3px solid #0f766e; margin: 16px 0; padding: 4px 16px; color: #475569; }
+        .body img { max-width: 100%; border-radius: 12px; }
+        .body a { color: #0f766e; font-weight: 700; }
+    </style>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta name="theme-color" content="#0f766e">
+</head>
+<body class="text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/"><img src="baytwikaya-logo.png" alt="شعار بيت الوقاية" class="h-14 w-auto object-contain"></a>
+            <nav class="flex items-center gap-5 text-sm md:text-base font-semibold">
+                <a href="/" class="text-gray-700 hover:text-teal-600 transition">الرئيسية</a>
+                <a href="tools" class="text-gray-700 hover:text-teal-600 transition">الأدوات</a>
+                <a href="news" class="text-teal-600 font-bold transition">الأخبار</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12 px-4 w-full">
+        <div class="max-w-3xl mx-auto">
+            <div id="status" class="text-center text-gray-400 py-16">جار تحميل المقال…</div>
+            <article id="art" style="display:none">
+                <h1 id="title" class="text-3xl md:text-4xl font-bold text-teal-900 mb-3 leading-snug"></h1>
+                <p id="meta" class="text-gray-400 text-sm mb-6"></p>
+                <img id="cover" class="w-full rounded-3xl shadow-xl mb-8" style="display:none" alt="">
+                <div id="body" class="body text-gray-700 text-lg"></div>
+                <div class="text-center mt-12">
+                    <a href="news" class="inline-block text-teal-700 font-bold hover:underline">← كل الأخبار</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-[#121826] text-white pt-10 w-full mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center gap-3 pb-8 text-center">
+                <img src="baytwikaya-logo.png" alt="شعار بيت الوقاية" class="h-12 w-auto object-contain bg-white px-4 py-1 rounded-lg">
+                <p class="text-gray-400 text-sm">مركز بيت الوقاية — الحجامة وتقويم العظام في الدار البيضاء.</p>
+                <div class="flex gap-5 font-semibold text-sm">
+                    <a href="/" class="hover:text-teal-300 transition">الرئيسية</a>
+                    <a href="news" class="hover:text-teal-300 transition">الأخبار</a>
+                    <a href="tools" class="hover:text-teal-300 transition">الأدوات</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 py-6 text-center text-gray-500 text-sm">© 2026 مركز بيت الوقاية. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+<script>
+(function(){
+var OWNER='Baytwikaya', REPO='baytwikaya-site', BRANCH='main', BASE='https://baytwikaya.site';
+var status=document.getElementById('status');
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function parseFM(text){
+  var m=text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if(!m) return {data:{},body:text};
+  var data={};
+  m[1].split(/\r?\n/).forEach(function(line){
+    var i=line.indexOf(':'); if(i<0) return;
+    data[line.slice(0,i).trim()]=line.slice(i+1).trim().replace(/^['"]|['"]$/g,'');
+  });
+  return {data:data,body:m[2]};
+}
+function inline(s){
+  s=esc(s);
+  s=s.replace(/!\[([^\]]*)\]\(([^)]+)\)/g,'<img src="$2" alt="$1">');
+  s=s.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+  s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
+  return s;
+}
+/* محوّل Markdown صغير (بلا مكتبات — باش الصفحة تبقى خفيفة): عناوين، قوائم، روابط، صور، عريض، مائل، اقتباس */
+function md(src){
+  var lines=src.replace(/\r\n?/g,'\n').split('\n'), out=[], i=0;
+  function flushPara(buf){ if(buf.length) out.push('<p>'+inline(buf.join(' '))+'</p>'); }
+  var buf=[];
+  while(i<lines.length){
+    var ln=lines[i];
+    if(/^#{1,3}\s/.test(ln)){ flushPara(buf); buf=[];
+      var lvl=ln.match(/^#+/)[0].length;
+      out.push('<h'+(lvl+1)+'>'+inline(ln.replace(/^#+\s*/,''))+'</h'+(lvl+1)+'>'); i++; continue; }
+    if(/^\s*[-*]\s+/.test(ln)){ flushPara(buf); buf=[];
+      var items=[];
+      while(i<lines.length && /^\s*[-*]\s+/.test(lines[i])){ items.push('<li>'+inline(lines[i].replace(/^\s*[-*]\s+/,''))+'</li>'); i++; }
+      out.push('<ul>'+items.join('')+'</ul>'); continue; }
+    if(/^\s*\d+[.)]\s+/.test(ln)){ flushPara(buf); buf=[];
+      var items2=[];
+      while(i<lines.length && /^\s*\d+[.)]\s+/.test(lines[i])){ items2.push('<li>'+inline(lines[i].replace(/^\s*\d+[.)]\s+/ ,''))+'</li>'); i++; }
+      out.push('<ol>'+items2.join('')+'</ol>'); continue; }
+    if(/^>\s?/.test(ln)){ flushPara(buf); buf=[];
+      var q=[];
+      while(i<lines.length && /^>\s?/.test(lines[i])){ q.push(lines[i].replace(/^>\s?/,'')); i++; }
+      out.push('<blockquote>'+inline(q.join(' '))+'</blockquote>'); continue; }
+    if(ln.trim()===''){ flushPara(buf); buf=[]; i++; continue; }
+    buf.push(ln.trim()); i++;
+  }
+  flushPara(buf);
+  return out.join('\n');
+}
+var slug=new URLSearchParams(location.search).get('slug')||'';
+if(!slug || slug.indexOf('/')>=0 || slug.indexOf('\\')>=0 || slug.indexOf('..')>=0){
+  status.innerHTML='المقال غير موجود. <a href="news" class="text-teal-700 font-bold">ارجع للأخبار</a>'; return;
+}
+fetch('https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/content/articles/'+encodeURIComponent(slug)+'.md')
+.then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.text(); })
+.then(function(t){
+  var p=parseFM(t);
+  document.title=(p.data.title||slug)+' — أخبار في عالم الصحة | بيت الوقاية';
+  document.getElementById('title').textContent=p.data.title||slug;
+  var meta=[];
+  if(p.data.date){ var dt=new Date(p.data.date); meta.push(isNaN(dt)?p.data.date:dt.toLocaleDateString('ar-MA',{year:'numeric',month:'long',day:'numeric'})); }
+  document.getElementById('meta').textContent=meta.join(' · ');
+  if(p.data.cover){
+    var cv=p.data.cover.indexOf('http')===0 ? p.data.cover : BASE+p.data.cover;
+    var img=document.getElementById('cover'); img.src=cv; img.style.display='block';
+  }
+  document.getElementById('body').innerHTML=md(p.body);
+  status.style.display='none';
+  document.getElementById('art').style.display='block';
+})
+.catch(function(){ status.innerHTML='المقال غير موجود أو تعذر تحميله. <a href="news" class="text-teal-700 font-bold">ارجع للأخبار</a>'; });
+})();
+</script>
+
+</body>
+</html>
