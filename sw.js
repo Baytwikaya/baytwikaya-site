@@ -1,5 +1,5 @@
 /* بيت الوقاية - Service Worker */
-const CACHE_NAME = 'baytwikaya-v20';
+const CACHE_NAME = 'baytwikaya-v21';
 const PRECACHE_URLS = [
     './',
     'faq',
@@ -42,6 +42,23 @@ self.addEventListener('fetch', (event) => {
     }
     const url = new URL(request.url);
     if (url.origin !== self.location.origin) {
+        return;
+    }
+    // Navigations are network-first: a cache-first navigation kept serving
+    // stale HTML after deploys (hard reload does not clear Cache Storage).
+    // Offline, navigations still fall back to the cache, then to './'.
+    if (request.mode === 'navigate') {
+        event.respondWith(
+            fetch(request)
+                .then((response) => {
+                    const copy = response.clone();
+                    caches.open(CACHE_NAME)
+                        .then((cache) => cache.put(request, copy))
+                        .catch(() => {});
+                    return response;
+                })
+                .catch(() => caches.match(request).then((cached) => cached || caches.match('./')))
+        );
         return;
     }
     event.respondWith(
