@@ -341,12 +341,102 @@
                 });
                 if (!tb.innerHTML) tb.innerHTML = '<tr><td colspan="6" class="p-3 text-gray-500">لم نجد أي طبق بهذا الاسم — القاعدة تتوسع، جرّب كلمة أخرى.</td></tr>';
             }
-            function offRow(p) {
-                const n = p.nutriments || {};
-                function g(k) { const v = n[k]; return (v === undefined || v === null) ? '—' : Math.round(v); }
-                const name = (p.product_name || p.product_name_fr || p.generic_name || 'منتج دون اسم');
-                const brand = p.brands ? (' — ' + p.brands) : '';
-                return '<tr class="border-b"><td class="p-3"><b>' + name + '</b>' + brand + '</td><td class="p-3">100غ</td><td class="p-3">' + g('energy-kcal_100g') + '</td><td class="p-3">' + g('proteins_100g') + '</td><td class="p-3">' + g('carbohydrates_100g') + '</td><td class="p-3">' + g('fat_100g') + '</td></tr>';
+            function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+            var NUTRI_COLORS = { a: '#038141', b: '#85BB2F', c: '#FECB02', d: '#EE8100', e: '#E63E11' };
+            var NOVA_LABELS = { 1: 'مجموعة نوفا 1 — أغذية غير مصنّعة أو قليلة التصنيع', 2: 'مجموعة نوفا 2 — مكونات مطبخية مصنّعة', 3: 'مجموعة نوفا 3 — أغذية مصنّعة', 4: 'مجموعة نوفا 4 — أغذية فائقة التصنيع' };
+            var CAUTION = {
+                'E171': { name: 'ثاني أكسيد التيتانيوم', note: 'EFSA 2021: لا يمكن اعتباره آمناً كمضاف غذائي؛ محظور في الاتحاد الأوروبي منذ 2022' },
+                'E951': { name: 'أسبارتام', note: 'IARC 2023: المجموعة 2B (محتمل أن يكون مسرطناً للبشر)؛ لجنة JECFA أبقت الجرعة المقبولة 40 ملغ/كغ' },
+                'E250': { name: 'نتريت الصوديوم', note: 'قد يتحول إلى نيتروزامينات؛ واللحوم المصنعة مصنفة من IARC في المجموعة 1 (مسرطنة للبشر) — والتنبيه هنا يتعلق بالنيتروزامينات المشتقة من النتريت وتصنيف اللحوم المصنعة، وليس تشخيصاً لهذا المنتج' },
+                'E251': { name: 'نترات الصوديوم', note: 'قد تتحول إلى نيتروزامينات؛ واللحوم المصنعة مصنفة من IARC في المجموعة 1 (مسرطنة للبشر) — والتنبيه هنا يتعلق بالنيتروزامينات المشتقة من النتريت وتصنيف اللحوم المصنعة، وليس تشخيصاً لهذا المنتج' },
+                'E320': { name: 'BHA (بوتيل هيدروكسي الأنيسول)', note: 'IARC المجموعة 2B (محتمل أن يكون مسرطناً)' },
+                'E102': { name: 'تارترازين', note: 'من أصباغ الآزو — دراسة ساوثهامبتون / EFSA: ارتباط بفرط النشاط عند الأطفال؛ الاتحاد الأوروبي يلزم التحذير على الملصق' },
+                'E110': { name: 'أصفر الغروب', note: 'من أصباغ الآزو — دراسة ساوثهامبتون / EFSA: ارتباط بفرط النشاط عند الأطفال؛ الاتحاد الأوروبي يلزم التحذير على الملصق' },
+                'E122': { name: 'أزوروبين', note: 'من أصباغ الآزو — دراسة ساوثهامبتون / EFSA: ارتباط بفرط النشاط عند الأطفال؛ الاتحاد الأوروبي يلزم التحذير على الملصق' },
+                'E124': { name: 'بونسو 4R', note: 'من أصباغ الآزو — دراسة ساوثهامبتون / EFSA: ارتباط بفرط النشاط عند الأطفال؛ الاتحاد الأوروبي يلزم التحذير على الملصق' }
+            };
+            function parseAdditives(p) {
+                var tags = p.additives_tags || [];
+                var seen = {}, out = [];
+                tags.forEach(function(t) {
+                    var m = String(t).match(/e(\d{3}[a-z]?)/i);
+                    if (!m) return;
+                    var code = 'E' + m[1].toUpperCase();
+                    if (seen[code]) return;
+                    seen[code] = true;
+                    out.push(code);
+                });
+                return out;
+            }
+            function fmtNutr(v, kcal) {
+                if (v === undefined || v === null || v === '') return 'غير متوفر';
+                var num = Number(v);
+                if (isNaN(num)) return 'غير متوفر';
+                if (kcal) return Math.round(num) + ' سعرة';
+                if (Math.abs(num) < 10) return (Math.round(num * 100) / 100) + ' غ';
+                return Math.round(num) + ' غ';
+            }
+            function offSheet(p) {
+                var n = p.nutriments || {};
+                var name = p.product_name_ar || p.product_name || p.product_name_fr || p.generic_name || 'منتج دون اسم';
+                var img = p.image_url || p.image_front_url || p.image_front_small_url || '';
+                var code = p.code || '';
+                var html = '<div class="bg-white border border-teal-100 rounded-2xl shadow-md p-5 md:p-6 mb-6 text-right">';
+                html += '<div class="flex gap-4 flex-wrap items-start">';
+                if (img) html += '<img src="' + esc(img) + '" alt="" style="width:110px;height:110px;object-fit:contain;border:1px solid #e5e7eb;border-radius:12px;background:#fff" onerror="this.style.display=\'none\'">';
+                html += '<div class="flex-1" style="min-width:220px"><h3 class="text-xl font-bold text-teal-900 mb-1">' + esc(name) + '</h3>';
+                if (p.brands) html += '<p class="text-gray-600 font-bold">' + esc(p.brands) + '</p>';
+                if (code) html += '<p class="text-gray-500 text-sm" dir="ltr" style="text-align:right">Barcode: ' + esc(code) + '</p>';
+                if (p.categories) html += '<p class="text-gray-500 text-sm">الفئات: ' + esc(p.categories) + '</p>';
+                var grade = (p.nutriscore_grade || '').toLowerCase();
+                if (NUTRI_COLORS[grade]) {
+                    var dark = grade === 'c';
+                    html += '<span style="display:inline-block;background:' + NUTRI_COLORS[grade] + ';color:' + (dark ? '#1f2937' : '#fff') + ';font-weight:800;font-size:22px;line-height:1;padding:8px 16px;border-radius:10px;margin-top:8px">Nutri-Score ' + grade.toUpperCase() + '</span>';
+                }
+                var nova = p.nova_group;
+                if (nova !== undefined && nova !== null && NOVA_LABELS[nova]) html += '<p class="mt-2"><span class="inline-block bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full text-sm">' + NOVA_LABELS[nova] + '</span></p>';
+                html += '</div></div>';
+                var rows = [
+                    ['الطاقة', 'energy-kcal_100g', true],
+                    ['الدهون', 'fat_100g', false],
+                    ['دهون مشبعة', 'saturated-fat_100g', false],
+                    ['كربوهيدرات', 'carbohydrates_100g', false],
+                    ['سكريات', 'sugars_100g', false],
+                    ['ألياف', 'fiber_100g', false],
+                    ['بروتينات', 'proteins_100g', false],
+                    ['ملح', 'salt_100g', false],
+                    ['صوديوم', 'sodium_100g', false]
+                ];
+                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">القيم الغذائية لكل 100غ</h4><div style="overflow-x:auto"><table class="w-full text-sm md:text-base"><tbody>';
+                rows.forEach(function(r) { html += '<tr class="border-b"><td class="p-2 font-bold">' + r[0] + '</td><td class="p-2">' + fmtNutr(n[r[1]], r[2]) + '</td></tr>'; });
+                html += '</tbody></table></div>';
+                var ing = p.ingredients_text_ar || p.ingredients_text || '';
+                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">المكونات</h4>';
+                html += ing ? '<p class="text-gray-700 leading-relaxed">' + esc(ing) + '</p>' : '<p class="text-gray-500">غير متوفر</p>';
+                if (p.allergens) {
+                    var al = String(p.allergens).split(',').map(function(a) { return a.replace(/^[a-z]{2}:/, '').trim(); }).filter(function(a) { return a; });
+                    if (al.length) html += '<p class="mt-3"><span class="font-bold">مسببات الحساسية: </span>' + al.map(function(a) { return '<span class="inline-block bg-red-50 text-red-800 border border-red-200 px-2 py-1 rounded-full text-sm mx-1">' + esc(a) + '</span>'; }).join('') + '</p>';
+                }
+                var adds = parseAdditives(p);
+                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">المضافات الغذائية</h4>';
+                if (adds.length) {
+                    html += '<p>' + adds.map(function(c) {
+                        var info = CAUTION[c];
+                        return '<span class="inline-block bg-teal-50 text-teal-900 border border-teal-200 px-2 py-1 rounded-full text-sm mx-1 font-bold">' + c + (info ? ' — ' + info.name : '') + '</span>';
+                    }).join('') + '</p>';
+                } else {
+                    html += '<p class="text-gray-500">لا توجد مضافات مذكورة لهذا المنتج.</p>';
+                }
+                var flagged = adds.filter(function(c) { return CAUTION[c]; });
+                if (flagged.length) {
+                    html += '<div class="mt-4 bg-amber-50 border border-amber-300 rounded-xl p-4"><h4 class="font-bold text-amber-900 mb-2">⚠ مواد تستدعي الانتباه</h4>';
+                    flagged.forEach(function(c) { html += '<p class="text-amber-900 mb-2"><b>' + c + ' — ' + CAUTION[c].name + ': </b>' + CAUTION[c].note + '</p>'; });
+                    html += '<p class="text-amber-800 text-sm mt-2">هذه التصنيفات هي تصنيفات الجهات المذكورة (EFSA / IARC)، وليست تشخيصاً لهذا المنتج بعينه.</p></div>';
+                }
+                if (code) html += '<p class="text-gray-500 text-sm mt-4">المعلومات من قاعدة بيانات <a class="text-teal-700 font-bold hover:underline" target="_blank" rel="noopener" href="https://world.openfoodfacts.org/product/' + encodeURIComponent(code) + '">Open Food Facts المفتوحة — صفحة المنتج</a> — البيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>';
+                else html += '<p class="text-gray-500 text-sm mt-4">المعلومات من قاعدة بيانات Open Food Facts المفتوحة — البيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>';
+                html += '</div>';
+                return html;
             }
             function searchOFF() {
                 const q = (document.getElementById('off-q').value || '').trim();
@@ -354,11 +444,11 @@
                 if (!q) { out.innerHTML = '<p class="text-gray-500">اكتب اسم منتج أو رقم الباركود أولاً.</p>'; return; }
                 out.innerHTML = '<p class="text-gray-500">جارٍ البحث...</p>';
                 const isCode = /^\d{8,14}$/.test(q);
-                const url = isCode ? ('https://world.openfoodfacts.org/api/v2/product/' + q + '.json') : ('https://world.openfoodfacts.org/cgi/search.pl?search_terms=' + encodeURIComponent(q) + '&search_simple=1&action=process&json=1&page_size=8&fields=product_name,product_name_fr,generic_name,brands,nutriments');
+                const url = isCode ? ('https://world.openfoodfacts.org/api/v2/product/' + q + '.json') : ('https://world.openfoodfacts.org/cgi/search.pl?search_terms=' + encodeURIComponent(q) + '&search_simple=1&action=process&json=1&page_size=8&fields=product_name,product_name_ar,product_name_fr,generic_name,brands,code,categories,image_url,image_front_url,nutriscore_grade,nova_group,ingredients_text,ingredients_text_ar,allergens,additives_tags,additives_original_tags,nutriments');
                 fetch(url).then(function(r) { return r.json(); }).then(function(d) {
                     const prods = isCode ? (d.status === 1 && d.product ? [d.product] : []) : (d.products || []);
                     if (!prods.length) { out.innerHTML = '<p class="text-gray-500">لم نجد شيئاً — تأكد من الرقم أو جرّب اسماً آخر. بعض المنتجات المغربية لم تدخل بعد إلى القاعدة العالمية.</p>'; return; }
-                    out.innerHTML = '<div style="overflow-x:auto"><table class="w-full text-sm md:text-base"><thead><tr class="bg-teal-50"><th class="p-3 text-right font-bold border-b">المنتج</th><th class="p-3 text-right font-bold border-b">المرجع</th><th class="p-3 text-right font-bold border-b">سعرات</th><th class="p-3 text-right font-bold border-b">بروتين (غ)</th><th class="p-3 text-right font-bold border-b">كربوهيدرات (غ)</th><th class="p-3 text-right font-bold border-b">دهون (غ)</th></tr></thead><tbody>' + prods.map(offRow).join('') + '</tbody></table></div><p class="text-gray-500 text-sm mt-2">المصدر: Open Food Facts — بيانات مساهمة جماعية، راجع التغليف الأصلي دائماً.</p>';
+                    out.innerHTML = prods.map(offSheet).join('');
                 }).catch(function() { out.innerHTML = '<p class="text-red-600 font-bold">حدثت مشكلة في الاتصال — أعد المحاولة.</p>'; });
             }
             document.getElementById('off-q').addEventListener('keydown', function(e) { if (e.key === 'Enter') searchOFF(); });
