@@ -21,6 +21,26 @@
         body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
         .primary-color { color: #0f766e; }
         .primary-bg { background-color: #0f766e; }
+        /* شريط الأخبار المتحرك: فوق محتوى الصفحة مباشرة تحت الشريط العلوي.
+           الحركة CSS فقط، وتتوقف عند التحويم أو التركيز، وتُلغى تماما عند تفضيل تقليل الحركة. */
+        .news-ticker { background-color: #0f766e; overflow: hidden; }
+        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 30s linear infinite; }
+        .news-ticker-set { display: flex; }
+        .news-ticker:hover .news-ticker-track, .news-ticker:focus-within .news-ticker-track { animation-play-state: paused; }
+        .news-ticker-item { display: flex; align-items: center; gap: 10px; padding: 8px 18px; color: #fff; text-decoration: none; white-space: nowrap; }
+        .news-ticker-item:hover span { text-decoration: underline; }
+        .news-ticker-item img { width: 56px; height: 56px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+        .news-ticker-item span { font-weight: 700; font-size: 14px; max-width: 280px; overflow: hidden; text-overflow: ellipsis; }
+        /* في RTL يبدأ المسار من اليمين؛ الانتقال إلى -50% يزيح النسخة الثانية مكان الأولى بسلاسة */
+        @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @media (max-width: 640px) {
+            .news-ticker-item { padding: 6px 12px; }
+            .news-ticker-item span { max-width: 200px; font-size: 13px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .news-ticker-track { animation: none; }
+            .news-ticker { overflow-x: auto; }
+        }
     </style>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <meta name="theme-color" content="#0f766e">
@@ -51,6 +71,22 @@
             </nav>
         </div>
     </header>
+
+    <!-- شريط الأخبار المتحرك: تحت الشريط العلوي مباشرة. النسخة الثانية مخفية عن قارئات الشاشة
+         وعن التنقل بلوحة المفاتيح (aria-hidden + tabindex) لأنها تكرار للحركة السلسة فقط.
+         مقالات لوحة التحكم تُضاف للنسختين معا عبر نفس جلب GitHub API أسفله، بلا طلب شبكة إضافي. -->
+    <div class="news-ticker" role="region" aria-label="شريط آخر الأخبار">
+        <div class="news-ticker-track" id="ticker-track">
+            <div class="news-ticker-set" id="ticker-set-1">
+                <a class="news-ticker-item" href="news/sleep-joints"><img src="news/hero-sleep-joints.webp" alt=""><span>تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</span></a>
+                <a class="news-ticker-item" href="news/strength-after-35"><img src="news/hero-strength-after-35.webp" alt=""><span>من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</span></a>
+            </div>
+            <div class="news-ticker-set" id="ticker-set-2" aria-hidden="true">
+                <a class="news-ticker-item" href="news/sleep-joints" tabindex="-1"><img src="news/hero-sleep-joints.webp" alt=""><span>تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</span></a>
+                <a class="news-ticker-item" href="news/strength-after-35" tabindex="-1"><img src="news/hero-strength-after-35.webp" alt=""><span>من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</span></a>
+            </div>
+        </div>
+    </div>
 
     <main class="flex-grow py-12 px-4 w-full">
         <div class="max-w-5xl mx-auto">
@@ -159,6 +195,18 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
         +'</div></article>';
     }).join('');
     section.style.display='block';
+    /* نفس مقالات لوحة التحكم تدخل شريط الأخبار المتحرك: نفس العنصر يُضاف للنسختين حتى يبقى
+       عرضهما متساويا وتدور الحركة بسلاسة. نسخة الشريط الثانية بلا تركيز لوحة مفاتيح لأنها تكرار مرئي فقط. */
+    var t1=document.getElementById('ticker-set-1'), t2=document.getElementById('ticker-set-2');
+    if(t1 && t2){
+      var tItem=function(a,tab){
+        var href='news-article?slug='+encodeURIComponent(a.slug);
+        var cover=a.cover ? (a.cover.indexOf('http')===0 ? a.cover : BASE+a.cover) : '';
+        return '<a class="news-ticker-item" href="'+href+'"'+tab+'>'+(cover?'<img src="'+esc(cover)+'" alt="">':'')+'<span>'+esc(a.title)+'</span></a>';
+      };
+      t1.insertAdjacentHTML('beforeend', arts.map(function(a){ return tItem(a,''); }).join(''));
+      t2.insertAdjacentHTML('beforeend', arts.map(function(a){ return tItem(a,' tabindex="-1"'); }).join(''));
+    }
   });
 })
 .catch(function(){ /* بلا مقالات لوحة تحكم بعد — القسم يبقى مخفي */ });
