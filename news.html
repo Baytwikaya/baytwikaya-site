@@ -41,7 +41,11 @@
             .news-ticker-track { animation: none; }
             .news-ticker { overflow-x: auto; }
         }
-    </style>
+    nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
+nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
+@keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
+</style>
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <meta name="theme-color" content="#0f766e">
     <script type="application/ld+json">
@@ -68,22 +72,25 @@
                 <a href="app" class="text-gray-700 hover:text-teal-600 transition">التطبيق 📱</a>
                 <a href="tools" class="text-gray-700 hover:text-teal-600 transition">الأدوات</a>
                 <a href="news" class="inline-flex items-center gap-1 text-amber-600 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
+                <a href="centers" class="nav-neon text-gray-700 hover:text-teal-600 transition">🏢 أصحاب المراكز</a>
             </nav>
         </div>
     </header>
 
     <!-- شريط الأخبار المتحرك: تحت الشريط العلوي مباشرة. النسخة الثانية مخفية عن قارئات الشاشة
          وعن التنقل بلوحة المفاتيح (aria-hidden + tabindex) لأنها تكرار للحركة السلسة فقط.
-         مقالات لوحة التحكم تُضاف للنسختين معا عبر نفس جلب GitHub API أسفله، بلا طلب شبكة إضافي. -->
+         مقالات لوحة التحكم تُضاف للنسختين معا عبر نفس جلب GitHub API أسفله، دون طلب شبكة إضافي. -->
     <div class="news-ticker" role="region" aria-label="شريط آخر الأخبار">
         <div class="news-ticker-track" id="ticker-track">
             <div class="news-ticker-set" id="ticker-set-1">
                 <a class="news-ticker-item" href="news/sleep-joints"><img src="news/hero-sleep-joints.webp" alt=""><span>تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</span></a>
                 <a class="news-ticker-item" href="news/strength-after-35"><img src="news/hero-strength-after-35.webp" alt=""><span>من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</span></a>
+                <a class="news-ticker-item" href="news/anti-fall-exercises"><img src="news/hero-anti-fall.webp" alt=""><span>السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم</span></a>
             </div>
             <div class="news-ticker-set" id="ticker-set-2" aria-hidden="true">
                 <a class="news-ticker-item" href="news/sleep-joints" tabindex="-1"><img src="news/hero-sleep-joints.webp" alt=""><span>تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</span></a>
                 <a class="news-ticker-item" href="news/strength-after-35" tabindex="-1"><img src="news/hero-strength-after-35.webp" alt=""><span>من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</span></a>
+                <a class="news-ticker-item" href="news/anti-fall-exercises" tabindex="-1"><img src="news/hero-anti-fall.webp" alt=""><span>السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم</span></a>
             </div>
         </div>
     </div>
@@ -92,7 +99,7 @@
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4">أخبار في عالم الصحة</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">مقالات أصلية بصياغتنا، موثقة بالمصادر العلمية: معلومة موثوقة، ونصيحة عملية، وروابط الأبحاث الأصلية — بلا نقل وبلا مبالغة.</p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">مقالات أصلية بصياغتنا، موثقة بالمصادر العلمية: معلومة موثوقة، ونصيحة عملية، وروابط الأبحاث الأصلية — دون نقل ودون مبالغة.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -113,6 +120,16 @@
                         <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/strength-after-35" class="hover:underline">من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</a></h2>
                         <p class="text-gray-600 leading-relaxed flex-grow">ذروة قوتك تكون بين 25 و35 سنة، ثم يبدأ تراجع هادئ لا تشعر به إلا بعد سنوات: من 3 إلى 8 بالمئة من الكتلة العضلية كل عقد. الخبر الجيد: هذا التراجع من أكثر عمليات الشيخوخة قابلية للعكس — وهذا ما يثبته العلم.</p>
                         <a href="news/strength-after-35" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/anti-fall-exercises"><img src="news/hero-anti-fall.webp" alt="سيدة مسنة تتدرب على التوازن بجانب كرسي في غرفة مشمسة" class="w-full h-56 object-cover"></a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · التوازن والوقاية من السقوط</p>
+                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/anti-fall-exercises" class="hover:underline">السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم</a></h2>
+                        <p class="text-gray-600 leading-relaxed flex-grow">واحد من كل 4 أشخاص فوق 65 سنة يسقط كل عام — لكن مراجعة كوكرين لأكثر من 100 تجربة تثبت أن تمارين التوازن تخفض معدل السقوط بحوالي الربع، والبرامج المتنوعة بأكثر من الثلث. 5 تمارين بسيطة تبدأ بها من بيتك.</p>
+                        <a href="news/anti-fall-exercises" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
                     </div>
                 </article>
 
@@ -196,7 +213,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
     }).join('');
     section.style.display='block';
     /* نفس مقالات لوحة التحكم تدخل شريط الأخبار المتحرك: نفس العنصر يُضاف للنسختين حتى يبقى
-       عرضهما متساويا وتدور الحركة بسلاسة. نسخة الشريط الثانية بلا تركيز لوحة مفاتيح لأنها تكرار مرئي فقط. */
+       عرضهما متساويا وتدور الحركة بسلاسة. نسخة الشريط الثانية دون تركيز لوحة مفاتيح لأنها تكرار مرئي فقط. */
     var t1=document.getElementById('ticker-set-1'), t2=document.getElementById('ticker-set-2');
     if(t1 && t2){
       var tItem=function(a,tab){
@@ -209,7 +226,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
     }
   });
 })
-.catch(function(){ /* بلا مقالات لوحة تحكم بعد — القسم يبقى مخفي */ });
+.catch(function(){ /* دون مقالات لوحة تحكم بعد — القسم يبقى مخفي */ });
 })();
 </script>
 

@@ -28,7 +28,11 @@
         .pattern-bg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%230f766e' stroke-opacity='0.07' stroke-width='1.5'%3E%3Cpolygon points='24,24 72,24 72,72 24,72'/%3E%3Cpolygon points='48,14 82,48 48,82 14,48'/%3E%3Ccircle cx='48' cy='48' r='5'/%3E%3Ccircle cx='0' cy='0' r='4'/%3E%3Ccircle cx='96' cy='0' r='4'/%3E%3Ccircle cx='0' cy='96' r='4'/%3E%3Ccircle cx='96' cy='96' r='4'/%3E%3C/g%3E%3C/svg%3E"); background-size: 96px 96px; }
         .pattern-band { background-color: #134e4a; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.11' stroke-width='1.5'%3E%3Cpolygon points='24,24 72,24 72,72 24,72'/%3E%3Cpolygon points='48,14 82,48 48,82 14,48'/%3E%3Ccircle cx='48' cy='48' r='5' stroke='%23c9a227' stroke-opacity='0.4'/%3E%3Ccircle cx='0' cy='0' r='4'/%3E%3Ccircle cx='96' cy='0' r='4'/%3E%3Ccircle cx='0' cy='96' r='4'/%3E%3Ccircle cx='96' cy='96' r='4'/%3E%3C/g%3E%3C/svg%3E"); background-size: 96px 96px; }
         .hadith-card { background-color: #fffdf7; border: 2px solid #c9a227; }
-    </style>
+    nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
+nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
+@keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
+</style>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -70,6 +74,7 @@
                     <a href="app" class="text-gray-700 hover:text-teal-600 font-semibold transition">التطبيق 📱</a>
                     <a href="tools" class="text-gray-700 hover:text-teal-600 font-semibold transition">الأدوات</a>
                     <a href="/news" class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
+                    <a href="centers" class="nav-neon text-gray-700 hover:text-teal-600 font-semibold transition">🏢 أصحاب المراكز</a>
                 </div>
                 <div class="hidden md:block flex-shrink-0">
                     <button class="open-modal-btn primary-bg hover:bg-teal-800 text-white px-6 py-2 rounded-full font-bold shadow-md transition transform hover:scale-105">إحجز موعدك</button>
@@ -84,6 +89,7 @@
             <a href="app" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">التطبيق 📱</a>
             <a href="tools" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الأدوات</a>
             <a href="/news" class="flex items-center gap-2 text-amber-600 font-bold text-lg border-b border-gray-100 pb-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
+            <a href="centers" class="nav-neon block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">🏢 أصحاب المراكز</a>
             <button class="open-modal-btn w-full primary-bg hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-bold shadow-md transition mt-2">إحجز موعدك الآن</button>
         </div>
     </nav>
