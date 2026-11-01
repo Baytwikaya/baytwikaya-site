@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Assistant Intelligent — Réservé aux centres de hijama (cupping) | Bayt wikaya</title>
+<meta name="description" content="L'Assistant Intelligent : version v3.0.1 pour Windows pour les centres de hijama — cartes de points interactives, assistant intelligent jusqu'à 3 cas, documentation complète des séances et mises à jour automatiques.">
+<link rel="alternate" hreflang="ar" href="https://baytwikaya.site/centers">
+<link rel="alternate" hreflang="en" href="https://baytwikaya.site/en/centers">
+<link rel="alternate" hreflang="fr" href="https://baytwikaya.site/fr/centers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--paper:#F7F5F0;--card:#FFFFFF;--ink:#16211C;--muted:#5C6B62;--green:#0B3D2E;--green2:#14563F;--gold:#B9975B;--line:#E6DFD0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Cairo,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8}
+a{color:var(--green2);text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:96px 20px 0}
+.hero{text-align:center;padding:44px 0 10px}
+.badge{display:inline-block;background:#EFE7D3;color:#6B5A2E;border-radius:999px;padding:4px 16px;font-weight:800;font-size:.9rem}
+.hero h1{font-size:2.7rem;margin:12px 0 8px}
+.hero p{color:var(--muted);max-width:700px;margin:0 auto 8px;font-size:1.1rem}
+.hero p b{color:var(--ink)}
+.title-row{display:flex;align-items:center;justify-content:center;gap:14px}
+.app-icon{width:64px;height:64px;border-radius:16px;box-shadow:0 2px 10px rgba(20,30,25,.18);flex-shrink:0}
+.hero-banner{margin:18px 0 4px}
+.hero-banner img{width:100%;border-radius:20px;border:1px solid var(--line);display:block;box-shadow:0 4px 20px rgba(20,30,25,.10)}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+.btn{display:inline-block;border-radius:999px;padding:14px 30px;font-weight:900;font-size:1.05rem;font-family:inherit;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:#241E0E}
+.btn-green{background:var(--green);color:#fff}
+.note{color:var(--muted);font-size:.95rem;text-align:center;margin:0}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;font-weight:800;font-size:.95rem}
+h2.section{font-size:1.6rem;margin:32px 0 4px}
+.sec-note{color:var(--muted);margin:0 0 8px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.feat h3{margin:0 0 6px;font-size:1.1rem}
+.feat p{margin:0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin:20px 0;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.card h2{font-size:1.4rem;margin:0 0 12px}
+.step{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px}
+.step .num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+.step p{margin:0;color:var(--muted)}
+.step p b{color:var(--ink)}
+.screen{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin:22px 0;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.screen h3{margin:0 0 6px;font-size:1.3rem}
+.screen p{margin:0 0 14px;color:var(--muted)}
+.screen img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+
+.tour-slider{position:relative;margin:22px 0}
+.tour-viewport{overflow:hidden;border-radius:20px;border:1px solid var(--line);background:var(--card);box-shadow:0 2px 12px rgba(20,30,25,.05);touch-action:pan-y;user-select:none}
+.tour-track{display:flex;transition:transform .45s ease}
+.tour-slide{flex:0 0 100%;box-sizing:border-box;padding:22px}
+.tour-slide img{width:auto;max-width:100%;max-height:520px;margin:0 auto;border-radius:14px;border:1px solid var(--line);display:block}
+.tour-slide figcaption{margin-top:14px}
+.tour-slide figcaption strong{display:block;font-size:1.25rem;margin-bottom:6px}
+.tour-slide figcaption span{color:var(--muted)}
+.tour-arrow{position:absolute;top:42%;width:52px;height:52px;border-radius:50%;border:none;background:#1ED760;color:#fff;cursor:pointer;font-size:30px;font-weight:800;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.30);z-index:2}
+.tour-prev{right:12px}
+.tour-next{left:12px}
+.tour-dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.tour-dots button{width:10px;height:10px;border-radius:50%;border:0;background:#cbd5cf;cursor:pointer;padding:0}
+.tour-dots button.on{background:#10b981;width:26px;border-radius:999px}
+.tour-count{text-align:center;color:var(--muted);margin-top:8px;font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.tour-track{transition:none}}
+.soon{background:var(--green);color:#EAF3EC;border-radius:20px;padding:26px;margin:22px 0;text-align:center}
+.soon h2{color:#fff;margin:0 0 6px;font-size:1.4rem}
+.soon p{margin:0;color:#C4D8CC}
+.faq h3{margin:0 0 6px;font-size:1.05rem}
+.faq p{margin:0 0 16px;color:var(--muted)}
+.foot{border-top:1px solid var(--line);padding:20px 0 40px;color:#8A948C;font-size:.85rem;text-align:center}
+@media(max-width:720px){.features,.strip{grid-template-columns:1fr}.hero h1{font-size:2.1rem}.app-icon{width:52px;height:52px}}
+<style>
+
+nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
+nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
+@keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
+</style>
+</style>
+<link rel="canonical" href="https://baytwikaya.site/fr/centers">
+</head>
+<body>
+
+
+<nav class="bg-white shadow-md fixed w-full z-40 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img width="800" height="313" src="../baytwikaya-logo.png" alt="Logo Bayt wikaya" class="h-14 w-auto object-contain">
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-teal-700 hover:text-teal-900 focus:outline-none p-2" aria-label="Menu">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center space-x-4 flex-grow justify-center">
+                    <a href="index.html" class="text-gray-700 hover:text-teal-600 font-semibold transition">Accueil</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-teal-600 font-semibold transition">Services</a>
+                    <a href="../sunnah" class="text-gray-700 hover:text-teal-600 font-semibold transition">Jours hijama</a>
+                    <a href="prices" class="text-gray-700 hover:text-teal-600 font-semibold transition">Tarifs</a>
+                    <a href="app" class="text-gray-700 hover:text-teal-600 font-semibold transition">Appli 📱</a>
+                    <a href="tools" class="text-gray-700 hover:text-teal-600 font-semibold transition">Outils</a>
+                    <a href="../news" class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>Actualités</a>
+                    <a href="centers" class="nav-neon text-teal-600 font-bold transition">🏢 Espace centres</a>
+                </div>
+            <div class="relative flex-shrink-0"><button type="button" id="langBtn" class="flex items-center gap-1.5 text-teal-700 hover:text-teal-900 font-semibold px-2 py-1 rounded-lg hover:bg-teal-50 focus:outline-none" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>FR</span><span aria-hidden="true">⌄</span></button><div id="langMenu" hidden class="absolute right-0 top-full mt-2 w-52 bg-white rounded-lg shadow-xl border border-gray-100 py-1 z-50"><a href="../centers.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold"><img src="../assets/flags/ma.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>AR</span><span>العربية</span></a><a href="../en/centers.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold"><img src="../assets/flags/gb.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>EN</span><span>English</span></a><a href="centers.html" aria-current="true" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold font-bold text-teal-700"><img src="../assets/flags/fr.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>FR</span><span>Français</span><span class="ml-auto" aria-hidden="true">✓</span></a></div></div></div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-teal-100 flex-col py-4 px-6 space-y-4 z-50">
+            <a href="index.html" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Accueil</a>
+            <a href="index.html#services" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Services</a>
+            <a href="../sunnah" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Jours hijama</a>
+            <a href="prices" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Tarifs</a>
+            <a href="app" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Appli 📱</a>
+            <a href="tools" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Outils</a>
+            <a href="../news" class="flex items-center gap-2 text-amber-600 font-bold text-lg border-b border-gray-100 pb-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>Actualités</a>
+            <a href="centers" class="nav-neon block text-teal-600 font-bold text-lg border-b border-gray-100 pb-2">🏢 Espace centres</a>
+        </div>
+    </nav>
+<script>
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+</script>
+<main class="wrap">
+
+
+  <div class="hero">
+    <span class="badge">Réservé aux centres de hijama</span>
+    <div class="title-row"><img width="512" height="512" class="app-icon" src="../assets/centers/app-icon.png" alt="Icône de l'application Assistant Intelligent"><h1>L'Assistant Intelligent</h1></div>
+    <p>Un outil professionnel pour les centres de hijama : <b>cartes de points interactives, assistant intelligent qui suggère les points selon le cas, et documentation complète des séances</b> — le tout en local sur votre appareil, avec des mises à jour automatiques depuis l'application.</p>
+    <div class="hero-banner"><img width="1800" height="600" src="../assets/centers/hero-room.jpg" alt="Salle de hijama professionnelle — le robot de l'Assistant Intelligent pointe vers la carte des points de hijama sur le corps"></div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://drive.google.com/file/d/17jciwtfiWBY8-Brbwpy-wXb89S9avOX_/view?usp=drivesdk">⬇ Télécharger l'installateur — Version 3.0.1 pour Windows</a>
+      <button class="btn btn-green" data-wa="المساعد الذكي">Demander la licence officielle via WhatsApp ←</button>
+    </div>
+    <p class="note">Version 3.0.1 pour Windows, d'environ 115 Mo. Après l'installation, vous trouverez un raccourci sur le bureau et dans le menu Démarrer, et la licence officielle est accordée au nom et avec le code après la demande et le paiement.</p>
+  </div>
+
+  <div class="strip">
+    <div>📴 100 % local</div>
+    <div>🔒 Licence nominative</div>
+    <div>🗂️ Documentation complète des séances</div>
+    <div>🔄 Mises à jour automatiques</div>
+  </div>
+
+  <h2 class="section">Que fait l'Assistant Intelligent ?</h2>
+  <p class="sec-note">Six fonctionnalités pratiques, conçues au sein d'un vrai centre.</p>
+  <div class="features">
+    <div class="feat"><h3>🗺️ Carte de points interactive</h3><p>154 points sur les cartes du dos, de l'avant, du visage et des membres — sélectionnez directement sur la carte en touchant.</p></div>
+    <div class="feat"><h3>🤖 L'Assistant Intelligent</h3><p>Choisissez jusqu'à 3 cas en une fois, et il suggère les points adaptés — 72 cas prêts, et ajoutez n'importe quel emplacement manuellement par son numéro.</p></div>
+    <div class="feat"><h3>☪️ Points de la Sunna et préventifs</h3><p>Ensembles prêts en un clic : points de la Sunna, ou préventifs, ou les deux ensemble.</p></div>
+    <div class="feat"><h3>🗂️ Documentation complète</h3><p>Dossiers clients avec recherche rapide, registre des séances, fiche de séance à imprimer, et consentement éclairé avant chaque séance.</p></div>
+    <div class="feat"><h3>🔒 Protection renforcée</h3><p>Verrouillage par code PIN, sauvegardes chiffrées (AES-GCM) et données 100 % locales.</p></div>
+    <div class="feat"><h3>🔄 Mises à jour automatiques</h3><p>Lorsqu'une nouvelle version paraît, l'application vous alerte et se met à jour en un clic — et la licence et les données vous suivent automatiquement.</p></div>
+  </div>
+
+  <div class="card">
+    <h2>Comment ça marche ?</h2>
+    <div class="step"><div class="num">1</div><p><b>Téléchargez la version v3.0.1</b> — via le bouton de téléchargement direct sur cette page (Windows, installateur officiel à installer sur votre ordinateur).</p></div>
+    <div class="step"><div class="num">2</div><p><b>Activez avec le nom et le code</b> — demandez la licence via WhatsApp, payez par virement bancaire, et recevez le code propre au nom de votre centre.</p></div>
+    <div class="step"><div class="num">3</div><p><b>Enregistrez les clients et les séances</b> — depuis la carte interactive, les points de la Sunna et préventifs, ou l'Assistant Intelligent.</p></div>
+    <div class="step"><div class="num">4</div><p><b>Documentez et mettez à jour</b> — chaque séance est enregistrée dans le registre, et les mises à jour vous parviennent dans l'application en un clic.</p></div>
+  </div>
+
+  <h2 class="section">Les normes selon lesquelles nous travaillons</h2>
+  <p class="sec-note">Avant d'être un outil, c'est un engagement professionnel.</p>
+  <div class="features">
+    <div class="feat"><h3>🛡️ La sécurité d'abord</h3><p>Tri des contre-indications et consentement éclairé avant chaque séance, en conformité avec les normes de l'OMS en matière de sécurité et de stérilisation.</p></div>
+    <div class="feat"><h3>🔒 Confidentialité absolue</h3><p>Vos données ne quittent jamais votre appareil — stockage local uniquement, sans serveurs ni suivi.</p></div>
+    <div class="feat"><h3>📖 Contenu professionnel rigoureux</h3><p>Cartes et points professionnels, loin des superstitions et des allégations non prouvées.</p></div>
+    <div class="feat"><h3>🗂️ Documentation et transparence</h3><p>Chaque séance est documentée : le client, le type, les points, les remarques et le consentement — une référence professionnelle complète.</p></div>
+  </div>
+
+  <h2 class="section">Découvrez l'application de l'intérieur — en vidéo</h2>
+  <p class="sec-note">Visite filmée de l'Assistant Intelligent — le suivi professionnel de la hijama : les clients, les séances, les cartes de points et l'Assistant Intelligent. Appuyez sur lecture et regardez directement ici, sans quitter la page.</p>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;margin:22px 0"><iframe src="https://www.youtube.com/embed/Cms0hGWzS1A" title="L'Assistant Intelligent — Suivi professionnel de la hijama | Visite de l'application" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+
+  <h2 class="section">Visite de l'application — page par page</h2>
+  <p class="sec-note">De vraies captures depuis l'application, page par page.</p>
+
+  <div class="tour-slider" dir="rtl">
+    <div class="tour-viewport">
+      <div class="tour-track">
+      <figure class="tour-slide">
+        <img width="1200" height="872" src="../assets/centers/screen-activation.png" alt="Page d'activation de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>1 — Activation</strong><span>Saisissez le nom du centre ou du praticien et le code de licence. La licence est liée au nom, pour un seul appareil, et le nom apparaît en haut de votre version.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="972" src="../assets/centers/screen-clients.png" alt="Page Clients de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>2 — Clients</strong><span>Créez le dossier de chaque client : nom complet, téléphone, âge, sexe, contre-indications et mots d'attention (anticoagulants, diabète, tension...), et remarques — et recherchez dans la liste par nom ou téléphone, et modifiez n'importe quel dossier en un clic.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="792" src="../assets/centers/screen-session.png" alt="Page Nouvelle séance de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>3 — Nouvelle séance</strong><span>Enregistrez la séance : le client, la date, le type de hijama, la durée et les remarques, avec le consentement éclairé.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="746" src="../assets/centers/screen-map.png" alt="Carte de points interactive de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>4 — Carte de points interactive</strong><span>Choisissez les points depuis la carte interactive, ou en un clic depuis les points de la Sunna ou préventifs ou l'Assistant Intelligent (jusqu'à 3 cas), et ajoutez n'importe quel emplacement manuellement par son numéro.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="775" src="../assets/centers/screen-map-front.png" alt="Carte : avant, de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>5 — Carte : l'avant</strong><span>Affichez la carte de face : les emplacements de la face avant sont numérotés et clairs, et les points sélectionnés apparaissent dans la vue à laquelle ils appartiennent.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="450" src="../assets/centers/screen-map-face.png" alt="Carte du visage de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>6 — Carte : le visage</strong><span>Carte du visage : les emplacements du visage et de la tête dans une vue indépendante et claire, sans encombrement.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="657" src="../assets/centers/screen-map-limbs.png" alt="Carte des membres de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>7 — Carte : les membres</strong><span>Carte des membres : les emplacements des mains et des pieds dans une seule vue, choisissez directement parmi eux.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="878" src="../assets/centers/screen-ai.png" alt="Boutons de l'Assistant Intelligent et panneau de choix des cas" draggable="false" decoding="async">
+        <figcaption><strong>8 — L'Assistant Intelligent</strong><span>Appuyez sur « Assistant Intelligent », choisissez jusqu'à 3 cas, les emplacements sont alors suggérés automatiquement et seuls ceux-ci apparaissent sur la carte — et les boutons Sunna et préventifs au-dessus de la carte pour un choix rapide.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="552" src="../assets/centers/screen-records.png" alt="Page Registre des séances de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>9 — Registre des séances</strong><span>Tableau complet de toutes les séances : la date, le client, le type, les emplacements et les remarques — avec une fiche de séance à imprimer pour chaque séance, votre référence pour l'historique du centre et le suivi de chaque client.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="937" src="../assets/centers/screen-settings.png" alt="Page Paramètres et protection de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>10 — Paramètres et protection</strong><span>La licence et la version avec vérification des mises à jour, verrouillage par code PIN à chaque ouverture, sauvegardes chiffrées (AES-GCM) avec exportation et importation — et vos données restent toujours locales.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="655" src="../assets/centers/screen-support.png" alt="Page Assistance de l'Assistant Intelligent" draggable="false" decoding="async">
+        <figcaption><strong>11 — Assistance</strong><span>Contactez-nous directement depuis l'application : WhatsApp, téléphone, e-mail et version de l'application — pour une assistance rapide et précise.</span></figcaption>
+      </figure>
+      </div>
+    </div>
+    <button type="button" class="tour-arrow tour-prev" aria-label="Image précédente">&#8250;</button>
+    <button type="button" class="tour-arrow tour-next" aria-label="Image suivante">&#8249;</button>
+    <div class="tour-dots"><button type="button" aria-label="Image 1"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button><button type="button" aria-label="Image 5"></button><button type="button" aria-label="Image 6"></button><button type="button" aria-label="Image 7"></button><button type="button" aria-label="Image 8"></button><button type="button" aria-label="Image 9"></button><button type="button" aria-label="Image 10"></button><button type="button" aria-label="Image 11"></button></div>
+    <div class="tour-count">1 / 11</div>
+  </div>
+
+<script>
+(function(){
+  var s=document.querySelector('.tour-slider'); if(!s) return;
+  var track=s.querySelector('.tour-track');
+  var dots=s.querySelectorAll('.tour-dots button');
+  var count=s.querySelector('.tour-count');
+  var n=s.querySelectorAll('.tour-slide').length, i=0;
+  function go(k){ i=((k%n)+n)%n; track.style.transform='translateX('+(i*100)+'%)';
+    dots.forEach(function(d,j){ d.classList.toggle('on', j===i); });
+    if(count) count.textContent=(i+1)+' / '+n; }
+  s.querySelector('.tour-next').addEventListener('click', function(){ go(i+1); });
+  s.querySelector('.tour-prev').addEventListener('click', function(){ go(i-1); });
+  dots.forEach(function(d,j){ d.addEventListener('click', function(){ go(j); }); });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowLeft') go(i+1);
+    if(e.key==='ArrowRight') go(i-1);
+  });
+  var x0=null;
+  function start(e){ x0=(e.touches?e.touches[0].clientX:e.clientX); }
+  function end(e){ if(x0===null) return; var x=(e.changedTouches?e.changedTouches[0].clientX:e.clientX); var dx=x-x0; x0=null;
+    if(dx<-40) go(i+1); else if(dx>40) go(i-1); }
+  var vp=s.querySelector('.tour-viewport');
+  vp.addEventListener('touchstart', start, {passive:true});
+  vp.addEventListener('touchend', end);
+  vp.addEventListener('mousedown', start);
+  vp.addEventListener('mouseup', end);
+  go(0);
+})();
+</script>
+
+  <div class="soon">
+    <h2>Autres logiciels pour les centres — bientôt ⏳</h2>
+    <p>Nous préparons de nouveaux outils pour les propriétaires de centres, et nous les annoncerons ici dès qu'ils seront prêts.</p>
+  </div>
+
+  <div class="card faq">
+    <h2>Questions fréquentes</h2>
+    <h3>Comment activer l'application ?</h3>
+    <p>Téléchargez la version depuis cette page, demandez la licence via WhatsApp, payez par virement bancaire, et recevez le code propre au nom de votre centre — saisissez-le sur l'écran d'activation.</p>
+    <h3>L'outil fonctionne-t-il sans Internet ?</h3>
+    <p>Oui, l'usage quotidien est entièrement local sur votre appareil : les clients, les séances et les sauvegardes. Internet n'est requis que pour le premier téléchargement et pour la vérification des mises à jour.</p>
+    <h3>Puis-je l'utiliser sur plus d'un appareil ?</h3>
+    <p>Une licence pour un seul appareil, au nom.</p>
+    <h3>Comment me parviennent les mises à jour ?</h3>
+    <p>L'application vérifie automatiquement : lorsqu'une nouvelle version paraît, une alerte s'affiche, et un seul clic la télécharge et l'installe — et la licence et les données vous suivent automatiquement.</p>
+    <h3>Comment payer ?</h3>
+    <p>Par virement bancaire — demandez via WhatsApp (depuis CIH, l'activation est immédiate, et depuis une autre banque, après la réception du virement).</p>
+    <h3>Quelles sont les conditions de fonctionnement ?</h3>
+    <p>Version Windows (ordinateur). Installateur officiel : installez-le sur votre ordinateur, vous trouverez un raccourci sur le bureau et dans le menu Démarrer, et la désinstallation se fait depuis le Panneau de configuration.</p>
+  </div>
+
+  <div class="foot">© 2026 Bayt wikaya — Tous droits réservés ·</div>
+</main>
+<script>
+(function(){
+document.querySelectorAll('[data-wa]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var msg = 'السلام عليكم، أريد طلب الترخيص الرسمي لـ ' + btn.getAttribute('data-wa') + '، مع الثمن وطريقة التفعيل من فضلك.';
+    window.open('https://wa.me/212664651301?text=' + encodeURIComponent(msg), '_blank');
+  });
+});
+})();
+</script>
+<script>
+(function(){
+var btn = document.getElementById('mobile-menu-btn');
+var menu = document.getElementById('mobile-menu');
+if (btn && menu) {
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); var lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} var lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');} });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  });
+}
+})();
+</script>
+</body>
+</html>

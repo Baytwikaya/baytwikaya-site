@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Smart Assistant — for cupping centers | Bayt wikaya</title>
+<meta name="description" content="The Smart Assistant: version 3.0.1 for Windows for cupping centers — interactive point maps, a smart assistant for up to 3 conditions, full session documentation, and automatic updates.">
+<link rel="alternate" hreflang="ar" href="https://baytwikaya.site/centers">
+<link rel="alternate" hreflang="en" href="https://baytwikaya.site/en/centers">
+<link rel="alternate" hreflang="fr" href="https://baytwikaya.site/fr/centers">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--paper:#F7F5F0;--card:#FFFFFF;--ink:#16211C;--muted:#5C6B62;--green:#0B3D2E;--green2:#14563F;--gold:#B9975B;--line:#E6DFD0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Cairo,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8}
+a{color:var(--green2);text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:96px 20px 0}
+.hero{text-align:center;padding:44px 0 10px}
+.badge{display:inline-block;background:#EFE7D3;color:#6B5A2E;border-radius:999px;padding:4px 16px;font-weight:800;font-size:.9rem}
+.hero h1{font-size:2.7rem;margin:12px 0 8px}
+.hero p{color:var(--muted);max-width:700px;margin:0 auto 8px;font-size:1.1rem}
+.hero p b{color:var(--ink)}
+.title-row{display:flex;align-items:center;justify-content:center;gap:14px}
+.app-icon{width:64px;height:64px;border-radius:16px;box-shadow:0 2px 10px rgba(20,30,25,.18);flex-shrink:0}
+.hero-banner{margin:18px 0 4px}
+.hero-banner img{width:100%;border-radius:20px;border:1px solid var(--line);display:block;box-shadow:0 4px 20px rgba(20,30,25,.10)}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+.btn{display:inline-block;border-radius:999px;padding:14px 30px;font-weight:900;font-size:1.05rem;font-family:inherit;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:#241E0E}
+.btn-green{background:var(--green);color:#fff}
+.note{color:var(--muted);font-size:.95rem;text-align:center;margin:0}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;font-weight:800;font-size:.95rem}
+h2.section{font-size:1.6rem;margin:32px 0 4px}
+.sec-note{color:var(--muted);margin:0 0 8px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.feat h3{margin:0 0 6px;font-size:1.1rem}
+.feat p{margin:0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin:20px 0;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.card h2{font-size:1.4rem;margin:0 0 12px}
+.step{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px}
+.step .num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+.step p{margin:0;color:var(--muted)}
+.step p b{color:var(--ink)}
+.screen{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin:22px 0;box-shadow:0 2px 12px rgba(20,30,25,.05)}
+.screen h3{margin:0 0 6px;font-size:1.3rem}
+.screen p{margin:0 0 14px;color:var(--muted)}
+.screen img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+
+.tour-slider{position:relative;margin:22px 0}
+.tour-viewport{overflow:hidden;border-radius:20px;border:1px solid var(--line);background:var(--card);box-shadow:0 2px 12px rgba(20,30,25,.05);touch-action:pan-y;user-select:none}
+.tour-track{display:flex;transition:transform .45s ease}
+.tour-slide{flex:0 0 100%;box-sizing:border-box;padding:22px}
+.tour-slide img{width:auto;max-width:100%;max-height:520px;margin:0 auto;border-radius:14px;border:1px solid var(--line);display:block}
+.tour-slide figcaption{margin-top:14px}
+.tour-slide figcaption strong{display:block;font-size:1.25rem;margin-bottom:6px}
+.tour-slide figcaption span{color:var(--muted)}
+.tour-arrow{position:absolute;top:42%;width:52px;height:52px;border-radius:50%;border:none;background:#1ED760;color:#fff;cursor:pointer;font-size:30px;font-weight:800;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.30);z-index:2}
+.tour-prev{right:12px}
+.tour-next{left:12px}
+.tour-dots{display:flex;gap:8px;justify-content:center;margin-top:14px}
+.tour-dots button{width:10px;height:10px;border-radius:50%;border:0;background:#cbd5cf;cursor:pointer;padding:0}
+.tour-dots button.on{background:#10b981;width:26px;border-radius:999px}
+.tour-count{text-align:center;color:var(--muted);margin-top:8px;font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.tour-track{transition:none}}
+.soon{background:var(--green);color:#EAF3EC;border-radius:20px;padding:26px;margin:22px 0;text-align:center}
+.soon h2{color:#fff;margin:0 0 6px;font-size:1.4rem}
+.soon p{margin:0;color:#C4D8CC}
+.faq h3{margin:0 0 6px;font-size:1.05rem}
+.faq p{margin:0 0 16px;color:var(--muted)}
+.foot{border-top:1px solid var(--line);padding:20px 0 40px;color:#8A948C;font-size:.85rem;text-align:center}
+@media(max-width:720px){.features,.strip{grid-template-columns:1fr}.hero h1{font-size:2.1rem}.app-icon{width:52px;height:52px}}
+<style>
+/* Center owners link - neon underline under the link */
+nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
+nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
+@keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
+</style>
+</style>
+<link rel="canonical" href="https://baytwikaya.site/en/centers">
+</head>
+<body>
+
+<nav class="bg-white shadow-md fixed w-full z-40 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img width="800" height="313" src="../baytwikaya-logo.png" alt="Bayt wikaya logo" class="h-14 w-auto object-contain">
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-teal-700 hover:text-teal-900 focus:outline-none p-2" aria-label="Menu">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center space-x-4 flex-grow justify-center">
+                    <a href="index.html" class="text-gray-700 hover:text-teal-600 font-semibold transition">Home</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-teal-600 font-semibold transition">Services</a>
+                    <a href="../sunnah" class="text-gray-700 hover:text-teal-600 font-semibold transition">Cupping days</a>
+                    <a href="prices" class="text-gray-700 hover:text-teal-600 font-semibold transition">Price list</a>
+                    <a href="app" class="text-gray-700 hover:text-teal-600 font-semibold transition">The app 📱</a>
+                    <a href="tools" class="text-gray-700 hover:text-teal-600 font-semibold transition">Tools</a>
+                    <a href="../news" class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>News</a>
+                    <a href="centers" class="nav-neon text-teal-600 font-bold transition">🏢 Center owners</a>
+                </div>
+            <div class="relative flex-shrink-0"><button type="button" id="langBtn" class="flex items-center gap-1.5 text-teal-700 hover:text-teal-900 font-semibold px-2 py-1 rounded-lg hover:bg-teal-50 focus:outline-none" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span><span aria-hidden="true">⌄</span></button><div id="langMenu" hidden class="absolute right-0 top-full mt-2 w-52 bg-white rounded-lg shadow-xl border border-gray-100 py-1 z-50"><a href="../centers.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold"><img src="../assets/flags/ma.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>AR</span><span>العربية</span></a><a href="centers.html" aria-current="true" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold font-bold text-teal-700"><img src="../assets/flags/gb.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>EN</span><span>English</span><span class="ml-auto" aria-hidden="true">✓</span></a><a href="../fr/centers.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold"><img src="../assets/flags/fr.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>FR</span><span>Français</span></a></div></div></div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-teal-100 flex-col py-4 px-6 space-y-4 z-50">
+            <a href="index.html" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Home</a>
+            <a href="index.html#services" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Services</a>
+            <a href="../sunnah" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Cupping days</a>
+            <a href="prices" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Price list</a>
+            <a href="app" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">The app 📱</a>
+            <a href="tools" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">Tools</a>
+            <a href="../news" class="flex items-center gap-2 text-amber-600 font-bold text-lg border-b border-gray-100 pb-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>News</a>
+            <a href="centers" class="nav-neon block text-teal-600 font-bold text-lg border-b border-gray-100 pb-2">🏢 Center owners</a>
+        </div>
+    </nav>
+<script>
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+</script>
+<main class="wrap">
+
+
+  <div class="hero">
+    <span class="badge">For cupping centers</span>
+    <div class="title-row"><img width="512" height="512" class="app-icon" src="../assets/centers/app-icon.png" alt="Smart Assistant app icon"><h1>Smart Assistant</h1></div>
+    <p>A professional tool for cupping centers: <b>Interactive point maps, a smart assistant that suggests points by condition, and full session documentation</b> — and everything is local on your device, with automatic updates from within the app.</p>
+    <div class="hero-banner"><img width="1800" height="600" src="../assets/centers/hero-room.jpg" alt="A professional cupping room — the Smart Assistant robot pointing to the cupping point map on the body"></div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://drive.google.com/file/d/17jciwtfiWBY8-Brbwpy-wXb89S9avOX_/view?usp=drivesdk">⬇ Download the installer — version 3.0.1 for Windows</a>
+      <button class="btn btn-green" data-wa="Smart Assistant">Request the official licence via WhatsApp →</button>
+    </div>
+    <p class="note">Version 3.0.1 for Windows, about 115 MB in size. After installation you will find a shortcut on the desktop and in the Start menu, and the official licence is granted by name and code after request and payment.</p>
+  </div>
+
+  <div class="strip">
+    <div>📴 100% local</div>
+    <div>🔒 Licence by name</div>
+    <div>🗂️ Full session documentation</div>
+    <div>🔄 Automatic updates</div>
+  </div>
+
+  <h2 class="section">What does the Smart Assistant do?</h2>
+  <p class="sec-note">Six practical features, designed from inside a real center.</p>
+  <div class="features">
+    <div class="feat"><h3>🗺️ Interactive point map</h3><p>154 points on back, front, face and limb maps — tap to select directly on the map.</p></div>
+    <div class="feat"><h3>🤖 Smart Assistant</h3><p>Choose up to 3 conditions at once, and it suggests the right points — 72 ready conditions, and add any point manually by its number.</p></div>
+    <div class="feat"><h3>☪️ Sunnah and preventive points</h3><p>Ready sets in one tap: Sunnah points, preventive points, or both together.</p></div>
+    <div class="feat"><h3>🗂️ Full documentation</h3><p>Client files with quick search, a session log, a printable session sheet, and informed consent before each session.</p></div>
+    <div class="feat"><h3>🔒 Strong protection</h3><p>PIN lock, encrypted backups (AES-GCM), and 100% local data.</p></div>
+    <div class="feat"><h3>🔄 Automatic updates</h3><p>When a new version is released, the app alerts you and updates itself in one tap — and your licence and data move with you automatically.</p></div>
+  </div>
+
+  <div class="card">
+    <h2>How does it work?</h2>
+    <div class="step"><div class="num">1</div><p><b>Download version 3.0.1</b> — from the direct download button on this page (Windows, an official installer installed on your computer).</p></div>
+    <div class="step"><div class="num">2</div><p><b>Activate by name and code</b> — Request the licence via WhatsApp, pay by bank transfer, and receive the code for your center's name.</p></div>
+    <div class="step"><div class="num">3</div><p><b>Record clients and sessions</b> — From the interactive map, from the Sunnah and preventive points, or from the Smart Assistant.</p></div>
+    <div class="step"><div class="num">4</div><p><b>Document and update</b> — Every session is saved in the log, and updates reach you inside the app in one tap.</p></div>
+  </div>
+
+  <h2 class="section">The standards we work by</h2>
+  <p class="sec-note">Before being a tool, it is a professional commitment.</p>
+  <div class="features">
+    <div class="feat"><h3>🛡️ Safety first</h3><p>Screening for contraindications and informed consent before each session, aligned with WHO standards on safety and sterilization.</p></div>
+    <div class="feat"><h3>🔒 Absolute privacy</h3><p>Your data never leaves your device — local storage only, no servers or tracking.</p></div>
+    <div class="feat"><h3>📖 Disciplined professional content</h3><p>Professional maps and points, far from superstition and unproven claims.</p></div>
+    <div class="feat"><h3>🗂️ Documentation and transparency</h3><p>Every session documented: client, type, points, notes and consent — a complete professional reference.</p></div>
+  </div>
+
+  <h2 class="section">See the app from the inside — on video</h2>
+  <p class="sec-note">A filmed tour inside the Smart Assistant — the professional cupping tracker: clients, sessions, point maps and the Smart Assistant. Press play and watch right here, without leaving the page.</p>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;margin:22px 0"><iframe src="https://www.youtube.com/embed/Cms0hGWzS1A" title="The Smart Assistant — the professional cupping tracker | Inside the app tour" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+
+  <h2 class="section">A tour inside the app — page by page</h2>
+  <p class="sec-note">Real screenshots from inside the app, page by page.</p>
+
+  <div class="tour-slider" dir="rtl">
+    <div class="tour-viewport">
+      <div class="tour-track">
+      <figure class="tour-slide">
+        <img width="1200" height="872" src="../assets/centers/screen-activation.png" alt="Activation page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>1 — Activation</strong><span>Enter the center or practitioner name and the licence code. The licence is tied to the name, for one device, and the name appears at the top of your copy.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="972" src="../assets/centers/screen-clients.png" alt="Clients page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>2 — Clients</strong><span>Create each client file: full name, phone, age, gender, contraindications and alert words (blood thinners, diabetes, blood pressure...), and notes — search the list by name or phone, and edit any file in one tap.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="792" src="../assets/centers/screen-session.png" alt="New session page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>3 — New session</strong><span>Record the session: client, date, cupping type, duration and notes, with informed consent.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="746" src="../assets/centers/screen-map.png" alt="Interactive point map in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>4 — Interactive point map</strong><span>Choose points from the interactive map, or in one tap from the Sunnah or preventive points or the Smart Assistant (up to 3 conditions), and add any point manually by its number.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="775" src="../assets/centers/screen-map-front.png" alt="Front map in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>5 — Map: front</strong><span>View the map from the front: front-side points numbered and clear, and selected points appear in the view they belong to.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="450" src="../assets/centers/screen-map-face.png" alt="Face map in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>6 — Map: face</strong><span>Face map: face and head points in a separate, clear view, without clutter.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="657" src="../assets/centers/screen-map-limbs.png" alt="Limb map in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>7 — Map: limbs</strong><span>Limb map: hand and foot points in one view, choose from them directly.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="878" src="../assets/centers/screen-ai.png" alt="Smart Assistant buttons and condition selection panel" draggable="false" decoding="async">
+        <figcaption><strong>8 — Smart Assistant</strong><span>Tap "Smart Assistant", choose up to 3 conditions, and it suggests the points automatically — only those appear on the map — with the Sunnah and preventive buttons above the map for quick selection.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="552" src="../assets/centers/screen-records.png" alt="Session log page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>9 — Session log</strong><span>A complete table of all sessions: date, client, type, points and notes — with a printable session sheet for each session, your reference for the center's history and each client's follow-up.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="937" src="../assets/centers/screen-settings.png" alt="Settings and protection page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>10 — Settings and protection</strong><span>Licence and version with update checks, PIN lock on every open, encrypted backups (AES-GCM) with export and import — and your data always stays local.</span></figcaption>
+      </figure>
+      <figure class="tour-slide">
+        <img width="1600" height="655" src="../assets/centers/screen-support.png" alt="Support page in the Smart Assistant" draggable="false" decoding="async">
+        <figcaption><strong>11 — Support</strong><span>Contact us directly from inside the app: WhatsApp, phone, email and app version — so support is fast and accurate.</span></figcaption>
+      </figure>
+      </div>
+    </div>
+    <button type="button" class="tour-arrow tour-prev" aria-label="Previous image">&#8249;</button>
+    <button type="button" class="tour-arrow tour-next" aria-label="Next image">&#8250;</button>
+    <div class="tour-dots"><button type="button" aria-label="Image 1"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button><button type="button" aria-label="Image 5"></button><button type="button" aria-label="Image 6"></button><button type="button" aria-label="Image 7"></button><button type="button" aria-label="Image 8"></button><button type="button" aria-label="Image 9"></button><button type="button" aria-label="Image 10"></button><button type="button" aria-label="Image 11"></button></div>
+    <div class="tour-count">1 / 11</div>
+  </div>
+
+<script>
+(function(){
+  var s=document.querySelector('.tour-slider'); if(!s) return;
+  var track=s.querySelector('.tour-track');
+  var dots=s.querySelectorAll('.tour-dots button');
+  var count=s.querySelector('.tour-count');
+  var n=s.querySelectorAll('.tour-slide').length, i=0;
+  function go(k){ i=((k%n)+n)%n; track.style.transform='translateX('+(i*100)+'%)';
+    dots.forEach(function(d,j){ d.classList.toggle('on', j===i); });
+    if(count) count.textContent=(i+1)+' / '+n; }
+  s.querySelector('.tour-next').addEventListener('click', function(){ go(i+1); });
+  s.querySelector('.tour-prev').addEventListener('click', function(){ go(i-1); });
+  dots.forEach(function(d,j){ d.addEventListener('click', function(){ go(j); }); });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowLeft') go(i+1);
+    if(e.key==='ArrowRight') go(i-1);
+  });
+  var x0=null;
+  function start(e){ x0=(e.touches?e.touches[0].clientX:e.clientX); }
+  function end(e){ if(x0===null) return; var x=(e.changedTouches?e.changedTouches[0].clientX:e.clientX); var dx=x-x0; x0=null;
+    if(dx<-40) go(i+1); else if(dx>40) go(i-1); }
+  var vp=s.querySelector('.tour-viewport');
+  vp.addEventListener('touchstart', start, {passive:true});
+  vp.addEventListener('touchend', end);
+  vp.addEventListener('mousedown', start);
+  vp.addEventListener('mouseup', end);
+  go(0);
+})();
+</script>
+
+  <div class="soon">
+    <h2>More programs for centers — coming soon ⏳</h2>
+    <p>We are preparing new tools for center owners, and we will announce them here when they are ready.</p>
+  </div>
+
+  <div class="card faq">
+    <h2>Frequently asked questions</h2>
+    <h3>How do I activate the app?</h3>
+    <p>Download the version from this page, request the licence via WhatsApp, pay by bank transfer, and receive the code for your center's name — enter it on the activation screen.</p>
+    <h3>Does the tool work without internet?</h3>
+    <p>Yes, daily use is fully local on your device: clients, sessions and backups. Internet is only needed for the initial download and for update checks.</p>
+    <h3>Can I use it on more than one device?</h3>
+    <p>One licence is for one device, by name.</p>
+    <h3>How do updates reach me?</h3>
+    <p>The app checks automatically: when a new version is released, an alert appears, and one tap downloads and installs it — and your licence and data move with you automatically.</p>
+    <h3>How do I pay?</h3>
+    <p>By bank transfer — order via WhatsApp (from CIH, activation is instant; from another bank, after the transfer arrives).</p>
+    <h3>What are the system requirements?</h3>
+    <p>A Windows version (computer). An official installer: install it on your computer, and you will find a shortcut on the desktop and in the Start menu; uninstall from the Control Panel.</p>
+  </div>
+
+  <div class="foot">© 2026 Bayt wikaya — All rights reserved ·</div>
+</main>
+<script>
+(function(){
+document.querySelectorAll('[data-wa]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var msg = 'Hello, I would like to request the official licence for ' + btn.getAttribute('data-wa') + ', including the price and activation method, please.';
+    window.open('https://wa.me/212664651301?text=' + encodeURIComponent(msg), '_blank');
+  });
+});
+})();
+</script>
+<script>
+(function(){
+var btn = document.getElementById('mobile-menu-btn');
+var menu = document.getElementById('mobile-menu');
+if (btn && menu) {
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); var lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} var lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');} });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () { menu.classList.add('hidden'); menu.classList.remove('flex'); });
+  });
+}
+})();
+</script>
+</body>
+</html>

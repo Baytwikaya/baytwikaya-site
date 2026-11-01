@@ -2,97 +2,287 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://baytwikaya.site/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/hijama</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/prices</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/centers</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/app</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/sunnah</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/faq</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://baytwikaya.site/calories</loc>
-    <lastmod>2026-10-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baytwikaya.site/water</loc>
-    <lastmod>2026-10-27</lastmod>
-    <priority>0.6</priority>
+    <loc>https://baytwikaya.site/news</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/tools</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/bmi</loc>
-    <lastmod>2026-10-27</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://baytwikaya.site/sleep</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/caffeine</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/calories</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/foods</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/scan</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baytwikaya.site/news</loc>
-    <lastmod>2026-10-28</lastmod>
-    <priority>0.8</priority>
+    <loc>https://baytwikaya.site/sleep</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/water</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/news/sleep-joints</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/news/strength-after-35</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://baytwikaya.site/centers</loc>
-    <lastmod>2026-10-28</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/news/anti-fall-exercises</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/hijama</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/prices</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/centers</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/app</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/sunnah</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/faq</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/tools</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/bmi</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/caffeine</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/calories</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/foods</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/scan</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/sleep</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/water</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/sleep-joints</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/strength-after-35</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/anti-fall-exercises</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/hijama</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/prices</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/centers</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/app</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/sunnah</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/faq</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/tools</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/bmi</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/caffeine</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/calories</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/foods</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/scan</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/sleep</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/water</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/sleep-joints</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/strength-after-35</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/anti-fall-exercises</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
