@@ -196,6 +196,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://baytwikaya.site/en/news/opioids-back-pain</loc>
+    <lastmod>2026-11-02</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://baytwikaya.site/fr/</loc>
     <lastmod>2026-11-01</lastmod>
     <priority>0.9</priority>
@@ -288,6 +293,11 @@
   <url>
     <loc>https://baytwikaya.site/fr/news/anti-fall-exercises</loc>
     <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/opioids-back-pain</loc>
+    <lastmod>2026-11-02</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
