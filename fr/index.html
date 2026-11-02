@@ -9,6 +9,25 @@
     <link rel="alternate" hreflang="ar" href="https://baytwikaya.site/">
     <link rel="alternate" hreflang="en" href="https://baytwikaya.site/en/">
     <link rel="alternate" hreflang="fr" href="https://baytwikaya.site/fr/">
+    <script>
+    /* Remember a manual language choice so first-visit auto-detection never overrides it. No network requests. */
+    (function(){
+      var KEY='baytwikaya-lang';
+      var CURRENT='fr';
+      document.addEventListener('DOMContentLoaded',function(){
+        var m=document.getElementById('langMenu');
+        if(!m)return;
+        var links=m.getElementsByTagName('a');
+        for(var i=0;i<links.length;i++){
+          links[i].addEventListener('click',function(){
+            var h=this.getAttribute('href')||'';
+            var v=(h==='index.html')?CURRENT:(h.indexOf('fr/')!==-1?'fr':(h.indexOf('en/')!==-1?'en':'ar'));
+            try{window.localStorage.setItem(KEY,v);}catch(e){}
+          });
+        }
+      });
+    })();
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bayt wikaya">
     <meta property="og:locale" content="fr_FR">

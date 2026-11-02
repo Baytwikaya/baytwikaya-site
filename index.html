@@ -10,6 +10,39 @@
     <link rel="alternate" hreflang="ar" href="https://baytwikaya.site/">
 <link rel="alternate" hreflang="en" href="https://baytwikaya.site/en/">
 <link rel="alternate" hreflang="fr" href="https://baytwikaya.site/fr/">
+    <script>
+    /* First-visit language detection: Morocco timezone stays Arabic; otherwise browser language (fr/en); a saved dropdown choice always wins; bots are never redirected. No network requests. */
+    (function(){
+      var KEY='baytwikaya-lang';
+      function pickLang(o){
+        if(/bot|crawl|spider|slurp|facebookexternalhit|mediapartners|adsbot|googlebot|bingbot|duckduckbot|yandex|baidu|sogou|exabot|facebot|ia_archiver/i.test(o.ua||''))return null;
+        if(o.saved)return o.saved;
+        if(o.tz==='Africa/Casablanca')return 'ar';
+        var l=(o.lang||'').toLowerCase();
+        if(l.indexOf('fr')===0)return 'fr';
+        if(l.indexOf('en')===0)return 'en';
+        return 'ar';
+      }
+      var saved=null;
+      try{saved=window.localStorage.getItem(KEY);}catch(e){}
+      var tz='';
+      try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
+      var target=pickLang({ua:navigator.userAgent||'',saved:saved,tz:tz,lang:navigator.language||navigator.userLanguage||''});
+      if(target&&target!=='ar'){window.location.replace(target+'/index.html');}
+      document.addEventListener('DOMContentLoaded',function(){
+        var m=document.getElementById('langMenu');
+        if(!m)return;
+        var links=m.getElementsByTagName('a');
+        for(var i=0;i<links.length;i++){
+          links[i].addEventListener('click',function(){
+            var h=this.getAttribute('href')||'';
+            var v=(h==='index.html')?'ar':(h.indexOf('fr/')!==-1?'fr':(h.indexOf('en/')!==-1?'en':'ar'));
+            try{window.localStorage.setItem(KEY,v);}catch(e){}
+          });
+        }
+      });
+    })();
+    </script>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="بيت الوقاية">
     <meta property="og:locale" content="ar_MA">
