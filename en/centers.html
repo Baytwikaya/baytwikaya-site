@@ -29,7 +29,7 @@ a{color:var(--green2);text-decoration:none}
 .hero-banner img{width:100%;border-radius:20px;border:1px solid var(--line);display:block;box-shadow:0 4px 20px rgba(20,30,25,.10)}
 .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
 .btn{display:inline-block;border-radius:999px;padding:14px 30px;font-weight:900;font-size:1.05rem;font-family:inherit;cursor:pointer;border:0}
-.btn-gold{background:var(--gold);color:#241E0E}
+.btn-gold{background:var(--gold);color:#241E0E}.btn-pulse{animation:btnPulse 2.2s ease-in-out infinite}@keyframes btnPulse{0%,100%{box-shadow:0 0 0 0 rgba(185,151,91,.55)}50%{box-shadow:0 0 0 14px rgba(185,151,91,0)}}@media (prefers-reduced-motion: reduce){.btn-pulse{animation:none}}
 .btn-green{background:var(--green);color:#fff}
 .note{color:var(--muted);font-size:.95rem;text-align:center;margin:0}
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}
@@ -134,7 +134,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <p>A professional tool for cupping centers: <b>Interactive point maps, a smart assistant that suggests points by condition, and full session documentation</b> — and everything is local on your device, with automatic updates from within the app.</p>
     <div class="hero-banner"><img width="1800" height="600" src="../assets/centers/hero-room.jpg" alt="A professional cupping room — the Smart Assistant robot pointing to the cupping point map on the body"></div>
     <div class="cta-row">
-      <a class="btn btn-gold" href="https://drive.google.com/file/d/17jciwtfiWBY8-Brbwpy-wXb89S9avOX_/view?usp=drivesdk">⬇ Download the installer — version 3.0.1 for Windows</a>
+      <a class="btn btn-gold btn-pulse" href="https://drive.google.com/file/d/17jciwtfiWBY8-Brbwpy-wXb89S9avOX_/view?usp=drivesdk">⬇ Download the Smart Assistant</a>
       <button class="btn btn-green" data-wa="Smart Assistant">Request the official licence via WhatsApp →</button>
     </div>
     <p class="note">Version 3.0.1 for Windows, about 115 MB in size. After installation you will find a shortcut on the desktop and in the Start menu, and the official licence is granted by name and code after request and payment.</p>
