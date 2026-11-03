@@ -111,12 +111,6 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                         <div class="flex gap-3 flex-wrap">
                             <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left flex-1" style="min-width:200px" id="off-q" type="text" inputmode="search" placeholder="Product name or barcode number (e.g. 6111242100992)">
                             <button type="button" class="primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow-md transition" onclick="searchOFF()">Search</button>
-                            <button type="button" class="bg-gray-800 hover:bg-gray-700 text-white font-bold px-6 py-3 rounded-lg shadow-md transition" onclick="startScan()">📷 Scan with camera</button>
-                        </div>
-                        <div id="scanner" style="display:none;margin-top:14px">
-                            <div id="scan-box" style="border-radius:16px;overflow:hidden;background:#000"></div>
-                            <button type="button" class="bg-red-700 hover:bg-red-600 text-white font-bold px-6 py-3 rounded-lg shadow-md transition mt-3" onclick="stopScan()">Stop camera</button>
-                            <p class="text-gray-500 text-sm mt-2">Bring the barcode close to the camera — the site must be opened from the phone over HTTPS (and it is).</p>
                         </div>
                         <div id="off-out" style="margin-top:14px"></div>
                     </div>
@@ -470,45 +464,9 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 }).catch(function() { out.innerHTML = '<p class="text-red-600 font-bold">A connection problem occurred — please try again.</p>'; });
             }
             document.getElementById('off-q').addEventListener('keydown', function(e) { if (e.key === 'Enter') searchOFF(); });
-            var scanStream = null, scanTimer = null, html5Qr = null;
-            function onCode(code) { stopScan(); document.getElementById('off-q').value = code; searchOFF(); }
-            function stopScan() {
-                if (scanTimer) { clearInterval(scanTimer); scanTimer = null; }
-                if (scanStream) { scanStream.getTracks().forEach(function(t) { t.stop(); }); scanStream = null; }
-                if (html5Qr) { try { html5Qr.stop().then(function() { html5Qr.clear(); }); } catch (e) {} html5Qr = null; }
-                document.getElementById('scanner').style.display = 'none';
-                document.getElementById('scan-box').innerHTML = '';
-            }
-            function startScan() {
-                const box = document.getElementById('scan-box');
-                document.getElementById('scanner').style.display = '';
-                if ('BarcodeDetector' in window && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-                    box.innerHTML = '<video id="scan-v" autoplay playsinline style="width:100%"></video>';
-                    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } }).then(function(s) {
-                        scanStream = s;
-                        const v = document.getElementById('scan-v');
-                        v.srcObject = s;
-                        const det = new BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128'] });
-                        scanTimer = setInterval(function() { det.detect(v).then(function(codes) { if (codes && codes.length) onCode(codes[0].rawValue); }).catch(function() {}); }, 400);
-                    }).catch(function() { box.innerHTML = '<p class="text-red-600 font-bold" style="padding:14px">Camera unavailable — grant permission or enter the number manually.</p>'; });
-                } else {
-                    const s = document.createElement('script');
-                    s.src = 'https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js';
-                    s.onload = function() {
-                        try {
-                            html5Qr = new Html5Qrcode('scan-box');
-                            html5Qr.start({ facingMode: 'environment' }, { fps: 10, qrbox: 240, formatsToSupport: [Html5QrcodeSupportedFormats.EAN_13, Html5QrcodeSupportedFormats.EAN_8, Html5QrcodeSupportedFormats.UPC_A, Html5QrcodeSupportedFormats.CODE_128] }, function(txt) { onCode(txt); }, function() {});
-                        } catch (e) { box.innerHTML = '<p class="text-red-600 font-bold" style="padding:14px">Scanning is not supported in this browser — enter the number manually.</p>'; }
-                    };
-                    s.onerror = function() { box.innerHTML = '<p class="text-red-600 font-bold" style="padding:14px">Could not load the scanning library — enter the number manually.</p>'; };
-                    document.body.appendChild(s);
-                }
-            }
             renderFoods();
             window.renderFoods = renderFoods;
             window.searchOFF = searchOFF;
-            window.startScan = startScan;
-            window.stopScan = stopScan;
 
         });
     </script>
