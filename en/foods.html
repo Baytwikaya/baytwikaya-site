@@ -8,17 +8,17 @@
     <link rel="alternate" hreflang="ar" href="https://baytwikaya.site/foods">
     <link rel="alternate" hreflang="en" href="https://baytwikaya.site/en/foods">
     <link rel="alternate" hreflang="fr" href="https://baytwikaya.site/fr/foods">
-    <meta name="description" content="Search Moroccan dish values (harira, couscous, rfissa...) and packaged products by name or barcode, with Bayt wikaya's free tools.">
+    <meta name="description" content="Search Moroccan dish values (harira, couscous, rfissa...), with Bayt wikaya's free tools.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bayt wikaya">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Moroccan Food Search | Bayt wikaya">
-    <meta property="og:description" content="Search Moroccan dish values (harira, couscous, rfissa...) and packaged products by name or barcode, with Bayt wikaya's free tools.">
+    <meta property="og:description" content="Search Moroccan dish values (harira, couscous, rfissa...), with Bayt wikaya's free tools.">
     <meta property="og:url" content="https://baytwikaya.site/en/foods">
     <meta property="og:image" content="https://baytwikaya.site/service-hijama.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Moroccan Food Search | Bayt wikaya">
-    <meta name="twitter:description" content="Search Moroccan dish values (harira, couscous, rfissa...) and packaged products by name or barcode, with Bayt wikaya's free tools.">
+    <meta name="twitter:description" content="Search Moroccan dish values (harira, couscous, rfissa...), with Bayt wikaya's free tools.">
     <meta name="twitter:image" content="https://baytwikaya.site/service-hijama.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -105,15 +105,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
             </div>
             <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-teal-700">
                 <div class="space-y-6">
-                    <div class="pb-6 border-b-2 border-dashed border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">📦 Packaged products — by name or barcode</h3>
-                        <p class="text-gray-600 mb-4">Data from the global open Open Food Facts database (values per 100 g as written on the packaging).</p>
-                        <div class="flex gap-3 flex-wrap">
-                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left flex-1" style="min-width:200px" id="off-q" type="text" inputmode="search" placeholder="Product name or barcode number (e.g. 6111242100992)">
-                            <button type="button" class="primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow-md transition" onclick="searchOFF()">Search</button>
-                        </div>
-                        <div id="off-out" style="margin-top:14px"></div>
-                    </div>
+
                     <div>
                         <label class="block text-gray-700 font-bold mb-2">Search for a dish or ingredient</label>
                         <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left" id="food-q" type="text" placeholder="Search: harira, couscous, chicken..." oninput="renderFoods()">
@@ -353,7 +345,6 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 });
                 if (!tb.innerHTML) tb.innerHTML = '<tr><td colspan="6" class="p-3 text-gray-500">No dish found by that name — the database is growing, try another word.</td></tr>';
             }
-            function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
             var NUTRI_COLORS = { a: '#038141', b: '#85BB2F', c: '#FECB02', d: '#EE8100', e: '#E63E11' };
             var NOVA_LABELS = { 1: 'NOVA group 1 — Unprocessed or minimally processed foods', 2: 'NOVA group 2 — Processed kitchen ingredients', 3: 'NOVA group 3 — Processed foods', 4: 'NOVA group 4 — Ultra-processed foods' };
             var CAUTION = {
@@ -367,106 +358,8 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 'E122': { name: 'Azorubine', note: 'An azo dye — Southampton study / EFSA: link to hyperactivity in children; the European Union requires a warning on the label' },
                 'E124': { name: 'Ponceau 4R', note: 'An azo dye — Southampton study / EFSA: link to hyperactivity in children; the European Union requires a warning on the label' }
             };
-            function parseAdditives(p) {
-                var tags = p.additives_tags || [];
-                var seen = {}, out = [];
-                tags.forEach(function(t) {
-                    var m = String(t).match(/e(\d{3}[a-z]?)/i);
-                    if (!m) return;
-                    var code = 'E' + m[1].toUpperCase();
-                    if (seen[code]) return;
-                    seen[code] = true;
-                    out.push(code);
-                });
-                return out;
-            }
-            function fmtNutr(v, kcal) {
-                if (v === undefined || v === null || v === '') return 'Not available';
-                var num = Number(v);
-                if (isNaN(num)) return 'Not available';
-                if (kcal) return Math.round(num) + ' kcal';
-                if (Math.abs(num) < 10) return (Math.round(num * 100) / 100) + ' g';
-                return Math.round(num) + ' g';
-            }
-            function offSheet(p) {
-                var n = p.nutriments || {};
-                var name = p.p.product_name_en || p.product_name || p.product_name_ar || p.product_name_fr || p.generic_name || 'Unnamed product';
-                var img = p.image_url || p.image_front_url || p.image_front_small_url || '';
-                var code = p.code || '';
-                var html = '<div class="bg-white border border-teal-100 rounded-2xl shadow-md p-5 md:p-6 mb-6 text-left">';
-                html += '<div class="flex gap-4 flex-wrap items-start">';
-                if (img) html += '<img src="' + esc(img) + '" alt="" style="width:110px;height:110px;object-fit:contain;border:1px solid #e5e7eb;border-radius:12px;background:#fff" onerror="this.style.display=\'none\'">';
-                html += '<div class="flex-1" style="min-width:220px"><h3 class="text-xl font-bold text-teal-900 mb-1">' + esc(name) + '</h3>';
-                if (p.brands) html += '<p class="text-gray-600 font-bold">' + esc(p.brands) + '</p>';
-                if (code) html += '<p class="text-gray-500 text-sm" dir="ltr" style="text-align:left">Barcode: ' + esc(code) + '</p>';
-                if (p.categories) html += '<p class="text-gray-500 text-sm">Categories: ' + esc(p.categories) + '</p>';
-                var grade = (p.nutriscore_grade || '').toLowerCase();
-                if (NUTRI_COLORS[grade]) {
-                    var dark = grade === 'c';
-                    html += '<span style="display:inline-block;background:' + NUTRI_COLORS[grade] + ';color:' + (dark ? '#1f2937' : '#fff') + ';font-weight:800;font-size:22px;line-height:1;padding:8px 16px;border-radius:10px;margin-top:8px">Nutri-Score ' + grade.toUpperCase() + '</span>';
-                }
-                var nova = p.nova_group;
-                if (nova !== undefined && nova !== null && NOVA_LABELS[nova]) html += '<p class="mt-2"><span class="inline-block bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full text-sm">' + NOVA_LABELS[nova] + '</span></p>';
-                html += '</div></div>';
-                var rows = [
-                    ['Energy', 'energy-kcal_100g', true],
-                    ['Fat', 'fat_100g', false],
-                    ['Saturated fat', 'saturated-fat_100g', false],
-                    ['Carbohydrates', 'carbohydrates_100g', false],
-                    ['Sugars', 'sugars_100g', false],
-                    ['Fiber', 'fiber_100g', false],
-                    ['Protein', 'proteins_100g', false],
-                    ['Salt', 'salt_100g', false],
-                    ['Sodium', 'sodium_100g', false]
-                ];
-                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">Nutrition values per 100 g</h4><div style="overflow-x:auto"><table class="w-full text-sm md:text-base"><tbody>';
-                rows.forEach(function(r) { html += '<tr class="border-b"><td class="p-2 font-bold">' + r[0] + '</td><td class="p-2">' + fmtNutr(n[r[1]], r[2]) + '</td></tr>'; });
-                html += '</tbody></table></div>';
-                var ing = p.ingredients_text_ar || p.ingredients_text || '';
-                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">Ingredients</h4>';
-                html += ing ? '<p class="text-gray-700 leading-relaxed">' + esc(ing) + '</p>' : '<p class="text-gray-500">Not available</p>';
-                if (p.allergens) {
-                    var al = String(p.allergens).split(',').map(function(a) { return a.replace(/^[a-z]{2}:/, '').trim(); }).filter(function(a) { return a; });
-                    if (al.length) html += '<p class="mt-3"><span class="font-bold">Allergens: </span>' + al.map(function(a) { return '<span class="inline-block bg-red-50 text-red-800 border border-red-200 px-2 py-1 rounded-full text-sm mx-1">' + esc(a) + '</span>'; }).join('') + '</p>';
-                }
-                var adds = parseAdditives(p);
-                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">Food additives</h4>';
-                if (adds.length) {
-                    html += '<p>' + adds.map(function(c) {
-                        var info = CAUTION[c];
-                        return '<span class="inline-block bg-teal-50 text-teal-900 border border-teal-200 px-2 py-1 rounded-full text-sm mx-1 font-bold">' + c + (info ? ' — ' + info.name : '') + '</span>';
-                    }).join('') + '</p>';
-                } else {
-                    html += '<p class="text-gray-500">No additives listed for this product.</p>';
-                }
-                var flagged = adds.filter(function(c) { return CAUTION[c]; });
-                if (flagged.length) {
-                    html += '<div class="mt-4 bg-amber-50 border border-amber-300 rounded-xl p-4"><h4 class="font-bold text-amber-900 mb-2">⚠ Substances to watch</h4>';
-                    flagged.forEach(function(c) { html += '<p class="text-amber-900 mb-2"><b>' + c + ' — ' + CAUTION[c].name + ': </b>' + CAUTION[c].note + '</p>'; });
-                    html += '<p class="text-amber-800 text-sm mt-2">These classifications are those of the bodies mentioned (EFSA / IARC), not a diagnosis for this specific product.</p></div>';
-                }
-                if (code) html += '<p class="text-gray-500 text-sm mt-4">Information from the open <a class="text-teal-700 font-bold hover:underline" target="_blank" rel="noopener" href="https://world.openfoodfacts.org/product/' + encodeURIComponent(code) + '">Open Food Facts database — product page</a> — data is crowd-contributed and may be incomplete; always check the original packaging.</p>';
-                else html += '<p class="text-gray-500 text-sm mt-4">Information from the open Open Food Facts database — data is crowd-contributed and may be incomplete; always check the original packaging.</p>';
-                html += '</div>';
-                return html;
-            }
-            function searchOFF() {
-                const q = (document.getElementById('off-q').value || '').trim();
-                const out = document.getElementById('off-out');
-                if (!q) { out.innerHTML = '<p class="text-gray-500">Enter a product name or barcode number first.</p>'; return; }
-                out.innerHTML = '<p class="text-gray-500">Searching...</p>';
-                const isCode = /^\d{8,14}$/.test(q);
-                const url = isCode ? ('https://world.openfoodfacts.org/api/v2/product/' + q + '.json') : ('https://world.openfoodfacts.org/cgi/search.pl?search_terms=' + encodeURIComponent(q) + '&search_simple=1&action=process&json=1&page_size=8&fields=product_name,product_name_ar,product_name_fr,generic_name,brands,code,categories,image_url,image_front_url,nutriscore_grade,nova_group,ingredients_text,ingredients_text_ar,allergens,additives_tags,additives_original_tags,nutriments');
-                fetch(url).then(function(r) { return r.json(); }).then(function(d) {
-                    const prods = isCode ? (d.status === 1 && d.product ? [d.product] : []) : (d.products || []);
-                    if (!prods.length) { out.innerHTML = '<p class="text-gray-500">Nothing found — check the number or try another name. Some Moroccan products have not yet entered the global database.</p>'; return; }
-                    out.innerHTML = prods.map(offSheet).join('');
-                }).catch(function() { out.innerHTML = '<p class="text-red-600 font-bold">A connection problem occurred — please try again.</p>'; });
-            }
-            document.getElementById('off-q').addEventListener('keydown', function(e) { if (e.key === 'Enter') searchOFF(); });
             renderFoods();
             window.renderFoods = renderFoods;
-            window.searchOFF = searchOFF;
 
         });
     </script>
