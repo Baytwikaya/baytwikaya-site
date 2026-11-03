@@ -47,7 +47,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
   gtag('config', 'G-Z7VGSVX46W');
 </script>
 </head>
-<body class="text-gray-800 antialiased flex flex-col min-h-screen relative">
+<body class="text-gray-800 antialiased flex flex-col min-h-screen relative overflow-x-hidden">
 
     
 
@@ -105,16 +105,16 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 <p class="text-gray-600 text-lg">Calculez votre besoin quotidien en calories selon la formule précise de Harris-Benedict, pour perdre, prendre ou maintenir votre poids.</p>
             </div>
             
-            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-teal-700">
+            <div class="bg-white rounded-3xl shadow-xl p-4 sm:p-8 md:p-12 border-t-8 border-teal-700">
                 <form id="caloriesForm" class="space-y-6">
                     <div>
                         <label class="block text-gray-700 font-bold mb-3">Sexe</label>
-                        <div class="flex gap-6">
-                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:gap-6">
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-full sm:w-1/2 justify-center transition">
                                 <input type="radio" name="gender" value="male" checked class="w-5 h-5 text-teal-600 focus:ring-teal-500">
                                 <span class="font-bold">Homme 👨</span>
                             </label>
-                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-full sm:w-1/2 justify-center transition">
                                 <input type="radio" name="gender" value="female" class="w-5 h-5 text-teal-600 focus:ring-teal-500">
                                 <span class="font-bold">Femme 👩</span>
                             </label>
@@ -138,12 +138,12 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
                     <div>
                         <label class="block text-gray-700 font-bold mb-3">Pratiquez-vous un sport ?</label>
-                        <div class="flex gap-6">
-                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:gap-6">
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-full sm:w-1/2 justify-center transition">
                                 <input type="radio" name="training" value="yes" class="w-5 h-5 text-teal-600 focus:ring-teal-500">
                                 <span class="font-bold">Je pratique un sport 🏃</span>
                             </label>
-                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-1/2 justify-center transition">
+                            <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-6 py-3 rounded-lg border hover:border-teal-500 w-full sm:w-1/2 justify-center transition">
                                 <input type="radio" name="training" value="no" checked class="w-5 h-5 text-teal-600 focus:ring-teal-500">
                                 <span class="font-bold">Je ne pratique pas de sport</span>
                             </label>
@@ -173,7 +173,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
                     <div>
                         <label class="block text-gray-700 font-bold mb-3">Objectif</label>
-                        <div class="flex gap-4">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
                             <label class="flex items-center gap-2 cursor-pointer bg-gray-50 px-4 py-3 rounded-lg border hover:border-teal-500 flex-1 justify-center transition">
                                 <input type="radio" name="goal" value="lose" class="w-5 h-5 text-teal-600 focus:ring-teal-500">
                                 <span class="font-bold">Perdre du poids</span>
@@ -219,9 +219,9 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                         <p class="text-teal-800 font-bold mb-2">Votre objectif quotidien selon l’objectif choisi</p>
                         <div class="text-3xl font-extrabold text-teal-600 mb-4" dir="ltr"><span id="target-result">0</span> <span class="text-lg">Kcal</span></div>
                         <div class="grid grid-cols-3 gap-3 text-center">
-                            <div class="bg-white p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Protéines</p><p class="font-bold text-lg" dir="ltr"><span id="protein-result">0</span> g</p></div>
-                            <div class="bg-white p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Glucides</p><p class="font-bold text-lg" dir="ltr"><span id="carbs-result">0</span> g</p></div>
-                            <div class="bg-white p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Lipides</p><p class="font-bold text-lg" dir="ltr"><span id="fat-result">0</span> g</p></div>
+                            <div class="bg-white p-2 sm:p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Protéines</p><p class="font-bold text-lg" dir="ltr"><span id="protein-result">0</span> g</p></div>
+                            <div class="bg-white p-2 sm:p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Glucides</p><p class="font-bold text-lg" dir="ltr"><span id="carbs-result">0</span> g</p></div>
+                            <div class="bg-white p-2 sm:p-3 rounded-xl border border-teal-100"><p class="text-gray-500 text-sm">Lipides</p><p class="font-bold text-lg" dir="ltr"><span id="fat-result">0</span> g</p></div>
                         </div>
                         <p class="text-gray-500 text-sm mt-3">Répartition des macros : protéines 30 % · glucides 40 % · lipides 30 % (protéines 35 % pour la perte de poids et 32 % pour la prise de poids).</p>
                     </div>
