@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماسح المنتجات بالكاميرا | بيت الوقاية</title>
+    <title>صحّتي | بيت الوقاية</title>
     <meta name="description" content="وجّه كاميرا هاتفك إلى باركود أي منتج معلّب واحصل فوراً على معلوماته الغذائية من قاعدة بيانات Open Food Facts المفتوحة.">
     <link rel="canonical" href="https://baytwikaya.site/scan">
     <link rel="alternate" hreflang="ar" href="https://baytwikaya.site/scan">
@@ -12,12 +12,12 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="بيت الوقاية">
     <meta property="og:locale" content="ar_MA">
-    <meta property="og:title" content="ماسح المنتجات بالكاميرا | بيت الوقاية">
+    <meta property="og:title" content="صحّتي | بيت الوقاية">
     <meta property="og:description" content="وجّه كاميرا هاتفك إلى باركود أي منتج معلّب واحصل فوراً على معلوماته الغذائية من قاعدة بيانات Open Food Facts المفتوحة.">
     <meta property="og:url" content="https://baytwikaya.site/scan">
     <meta property="og:image" content="https://baytwikaya.site/scan-banner.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ماسح المنتجات بالكاميرا | بيت الوقاية">
+    <meta name="twitter:title" content="صحّتي | بيت الوقاية">
     <meta name="twitter:description" content="وجّه كاميرا هاتفك إلى باركود أي منتج معلّب واحصل فوراً على معلوماته الغذائية من قاعدة بيانات Open Food Facts المفتوحة.">
     <meta name="twitter:image" content="https://baytwikaya.site/scan-banner.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,6 +26,41 @@
         body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
         .primary-color { color: #0f766e; }
         .primary-bg { background-color: #0f766e; }
+        .sehti-logo { display: inline-block; width: 46px; height: 46px; vertical-align: -11px; border-radius: 12px; }
+        .nutri-pill { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-weight: 800; font-size: 1.2rem; flex: none; }
+        /* بطاقة نتيجة المسح (Nutri-Score / Eco-Score) */
+        .off-card { background: #fff; border: 1px solid #ccfbf1; border-radius: 20px; box-shadow: 0 6px 18px rgba(15,118,110,.08); overflow: hidden; margin-top: 14px; }
+        .off-verdict { padding: 12px 18px; font-weight: 800; text-align: center; color: #fff; font-size: 1.05rem; }
+        .off-verdict.good { background: #1E8A46; }
+        .off-verdict.mid { background: #B7791F; }
+        .off-verdict.bad { background: #C0392B; }
+        .off-verdict.none { background: #5B6B62; }
+        .off-head { display: flex; gap: 14px; padding: 18px; align-items: center; }
+        .off-head img { width: 84px; height: 84px; object-fit: contain; border: 1px solid #e5e7eb; border-radius: 14px; background: #fff; flex: none; }
+        .off-head .nm { font-weight: 800; font-size: 1.15rem; line-height: 1.4; color: #134e4a; }
+        .off-head .br { color: #6b7280; font-size: .92rem; }
+        .off-head .qt { color: #6b7280; font-size: .92rem; font-weight: 700; }
+        .off-head .bc { color: #9ca3af; font-size: .85rem; }
+        .off-card .lbl { font-size: .8rem; font-weight: 800; letter-spacing: .04em; color: #6b7280; }
+        .off-score { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-top: 1px solid #f0fdfa; flex-wrap: wrap; }
+        .off-scale { display: flex; gap: 4px; align-items: center; }
+        .off-scale span { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; font-size: 1.05rem; opacity: .35; }
+        .off-scale span.on { opacity: 1; transform: scale(1.18); box-shadow: 0 4px 10px rgba(15,118,110,.3); outline: 2px solid #fff; }
+        .off-score .txt { font-weight: 800; font-size: 1rem; line-height: 1.4; }
+        .off-eco { display: flex; gap: 12px; align-items: center; padding: 14px 18px; border-top: 1px solid #f0fdfa; }
+        .off-eco .badge { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; font-weight: 800; font-size: 1.45rem; color: #fff; flex: none; }
+        .off-eco .txt { font-weight: 700; line-height: 1.5; }
+        .off-attrs-h { padding: 12px 18px 0; border-top: 1px solid #f0fdfa; font-size: .85rem; color: #6b7280; font-weight: 700; }
+        .off-attrs { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 18px 14px; }
+        .off-attr { display: inline-flex; align-items: center; gap: 6px; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: .88rem; }
+        .off-attr i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+        .off-allerg { padding: 12px 18px; border-top: 1px solid #f0fdfa; font-size: .92rem; color: #6b7280; }
+        .off-allerg b { color: #1f2937; }
+        .off-nutri { width: 100%; border-collapse: collapse; }
+        .off-nutri td { padding: 7px 18px; border-top: 1px dashed #99f6e4; }
+        .off-nutri td:last-child { text-align: left; font-weight: 800; }
+        .off-pill { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; color: #fff; font-weight: 800; font-size: .95rem; }
+        .off-pill.na { background: #e5e7eb; color: #6b7280; }
     </style>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -103,8 +138,8 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <main class="flex-grow pt-28 pb-16 px-4 w-full">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-10">
-                <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4">ماسح المنتجات بالكاميرا 📷</h1>
-                <p class="text-gray-600 text-lg">وجّه كاميرا هاتفك إلى باركود أي منتج معلّب، واحصل فوراً على معلوماته الغذائية: القيم لكل 100غ، نوتري سكور، نوفا، المكونات والمضافات.</p>
+                <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4"><img src="assets/sehti-logo.svg" alt="صحّتي" class="sehti-logo"> صحّتي</h1>
+                <p class="text-gray-600 text-lg">صحتك في جيبك — وجّه كاميرا هاتفك إلى باركود أي منتج معلّب، واحصل فوراً على معلوماته الغذائية: القيم لكل 100غ، نوتري سكور، نوفا، المكونات والمضافات.</p>
             </div>
             <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-[#c9a227]">
                 <div class="space-y-6">
@@ -118,9 +153,9 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                         </div>
                     </div>
                     <div class="pt-6 border-t-2 border-dashed border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">أو اكتب رقم الباركود يدوياً</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">أو اكتب اسم المنتج أو رقم الباركود</h3>
                         <div class="flex gap-3 flex-wrap">
-                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left flex-1" style="min-width:200px" id="off-q" type="text" inputmode="numeric" placeholder="رقم الباركود (مثال: 6111242100992)">
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left flex-1" style="min-width:200px" id="off-q" type="text" inputmode="search" placeholder="اسم منتج أو رقم باركود (مثال: 6111242100992)">
                             <button type="button" class="primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow-md transition" onclick="searchOFF()">ابحث</button>
                         </div>
                     </div>
@@ -128,11 +163,24 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     <p class="text-gray-500 text-sm">البيانات من قاعدة Open Food Facts العالمية المفتوحة (القيم لكل 100غ كما هي مكتوبة على التغليف) — البيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>
                 </div>
             </div>
+            <div id="nutri-explainer" class="bg-white rounded-3xl shadow-xl p-8 md:p-10 mt-8">
+                <h2 class="text-2xl font-bold text-teal-900 mb-2">ما هو Nutri-Score؟</h2>
+                <p class="text-gray-600 mb-6">شعار يوضح الجودة الغذائية للمنتجات من A إلى E. طُوّر عام 2014 من طرف فريق البحث الفرنسي EREN في علم الأوبئة الغذائية، بقيادة البروفيسور سيرج هيركبرغ.</p>
+                <div class="space-y-4">
+                    <div class="flex gap-3 items-center"><span class="nutri-pill" style="background:#038141;color:#fff">A</span><div><b class="text-teal-900">جودة غذائية ممتازة</b><span class="block text-gray-600 text-sm">الخيار الأفضل — تناوله دون تردد</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="nutri-pill" style="background:#85BB2F;color:#fff">B</span><div><b class="text-teal-900">جودة غذائية جيدة</b><span class="block text-gray-600 text-sm">خيار جيد — تناوله بانتظام</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="nutri-pill" style="background:#FECB02;color:#14201A">C</span><div><b class="text-teal-900">جودة غذائية متوسطة</b><span class="block text-gray-600 text-sm">متوسط — من حين لآخر، وليس كل يوم</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="nutri-pill" style="background:#EE8100;color:#fff">D</span><div><b class="text-teal-900">جودة غذائية ضعيفة</b><span class="block text-gray-600 text-sm">ضعيف — قلّل منه قدر الإمكان</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="nutri-pill" style="background:#E63E11;color:#fff">E</span><div><b class="text-teal-900">جودة غذائية ضعيفة جداً</b><span class="block text-gray-600 text-sm">سيئ جداً — الأفضل تجنّبه</span></div></div>
+                </div>
+                <p class="text-gray-500 text-sm mt-6">التقييم محسوب من Open Food Facts بناءً على القيم الغذائية المعلنة على التغليف.</p>
+            </div>
             <div class="text-center mt-8 space-y-2">
                 <a href="tools" class="inline-block text-teal-700 font-bold hover:underline">← جميع الأدوات المجانية</a>
                 <span class="text-gray-300 mx-2">|</span>
                 <a href="/" class="inline-block text-teal-700 font-bold hover:underline">العودة للرئيسية</a>
             </div>
+            <p class="text-center text-gray-400 text-sm mt-6">بشراكة مع محرز زهير — <a href="https://www.mahrezzouhair.com" target="_blank" rel="noopener" class="text-teal-700 hover:underline" dir="ltr">www.mahrezzouhair.com</a></p>
         </div>
     </main>
 
@@ -275,6 +323,13 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
             function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
             var NUTRI_COLORS = { a: '#038141', b: '#85BB2F', c: '#FECB02', d: '#EE8100', e: '#E63E11' };
+            var NS_TEXT = { a: '#fff', b: '#fff', c: '#14201A', d: '#fff', e: '#fff' };
+            var ECO_COLORS = { a: '#038141', b: '#85BB2F', c: '#FECB02', d: '#EE8100', e: '#E63E11', f: '#8B1A1A' };
+            var NS_LABEL = { a: 'جودة غذائية ممتازة', b: 'جودة غذائية جيدة', c: 'جودة غذائية متوسطة', d: 'جودة غذائية ضعيفة', e: 'جودة غذائية ضعيفة جداً' };
+            var ECO_LABEL = { a: 'تأثير بيئي منخفض جداً', b: 'تأثير بيئي منخفض', c: 'تأثير بيئي متوسط', d: 'تأثير بيئي مرتفع', e: 'تأثير بيئي مرتفع جداً', f: 'تأثير بيئي سيئ جداً' };
+            var VERDICT = { a: ['good', '✅ اختيار ممتاز'], b: ['good', '👍 اختيار جيد'], c: ['mid', '⚖️ اختيار متوسط'], d: ['bad', '⚠️ اختيار ضعيف'], e: ['bad', '🚫 اختيار سيئ — الأفضل أن تقلل منه'] };
+            var ATTR_LABEL = { vegetarian: 'نباتي', 'non-vegetarian': 'غير نباتي', vegan: 'نباتي صرف (فيغان)', 'non-vegan': 'غير نباتي صرف', 'maybe-vegan': 'قد يكون نباتياً صرفاً', 'palm-oil': 'يحتوي على زيت النخيل', 'palm-oil-free': 'بدون زيت النخيل', 'gluten-free': 'بدون غلوتين', organic: 'منتج عضوي', 'fair-trade': 'تجارة عادلة' };
+            var ALLERGEN_MAP = { 'en:milk': 'الحليب', 'en:gluten': 'الغلوتين', 'en:nuts': 'المكسرات', 'en:peanuts': 'الفول السوداني', 'en:soybeans': 'الصويا', 'en:soya': 'الصويا', 'en:eggs': 'البيض', 'en:fish': 'السمك', 'en:sesame-seeds': 'السمسم', 'en:sulphur-dioxide-and-sulphites': 'ثاني أكسيد الكبريت' };
             var NOVA_LABELS = { 1: 'مجموعة نوفا 1 — أغذية غير مصنّعة أو قليلة التصنيع', 2: 'مجموعة نوفا 2 — مكونات مطبخية مصنّعة', 3: 'مجموعة نوفا 3 — أغذية مصنّعة', 4: 'مجموعة نوفا 4 — أغذية فائقة التصنيع' };
             var CAUTION = {
                 'E171': { name: 'ثاني أكسيد التيتانيوم', note: 'EFSA 2021: لا يمكن اعتباره آمناً كمضاف غذائي؛ محظور في الاتحاد الأوروبي منذ 2022' },
@@ -308,26 +363,59 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 if (Math.abs(num) < 10) return (Math.round(num * 100) / 100) + ' غ';
                 return Math.round(num) + ' غ';
             }
+            function nsGrade(p) { var g = String(p.nutriscore_grade || '').toLowerCase(); return (g >= 'a' && g <= 'e') ? g : null; }
+            function ecoGrade(p) { var g = String(p.ecoscore_grade || '').toLowerCase(); return (g >= 'a' && g <= 'f') ? g : null; }
+            function nsPill(g) { if (!g) return '<span class="off-pill na">—</span>'; return '<span class="off-pill" style="background:' + NUTRI_COLORS[g] + ';color:' + NS_TEXT[g] + '">' + g.toUpperCase() + '</span>'; }
+            function nsScale(g) { var letters = ['a', 'b', 'c', 'd', 'e']; return '<div class="off-scale">' + letters.map(function(l) { return '<span' + (l === g ? ' class="on"' : '') + ' style="background:' + NUTRI_COLORS[l] + ';color:' + NS_TEXT[l] + '">' + l.toUpperCase() + '</span>'; }).join('') + '</div>'; }
+            function offAttrs(p) {
+                var tags = p.ingredients_analysis_tags || []; var labels = p.labels_tags || [];
+                function has(x) { return tags.indexOf(x) >= 0 || labels.indexOf(x) >= 0; }
+                var items = [];
+                if (has('en:vegetarian')) items.push({ c: '#1E8A46', x: 'vegetarian' }); else if (has('en:non-vegetarian')) items.push({ c: '#C0392B', x: 'non-vegetarian' });
+                if (has('en:vegan')) items.push({ c: '#1E8A46', x: 'vegan' }); else if (has('en:non-vegan')) items.push({ c: '#C0392B', x: 'non-vegan' }); else if (has('en:maybe-vegan')) items.push({ c: '#B7791F', x: 'maybe-vegan' });
+                if (has('en:palm-oil')) items.push({ c: '#C0392B', x: 'palm-oil' }); else if (has('en:palm-oil-free')) items.push({ c: '#1E8A46', x: 'palm-oil-free' });
+                if (has('en:gluten-free')) items.push({ c: '#1E8A46', x: 'gluten-free' });
+                if (has('en:organic')) items.push({ c: '#1E8A46', x: 'organic' });
+                if (has('en:fair-trade')) items.push({ c: '#1E8A46', x: 'fair-trade' });
+                if (!items.length) return '';
+                return '<div class="off-attrs-h">خصائص المنتج:</div><div class="off-attrs">' + items.map(function(it) { return '<span class="off-attr"><i style="background:' + it.c + '"></i>' + ATTR_LABEL[it.x] + '</span>'; }).join('') + '</div>';
+            }
+            function offAllergens(p) {
+                var tags = p.allergens_tags || [];
+                var names = [];
+                if (tags.length) {
+                    names = tags.slice(0, 4).map(function(tg) { return ALLERGEN_MAP[tg] || tg.replace(/^en:/, '').replace(/-/g, ' '); });
+                } else if (p.allergens) {
+                    names = String(p.allergens).split(',').map(function(a) { return a.replace(/^[a-z]{2}:/, '').trim(); }).filter(function(a) { return a; }).slice(0, 4);
+                }
+                if (!names.length) return '';
+                return '<div class="off-allerg"><b>مسببات الحساسية:</b> ' + names.map(esc).join(' · ') + '</div>';
+            }
             function offSheet(p) {
                 var n = p.nutriments || {};
                 var name = p.product_name_ar || p.product_name || p.product_name_fr || p.generic_name || 'منتج دون اسم';
-                var img = p.image_url || p.image_front_url || p.image_front_small_url || '';
+                var img = p.image_small_url || p.image_url || p.image_front_url || p.image_front_small_url || '';
                 var code = p.code || '';
-                var html = '<div class="bg-white border border-teal-100 rounded-2xl shadow-md p-5 md:p-6 mb-6 text-right">';
-                html += '<div class="flex gap-4 flex-wrap items-start">';
-                if (img) html += '<img src="' + esc(img) + '" alt="" style="width:110px;height:110px;object-fit:contain;border:1px solid #e5e7eb;border-radius:12px;background:#fff" onerror="this.style.display=\'none\'">';
-                html += '<div class="flex-1" style="min-width:220px"><h3 class="text-xl font-bold text-teal-900 mb-1">' + esc(name) + '</h3>';
-                if (p.brands) html += '<p class="text-gray-600 font-bold">' + esc(p.brands) + '</p>';
-                if (code) html += '<p class="text-gray-500 text-sm" dir="ltr" style="text-align:right">Barcode: ' + esc(code) + '</p>';
-                if (p.categories) html += '<p class="text-gray-500 text-sm">الفئات: ' + esc(p.categories) + '</p>';
-                var grade = (p.nutriscore_grade || '').toLowerCase();
-                if (NUTRI_COLORS[grade]) {
-                    var dark = grade === 'c';
-                    html += '<span style="display:inline-block;background:' + NUTRI_COLORS[grade] + ';color:' + (dark ? '#1f2937' : '#fff') + ';font-weight:800;font-size:22px;line-height:1;padding:8px 16px;border-radius:10px;margin-top:8px">Nutri-Score ' + grade.toUpperCase() + '</span>';
-                }
+                var ns = nsGrade(p), eco = ecoGrade(p);
+                var vclass = 'none', verdict = 'ℹ️ هذا المنتج ليس له تقييم';
+                if (ns && VERDICT[ns]) { vclass = VERDICT[ns][0]; verdict = VERDICT[ns][1]; }
+                var html = '<div class="off-card">';
+                html += '<div class="off-verdict ' + vclass + '">' + verdict + '</div>';
+                html += '<div class="off-head">';
+                if (img) html += '<img src="' + esc(img) + '" alt="" loading="lazy" onerror="this.remove()">';
+                html += '<div><div class="nm">' + esc(name) + '</div>';
+                if (p.brands) html += '<div class="br">' + esc(p.brands) + '</div>';
+                if (p.quantity) html += '<div class="qt">' + esc(p.quantity) + '</div>';
+                if (code) html += '<div class="bc" dir="ltr" style="text-align:right">Barcode: ' + esc(code) + '</div>';
+                if (p.categories) html += '<div class="br">الفئات: ' + esc(p.categories) + '</div>';
                 var nova = p.nova_group;
-                if (nova !== undefined && nova !== null && NOVA_LABELS[nova]) html += '<p class="mt-2"><span class="inline-block bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full text-sm">' + NOVA_LABELS[nova] + '</span></p>';
+                if (nova !== undefined && nova !== null && NOVA_LABELS[nova]) html += '<div class="mt-2"><span class="inline-block bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full text-sm">' + NOVA_LABELS[nova] + '</span></div>';
                 html += '</div></div>';
+                html += '<div class="off-score"><div><div class="lbl">NUTRI-SCORE</div>' + nsScale(ns) + '</div><div class="txt">' + (ns ? NS_LABEL[ns] : 'بدون تقييم') + '</div></div>';
+                if (eco) html += '<div class="off-eco"><span class="badge" style="background:' + ECO_COLORS[eco] + '">' + eco.toUpperCase() + '</span><div><div class="lbl">ECO-SCORE</div><div class="txt">' + ECO_LABEL[eco] + '</div></div></div>';
+                else html += '<div class="off-eco"><span class="badge" style="background:#CBD5CE;color:#5B6B62">?</span><div><div class="lbl">ECO-SCORE</div><div class="txt">لا يوجد Eco-Score</div></div></div>';
+                html += offAttrs(p);
+                html += offAllergens(p);
                 var rows = [
                     ['الطاقة', 'energy-kcal_100g', true],
                     ['الدهون', 'fat_100g', false],
@@ -339,16 +427,13 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     ['ملح', 'salt_100g', false],
                     ['صوديوم', 'sodium_100g', false]
                 ];
-                html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">القيم الغذائية لكل 100غ</h4><div style="overflow-x:auto"><table class="w-full text-sm md:text-base"><tbody>';
-                rows.forEach(function(r) { html += '<tr class="border-b"><td class="p-2 font-bold">' + r[0] + '</td><td class="p-2">' + fmtNutr(n[r[1]], r[2]) + '</td></tr>'; });
+                html += '<div style="padding:12px 18px 0;font-size:.85rem;color:#6b7280;font-weight:700">القيم الغذائية لكل 100غ</div><div style="overflow-x:auto"><table class="off-nutri"><tbody>';
+                rows.forEach(function(r) { html += '<tr><td>' + r[0] + '</td><td>' + fmtNutr(n[r[1]], r[2]) + '</td></tr>'; });
                 html += '</tbody></table></div>';
+                html += '<div style="padding:0 18px 18px">';
                 var ing = p.ingredients_text_ar || p.ingredients_text || '';
                 html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">المكونات</h4>';
                 html += ing ? '<p class="text-gray-700 leading-relaxed">' + esc(ing) + '</p>' : '<p class="text-gray-500">غير متوفر</p>';
-                if (p.allergens) {
-                    var al = String(p.allergens).split(',').map(function(a) { return a.replace(/^[a-z]{2}:/, '').trim(); }).filter(function(a) { return a; });
-                    if (al.length) html += '<p class="mt-3"><span class="font-bold">مسببات الحساسية: </span>' + al.map(function(a) { return '<span class="inline-block bg-red-50 text-red-800 border border-red-200 px-2 py-1 rounded-full text-sm mx-1">' + esc(a) + '</span>'; }).join('') + '</p>';
-                }
                 var adds = parseAdditives(p);
                 html += '<h4 class="font-bold text-teal-900 mt-5 mb-2">المضافات الغذائية</h4>';
                 if (adds.length) {
@@ -368,17 +453,28 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 if (code) html += '<p class="text-gray-500 text-sm mt-4">المعلومات من قاعدة بيانات <a class="text-teal-700 font-bold hover:underline" target="_blank" rel="noopener" href="https://world.openfoodfacts.org/product/' + encodeURIComponent(code) + '">Open Food Facts المفتوحة — صفحة المنتج</a> — البيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>';
                 else html += '<p class="text-gray-500 text-sm mt-4">المعلومات من قاعدة بيانات Open Food Facts المفتوحة — البيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>';
                 html += '</div>';
+                html += '</div>';
                 return html;
+            }
+            function offRow(p) {
+                var n = p.nutriments || {};
+                function g(k) { var v = n[k]; return (v === undefined || v === null) ? '—' : Math.round(v); }
+                var name = (p.product_name || p.product_name_fr || p.generic_name || 'منتج دون اسم');
+                var brand = p.brands ? (' — ' + p.brands) : '';
+                return '<tr class="border-b"><td class="p-2"><b>' + esc(name) + '</b>' + esc(brand) + '</td><td class="p-2">' + nsPill(nsGrade(p)) + '</td><td class="p-2">100غ</td><td class="p-2">' + g('energy-kcal_100g') + '</td><td class="p-2">' + g('proteins_100g') + '</td><td class="p-2">' + g('carbohydrates_100g') + '</td><td class="p-2">' + g('fat_100g') + '</td></tr>';
             }
             function searchOFF() {
                 const q = (document.getElementById('off-q').value || '').trim();
                 const out = document.getElementById('off-out');
-                if (!/^\d{8,14}$/.test(q)) { out.innerHTML = '<p class="text-gray-500">اكتب رقم باركود صحيحاً (8 إلى 14 رقماً) أو امسحه بالكاميرا.</p>'; return; }
+                if (!q) { out.innerHTML = '<p class="text-gray-500">اكتب اسم منتج أو رقم الباركود أولاً.</p>'; return; }
                 out.innerHTML = '<p class="text-gray-500">جارٍ البحث...</p>';
-                fetch('https://world.openfoodfacts.org/api/v2/product/' + q + '.json').then(function(r) { return r.json(); }).then(function(d) {
-                    const prods = (d.status === 1 && d.product) ? [d.product] : [];
-                    if (!prods.length) { out.innerHTML = '<p class="text-gray-500">لم نجد شيئاً — تأكد من الرقم. بعض المنتجات المغربية لم تدخل بعد إلى القاعدة العالمية.</p>'; return; }
-                    out.innerHTML = prods.map(offSheet).join('');
+                var isCode = /^\d{8,14}$/.test(q);
+                var url = isCode ? ('https://world.openfoodfacts.org/api/v2/product/' + q + '.json') : ('https://world.openfoodfacts.org/cgi/search.pl?search_terms=' + encodeURIComponent(q) + '&search_simple=1&action=process&json=1&page_size=8&fields=product_name,product_name_fr,generic_name,brands,quantity,image_url,image_small_url,nutriscore_grade,ecoscore_grade,ingredients_analysis_tags,labels_tags,allergens_tags,nutriments');
+                fetch(url).then(function(r) { return r.json(); }).then(function(d) {
+                    var prods = isCode ? ((d.status === 1 && d.product) ? [d.product] : []) : (d.products || []);
+                    if (!prods.length) { out.innerHTML = '<p class="text-gray-500">لم نجد شيئاً — تأكد من الرقم أو جرّب اسماً آخر. بعض المنتجات المغربية لم تدخل بعد إلى القاعدة العالمية.</p>'; return; }
+                    if (isCode) { out.innerHTML = prods.map(offSheet).join(''); return; }
+                    out.innerHTML = '<div style="overflow-x:auto"><table class="w-full text-sm md:text-base"><thead><tr class="border-b"><th class="p-2 text-right">المنتج</th><th class="p-2 text-right">Nutri-Score</th><th class="p-2 text-right">المرجع</th><th class="p-2 text-right">سعرات</th><th class="p-2 text-right">بروتين (غ)</th><th class="p-2 text-right">كربوهيدرات (غ)</th><th class="p-2 text-right">دهون (غ)</th></tr></thead><tbody>' + prods.map(offRow).join('') + '</tbody></table></div><p class="text-gray-500 text-sm mt-4">المصدر: Open Food Facts — بيانات مساهمة جماعية، راجع التغليف الأصلي دائماً.</p>';
                 }).catch(function() { out.innerHTML = '<p class="text-red-600 font-bold">حدثت مشكلة في الاتصال — أعد المحاولة.</p>'; });
             }
             document.getElementById('off-q').addEventListener('keydown', function(e) { if (e.key === 'Enter') searchOFF(); });
