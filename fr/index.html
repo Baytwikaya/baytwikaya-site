@@ -519,6 +519,9 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         const openModalFunc = (e) => { e.preventDefault(); mobileMenu.classList.add('hidden'); modal.classList.remove('hidden'); setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); }, 10); };
         const closeModalFunc = () => { modal.classList.add('opacity-0'); modalContent.classList.add('scale-95'); setTimeout(() => { modal.classList.add('hidden'); }, 300); };
         openBtns.forEach(btn => btn.addEventListener('click', openModalFunc));
+        const openOnBookingHash = () => { if (window.location.hash === '#booking') { openModalFunc(new Event('click')); } };
+        openOnBookingHash();
+        window.addEventListener('hashchange', openOnBookingHash);
         closeModal.addEventListener('click', closeModalFunc);
         modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFunc(); });
 
