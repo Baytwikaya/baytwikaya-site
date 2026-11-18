@@ -150,7 +150,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
             </div>
             <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Dernières actualités</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
                 <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
                     <a href="news/medlife-lifestyle"><img src="../news/hero-medlife-lifestyle.webp" alt="Deux hommes d’une cinquantaine d’années partageant un repas méditerranéen en plein air : huile d’olive, pois chiches, lentilles, poisson grillé et pain complet" class="w-full h-56 object-cover"></a>
                     <div class="p-6 flex flex-col flex-grow">
@@ -210,6 +210,8 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 </article>
 
             </div>
+
+            <div id="news-pagination" class="flex flex-wrap items-center justify-center gap-2 mt-10"></div>
 
             <div id="cms-section" class="mt-16" style="display:none">
                 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6 text-center">Nouveaux articles</h2>
@@ -303,6 +305,45 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   });
 })
 .catch(function(){ /* Pas encore d’articles du tableau de bord — la section reste masquée */ });
+})();
+</script>
+
+<script>
+/* ترقيم صفحات الأخبار: 9 مقالات في الصفحة (3 صفوف × 3 أعمدة). يعيد الترقيم تلقائيا
+   عند إضافة مقال جديد في أعلى الشبكة، فلا حاجة لتعديله عند كل نشر. */
+(function(){
+  var PER_PAGE = 9;
+  var grid = document.getElementById('news-grid');
+  var nav = document.getElementById('news-pagination');
+  if(!grid || !nav) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('article'));
+  var pages = Math.max(1, Math.ceil(cards.length / PER_PAGE));
+  var current = 1;
+  if(pages <= 1){ nav.style.display = 'none'; return; }
+  function btn(label, page, disabled, active){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label;
+    b.className = 'px-4 py-2 rounded-full font-bold transition ' + (active ? 'primary-bg text-white shadow-md' : 'bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50');
+    if(disabled){ b.disabled = true; b.className += ' opacity-50 cursor-not-allowed'; }
+    b.addEventListener('click', function(){ go(page); });
+    return b;
+  }
+  function render(){
+    cards.forEach(function(c, i){
+      c.style.display = (i >= (current-1)*PER_PAGE && i < current*PER_PAGE) ? '' : 'none';
+    });
+    nav.innerHTML = '';
+    nav.appendChild(btn('‹ Précédent', current-1, current === 1, false));
+    for(var p = 1; p <= pages; p++) nav.appendChild(btn(String(p), p, false, p === current));
+    nav.appendChild(btn('Suivant ›', current+1, current === pages, false));
+  }
+  function go(p){
+    if(p < 1 || p > pages) return;
+    current = p; render();
+    grid.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  render();
 })();
 </script>
 
