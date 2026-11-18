@@ -309,8 +309,9 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
 </script>
 
 <script>
-/* ترقيم صفحات الأخبار: 9 مقالات في الصفحة (3 صفوف × 3 أعمدة). يعيد الترقيم تلقائيا
-   عند إضافة مقال جديد في أعلى الشبكة، فلا حاجة لتعديله عند كل نشر. */
+/* ترقيم صفحات الأخبار على طريقة ووردبريس: 9 مقالات في الصفحة (3 صفوف × 3 أعمدة)،
+   زر ذهبي «مقالات قديمة» للمقالات الأقدم وزر «المقالات الأحدث» للرجوع. يعيد الترقيم
+   تلقائيا عند إضافة مقال جديد في أعلى الشبكة، فلا حاجة لتعديله عند كل نشر. */
 (function(){
   var PER_PAGE = 9;
   var grid = document.getElementById('news-grid');
@@ -320,11 +321,11 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   var pages = Math.max(1, Math.ceil(cards.length / PER_PAGE));
   var current = 1;
   if(pages <= 1){ nav.style.display = 'none'; return; }
-  function btn(label, page, disabled, active){
+  function btn(label, page, disabled, active, gold){
     var b = document.createElement('button');
     b.type = 'button';
     b.textContent = label;
-    b.className = 'px-4 py-2 rounded-full font-bold transition ' + (active ? 'primary-bg text-white shadow-md' : 'bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50');
+    b.className = 'px-4 py-2 rounded-full font-bold transition ' + (active ? 'primary-bg text-white shadow-md' : (gold && !disabled ? 'bg-[#c9a227] hover:bg-[#b08d1e] text-white shadow-md' : 'bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50'));
     if(disabled){ b.disabled = true; b.className += ' opacity-50 cursor-not-allowed'; }
     b.addEventListener('click', function(){ go(page); });
     return b;
@@ -334,9 +335,9 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
       c.style.display = (i >= (current-1)*PER_PAGE && i < current*PER_PAGE) ? '' : 'none';
     });
     nav.innerHTML = '';
-    nav.appendChild(btn('‹ Précédent', current-1, current === 1, false));
+    nav.appendChild(btn('‹ Articles plus récents', current-1, current === 1, false));
     for(var p = 1; p <= pages; p++) nav.appendChild(btn(String(p), p, false, p === current));
-    nav.appendChild(btn('Suivant ›', current+1, current === pages, false));
+    nav.appendChild(btn('Articles plus anciens ›', current+1, current === pages, false, true));
   }
   function go(p){
     if(p < 1 || p > pages) return;
