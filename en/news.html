@@ -149,6 +149,19 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto">Original articles backed by scientific sources: reliable information, practical advice, and links to the original research</p>
             </div>
 
+                        <!-- BREAKING: breaking-news slot — update when an important health story drops; to hide temporarily add style="display:none" to the <a> tag -->
+            <a href="news/weight-loss-drugs-blindness-warning" id="breaking-news" class="block mb-8 rounded-2xl overflow-hidden shadow-xl border-2 border-red-600" style="display:none">
+                <div class="bg-red-600 text-white px-4 py-3 flex items-center gap-3">
+                    <span class="inline-flex items-center gap-2 bg-white text-red-600 font-extrabold px-3 py-1 rounded-full text-sm shrink-0"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span></span>BREAKING</span>
+                    <span class="font-bold text-base md:text-lg leading-snug">New US warning: popular weight-loss drugs and a rare risk to vision — what is the truth?</span>
+                </div>
+                <div class="bg-red-50 px-4 py-3 flex items-center justify-between gap-3">
+                    <span class="text-red-900 text-sm md:text-base">The FDA is ordering Ozempic, Wegovy, Mounjaro and Zepbound to add a warning about a rare optic nerve risk — read the real numbers and the limits of the risk.</span>
+                    <span class="text-red-700 font-bold whitespace-nowrap text-sm md:text-base">Read more →</span>
+                </div>
+            </a>
+            <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Latest news</h2>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
                 <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
                     <a href="news/medlife-lifestyle"><img src="../news/hero-medlife-lifestyle.webp" alt="Two men in their fifties sharing a Mediterranean meal outdoors: olive oil, chickpeas, lentils, grilled fish and whole-grain bread" class="w-full h-56 object-cover"></a>
