@@ -221,3 +221,6 @@ var BAYT_NEWS_DATA = [
     "fr": "La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé"
   }
 ];
+
+if (typeof window !== 'undefined') { window.BAYT_NEWS = BAYT_NEWS_DATA; }
+if (typeof module !== 'undefined' && module.exports) { module.exports = BAYT_NEWS_DATA; }
