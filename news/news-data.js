@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "cartilage-gel-knee",
+    "img": "hero-cartilage-gel-knee.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "هلام قابل للحقن يعيد بناء الغضروف في الركبة؟ ما كشفته دراسة على الأغنام في 2024",
+    "en": "Injectable gel regrows knee cartilage? What a 2024 sheep study actually showed",
+    "fr": "Un gel injectable régénère le cartilage du genou ? Ce qu’a vraiment montré une étude sur des moutons en 2024"
+  },
+  {
     "slug": "alzheimer-blood-test-emtbr-tau",
     "img": "hero-alzheimer-blood-test-emtbr-tau.webp",
     "langs": [
