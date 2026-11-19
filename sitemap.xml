@@ -41,6 +41,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://baytwikaya.site/about</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/contact</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/privacy</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://baytwikaya.site/news</loc>
     <lastmod>2026-11-19</lastmod>
     <priority>0.8</priority>
@@ -161,6 +176,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://baytwikaya.site/en/about</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/contact</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/privacy</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://baytwikaya.site/en/news</loc>
     <lastmod>2026-11-19</lastmod>
     <priority>0.8</priority>
@@ -269,6 +299,21 @@
     <loc>https://baytwikaya.site/fr/faq</loc>
     <lastmod>2026-11-08</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/about</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/contact</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/privacy</loc>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://baytwikaya.site/fr/news</loc>
