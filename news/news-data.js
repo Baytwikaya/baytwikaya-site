@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "alzheimer-blood-test-emtbr-tau",
+    "img": "hero-alzheimer-blood-test-emtbr-tau.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تحليل دم جديد يقيس تقدّم الزهايمر بدقة أكبر؟ ما كشفته دراسة JAMA في 2026",
+    "en": "A new blood test measures how far Alzheimer’s has spread — what the JAMA study found",
+    "fr": "Un nouveau test sanguin mesure la progression d’Alzheimer — ce que révèle l’étude du JAMA"
+  },
+  {
     "slug": "fibromyalgia-pea-alc",
     "img": "hero-fibromyalgia-pea-alc.webp",
     "langs": [
