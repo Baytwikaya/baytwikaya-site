@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "fibromyalgia-pea-alc",
+    "img": "hero-fibromyalgia-pea-alc.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "مكمّل غذائي للألم المزمن؟ ما كشفته دراسة جديدة عن الفيبروميالجيا بعد 12 شهراً",
+    "en": "A supplement for fibromyalgia? What a 12-month study found — and what it cannot prove",
+    "fr": "Un complément contre la fibromyalgie ? Ce qu’une étude de 12 mois a trouvé — et ce qu’elle ne peut pas prouver"
+  },
+  {
     "slug": "flavour-nutrient-learning",
     "img": "hero-flavour-nutrient-learning.webp",
     "langs": [
