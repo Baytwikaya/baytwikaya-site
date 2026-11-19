@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "flavour-nutrient-learning",
+    "img": "hero-flavour-nutrient-learning.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "لماذا يتحسّن طعم القهوة والشوكولاتة مع الوقت؟ الدماغ يتعلم النكهات من المعدة",
+    "en": "Why coffee and chocolate start to taste better: your brain learns flavours from your gut",
+    "fr": "Pourquoi le café et le chocolat ont meilleur goût avec le temps : le cerveau apprend les saveurs depuis l’estomac"
+  },
+  {
     "slug": "dark-chocolate-health",
     "img": "hero-dark-chocolate-health.webp",
     "langs": [
