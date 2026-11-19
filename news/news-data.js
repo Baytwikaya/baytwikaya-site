@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "measles-elimination-lost",
+    "img": "hero-measles-elimination-lost.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الولايات المتحدة تفقد صفة القضاء على الحصبة بعد 26 عاماً وسط تفشٍّ قياسي",
+    "en": "The US has officially lost its measles elimination status after 26 years amid a record outbreak",
+    "fr": "Les États-Unis perdent officiellement leur statut d’élimination de la rougeole après 26 ans, en pleine flambée record"
+  },
+  {
     "slug": "cartilage-gel-knee",
     "img": "hero-cartilage-gel-knee.webp",
     "langs": [
