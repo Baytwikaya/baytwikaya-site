@@ -19,6 +19,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Actualités du monde de la santé | Bayt wikaya">
     <meta name="twitter:description" content="Des articles originaux étayés par des sources scientifiques sur le sommeil et les articulations, la force et les muscles, la nutrition et la prévention.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7VGSVX46W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z7VGSVX46W');
+</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
@@ -181,181 +189,213 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     <span class="text-red-700 font-bold whitespace-nowrap text-sm md:text-base">Lire la suite →</span>
                 </div>
             </a>
-            <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Dernières actualités</h2>
+                        <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col mb-10">
+                <a href="news/dark-chocolate-health" class="flex flex-col">
+                    <img src="../news/hero-dark-chocolate-health.webp" alt="Morceaux de chocolat noir et fèves de cacao sur une table en bois" class="w-full object-cover" style="aspect-ratio:16/9;max-height:480px">
+                    <div class="p-6 md:p-8">
+                        <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Nutrition et cœur</p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-3 leading-snug">Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré</h2>
+                        <p class="text-gray-600 leading-relaxed" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Une méta-analyse de 25 essais a montré que les flavanols du cacao améliorent le flux sanguin et baissent la tension, une étude coréenne a lié le chocolat noir à une meilleure humeur, et des données de Harvard à un risque de diabète plus faible — avec des réserves importantes, dont le financement d’une étude par un fabricant de cacao.</p>
+                    </div>
+                </a>
+            </article>
+
+            <section id="saved-section" class="mb-10" style="display:none">
+                <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Articles enregistrés</h2>
+                <ul id="saved-list" class="bg-white rounded-3xl shadow-xl p-6 md:p-8 space-y-4"></ul>
+            </section>
+
+<h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Dernières actualités</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/dark-chocolate-health" class="flex flex-col flex-grow">
-                        <img src="../news/hero-dark-chocolate-health.webp" alt="Morceaux de chocolat noir et fèves de cacao sur une table en bois" class="w-full object-cover" style="aspect-ratio:16/10">
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/mediterranean-diet-biological-age" class="flex flex-col flex-grow">
+                        <img src="../news/hero-mediterranean-diet-biological-age.webp" alt="Une table méditerranéenne avec de l’huile d’olive, des légumes, du poisson et du pain complet" class="w-full object-cover" style="aspect-ratio:16/10">
                         <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Nutrition et cœur</p>
-                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré</h2>
+                            <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Nutrition et vieillissement</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Régime méditerranéen et âge biologique : votre assiette peut-elle vraiment vous rajeunir ?</h2>
                         </div>
                     </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/mediterranean-diet-biological-age"><img src="../news/hero-mediterranean-diet-biological-age.webp" alt="Une table méditerranéenne avec de l’huile d’olive, des légumes, du poisson et du pain complet" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Nutrition et vieillissement</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/mediterranean-diet-biological-age" class="hover:underline">Régime méditerranéen et âge biologique : votre assiette peut-elle vraiment vous rajeunir ?</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une revue systématique de Nutrition Reviews associe l’alimentation de type méditerranéen à un âge biologique plus jeune, une meilleure mémoire et moins de fragilité, et l’essai DIRECT PLUS montre un écart favorable moyen de 8,9 mois — mais une association ne prouve pas que le régime ralentit le vieillissement.</p>
-                        <a href="news/mediterranean-diet-biological-age" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/milk-peptides-memory" class="flex flex-col flex-grow">
+                        <img src="../news/hero-milk-peptides-memory.webp" alt="Un verre de lait frais à côté d’un livre, symbole de la mémoire et de la nutrition" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Mémoire et nutrition</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Peptides du lait et mémoire : ce qu’ont vraiment montré un nouvel essai coréen et des études antérieures</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/milk-peptides-memory"><img src="../news/hero-milk-peptides-memory.webp" alt="Un verre de lait frais à côté d’un livre, symbole de la mémoire et de la nutrition" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">19 novembre 2026 · Mémoire et nutrition</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/milk-peptides-memory" class="hover:underline">Peptides du lait et mémoire : ce qu’ont vraiment montré un nouvel essai coréen et des études antérieures</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Un essai coréen portant sur 100 adultes annonce une meilleure mémoire, une meilleure concentration et de meilleures capacités verbales après 12 semaines de peptides du lait — sans publier de chiffres. Les preuves publiées à ce jour : une étude japonaise sur un peptide précis, le LNDP, à 2,4 mg par jour pendant 24 semaines.</p>
-                        <a href="news/milk-peptides-memory" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/vitamin-d-sunny-countries" class="flex flex-col flex-grow">
+                        <img src="../news/hero-vitamin-d-sunny-countries.webp" alt="Un homme d&amp;#x27;une quarantaine d&amp;#x27;années debout, souriant, dans la lumière du soleil du matin près d&amp;#x27;une grande fenêtre, avec du saumon grillé, des œufs durs et un verre de lait sur une table en bois" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Vitamines et santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le soleil est là, la vitamine manque : pourquoi les habitants des pays ensoleillés souffrent-ils d'une carence en vitamine D ?</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/vitamin-d-sunny-countries"><img src="../news/hero-vitamin-d-sunny-countries.webp" alt="Un homme d&#x27;une quarantaine d&#x27;années debout, souriant, dans la lumière du soleil du matin près d&#x27;une grande fenêtre, avec du saumon grillé, des œufs durs et un verre de lait sur une table en bois" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Vitamines et santé</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/vitamin-d-sunny-countries" class="hover:underline">Le soleil est là, la vitamine manque : pourquoi les habitants des pays ensoleillés souffrent-ils d&#x27;une carence en vitamine D ?</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une revue systématique de 2025 a réuni 35 études portant sur 28 260 personnes aux Émirats arabes unis — un pays avec 10 heures de soleil par jour — et a trouvé un taux moyen de vitamine D de 17,63 ng/mL, tandis qu&#x27;une étude de Dubaï sur 7 924 patients a trouvé 85,4 % sous le seuil de 30. Pourquoi le soleil ne suffit-il pas ?</p>
-                        <a href="news/vitamin-d-sunny-countries" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/back-pain-inflammation" class="flex flex-col flex-grow">
+                        <img src="../news/hero-back-pain-inflammation.webp" alt="Un homme dans la quarantaine faisant un exercice doux d&amp;#x27;étirement du dos sur un tapis dans une pièce éclairée par la lumière du matin" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Lombalgie et santé générale</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Votre dos vous fait mal ? Le problème est peut-être ailleurs que dans le dos : inflammation, cœur et foie dans 3 études récentes</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/back-pain-inflammation"><img src="../news/hero-back-pain-inflammation.webp" alt="Un homme dans la quarantaine faisant un exercice doux d&#x27;étirement du dos sur un tapis dans une pièce éclairée par la lumière du matin" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Lombalgie et santé générale</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/back-pain-inflammation" class="hover:underline">Votre dos vous fait mal ? Le problème est peut-être ailleurs que dans le dos : inflammation, cœur et foie dans 3 études récentes</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Trois études récentes de 2025 et 2026 relient la lombalgie à un marqueur d&#x27;inflammation sanguine, aux habitudes de santé cardiaque et à un indice de stéatose hépatique. Que disent vraiment les chiffres ? Et que n&#x27;ont-elles pas encore prouvé ?</p>
-                        <a href="news/back-pain-inflammation" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/fats-joints-oa" class="flex flex-col flex-grow">
+                        <img src="../news/hero-fats-joints-oa.webp" alt="Huile d&amp;#x27;olive, noix, poisson grillé et avocat sur une table en bois à la lumière du matin" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et articulations</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Changez vos graisses pour protéger vos genoux ? Ce qu'une étude de 2026 a révélé sur les graisses et l'arthrose</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/fats-joints-oa"><img src="../news/hero-fats-joints-oa.webp" alt="Huile d&#x27;olive, noix, poisson grillé et avocat sur une table en bois à la lumière du matin" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et articulations</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/fats-joints-oa" class="hover:underline">Changez vos graisses pour protéger vos genoux ? Ce qu&#x27;une étude de 2026 a révélé sur les graisses et l&#x27;arthrose</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Étude 2026 dans Frontiers in Nutrition : plus de 93 000 personnes suivies dans trois pays — une part plus élevée de graisses insaturées dans l&#x27;alimentation a été associée à moins de nouveaux diagnostics d&#x27;arthrose, mais le lien est faible et l&#x27;étude observationnelle ne prouve pas que changer de graisses prévient l&#x27;arthrose.</p>
-                        <a href="news/fats-joints-oa" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/food-and-memory" class="flex flex-col flex-grow">
+                        <img src="../news/hero-food-memory.webp" alt="Table méditerranéenne : huile d&amp;#x27;olive, légumes verts, baies, noix, poisson grillé et pain complet" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">16 novembre 2026 · Alimentation et mémoire</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">L'oubli commence-t-il dans l'assiette ? Ce que les dernières études révèlent sur l'alimentation et la mémoire</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/food-and-memory"><img src="../news/hero-food-memory.webp" alt="Table méditerranéenne : huile d&#x27;olive, légumes verts, baies, noix, poisson grillé et pain complet" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">16 novembre 2026 · Alimentation et mémoire</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/food-and-memory" class="hover:underline">L&#x27;oubli commence-t-il dans l&#x27;assiette ? Ce que les dernières études révèlent sur l&#x27;alimentation et la mémoire</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une étude canadienne publiée en octobre 2026 a constaté qu&#x27;une consommation élevée d&#x27;aliments ultra-transformés est liée à des lésions silencieuses des vaisseaux cérébraux, tandis que les habitudes alimentaires de type méditerranéen sont associées à un risque moindre de déclin cognitif. Que mange votre mémoire ? Et que les essais n&#x27;ont-ils pas encore prouvé ?</p>
-                        <a href="news/food-and-memory" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/retatrutide-sleep-knee-pain" class="flex flex-col flex-grow">
+                        <img src="../news/hero-retatrutide.webp" alt="Un homme d’une cinquantaine d’années montant des marches en pierre dans un parc éclairé par la lumière du matin, plein d’énergie" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Obésité, sommeil et articulations</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Un seul médicament contre l'obésité améliore le sommeil et soulage la douleur du genou ? Ce qu'ont révélé les résultats du rétatrutide en 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/retatrutide-sleep-knee-pain"><img src="../news/hero-retatrutide.webp" alt="Un homme d’une cinquantaine d’années montant des marches en pierre dans un parc éclairé par la lumière du matin, plein d’énergie" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Obésité, sommeil et articulations</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/retatrutide-sleep-knee-pain" class="hover:underline">Un seul médicament contre l&#x27;obésité améliore le sommeil et soulage la douleur du genou ? Ce qu&#x27;ont révélé les résultats du rétatrutide en 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Lors du congrès ObesityWeek 2026, Lilly a annoncé que le rétatrutide expérimental réduisait l&#x27;apnée du sommeil jusqu&#x27;à 60,6 % et la douleur de l&#x27;arthrose du genou jusqu&#x27;à 75,8 % dans des essais de phase 3. Mais le médicament est toujours expérimental, et les chiffres « jusqu&#x27;à » ne concernent pas tout le monde.</p>
-                        <a href="news/retatrutide-sleep-knee-pain" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/peanuts-memory" class="flex flex-col flex-grow">
+                        <img src="../news/hero-peanuts-memory.webp" alt="Un bol de cacahuètes grillées avec leur peau sur une table en bois, avec un verre d’eau à la lumière du matin" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et mémoire</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Une poignée de cacahuètes par jour : peut-elle améliorer la mémoire et le flux sanguin vers le cerveau ? Ce qu’un essai néerlandais a révélé en 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/peanuts-memory"><img src="../news/hero-peanuts-memory.webp" alt="Un bol de cacahuètes grillées avec leur peau sur une table en bois, avec un verre d’eau à la lumière du matin" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et mémoire</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/peanuts-memory" class="hover:underline">Une poignée de cacahuètes par jour : peut-elle améliorer la mémoire et le flux sanguin vers le cerveau ? Ce qu’un essai néerlandais a révélé en 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Essai néerlandais sur 31 adultes de 60 à 75 ans : 60 grammes de cacahuètes grillées avec leur peau, sans sel, chaque jour pendant 16 semaines ont augmenté le flux sanguin vers le cerveau de 3,6 % et amélioré la mémoire verbale de 5,8 %, et rendu les régions de la mémoire plus sensibles à l’insuline. Que prouve-t-il vraiment ?</p>
-                        <a href="news/peanuts-memory" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/menopause-bone-cliff" class="flex flex-col flex-grow">
+                        <img src="../news/hero-menopause-bone-cliff.webp" alt="Une femme d&amp;#x27;une cinquantaine d&amp;#x27;années portant le hijab et des vêtements modestes, marchant d&amp;#x27;un pas vif dans un parc ensoleillé" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Santé des femmes et os</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">La ménopause n'est pas un déclin lent… mais une « falaise » soudaine ? Ce que 300 millions d'analyses ont révélé</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/menopause-bone-cliff"><img src="../news/hero-menopause-bone-cliff.webp" alt="Une femme d&#x27;une cinquantaine d&#x27;années portant le hijab et des vêtements modestes, marchant d&#x27;un pas vif dans un parc ensoleillé" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Santé des femmes et os</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/menopause-bone-cliff" class="hover:underline">La ménopause n&#x27;est pas un déclin lent… mais une « falaise » soudaine ? Ce que 300 millions d&#x27;analyses ont révélé</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une étude publiée dans Nature Medicine en octobre 2026 a analysé plus de 300 millions d&#x27;analyses de laboratoire de plus d&#x27;un million de femmes et a constaté que 52 analyses de routine sur 90 changent brusquement lors des dernières règles — et les os font partie des systèmes les plus touchés. Qu&#x27;est-ce que cela signifie pour la prévention ?</p>
-                        <a href="news/menopause-bone-cliff" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/diabetes-muscle-loss" class="flex flex-col flex-grow">
+                        <img src="../news/hero-diabetes-muscle-loss.webp" alt="Un homme dans la quarantaine faisant des exercices de résistance avec des haltères légers dans un salon lumineux" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Diabète et muscles</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le diabète de type 2 peut-il régresser sans perte musculaire ? Ce qu'a révélé un essai de 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/diabetes-muscle-loss"><img src="../news/hero-diabetes-muscle-loss.webp" alt="Un homme dans la quarantaine faisant des exercices de résistance avec des haltères légers dans un salon lumineux" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Diabète et muscles</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/diabetes-muscle-loss" class="hover:underline">Le diabète de type 2 peut-il régresser sans perte musculaire ? Ce qu&#x27;a révélé un essai de 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">L&#x27;essai RESET for Remission, publié en octobre 2026 : un régime très hypocalorique associé à un exercice encadré a mis 54 % des jeunes adultes atteints de diabète de type 2 en rémission après 24 semaines, tout en préservant les muscles — mais l&#x27;essai était petit et le suivi court.</p>
-                        <a href="news/diabetes-muscle-loss" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/medlife-lifestyle" class="flex flex-col flex-grow">
+                        <img src="../news/hero-medlife-lifestyle.webp" alt="Deux hommes d’une cinquantaine d’années partageant un repas méditerranéen en plein air : huile d’olive, pois chiches, lentilles, poisson grillé et pain complet" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et mode de vie</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Pas seulement l’alimentation : le mode de vie méditerranéen complet réduit le risque de décès de 30 % — ce qu’une étude de 2026 a révélé</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/medlife-lifestyle"><img src="../news/hero-medlife-lifestyle.webp" alt="Deux hommes d’une cinquantaine d’années partageant un repas méditerranéen en plein air : huile d’olive, pois chiches, lentilles, poisson grillé et pain complet" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 novembre 2026 · Nutrition et mode de vie</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/medlife-lifestyle" class="hover:underline">Pas seulement l’alimentation : le mode de vie méditerranéen complet réduit le risque de décès de 30 % — ce qu’une étude de 2026 a révélé</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une étude néerlandaise a suivi 105 812 personnes pendant 13 ans et mesuré le mode de vie méditerranéen avec un indice de 23 habitudes : alimentation, mouvement, sommeil et vie sociale. Les plus assidus avaient un risque de décès inférieur de 30 % — et le bénéfice concernait tout le monde, riches et pauvres.</p>
-                        <a href="news/medlife-lifestyle" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/sleep-joints" class="flex flex-col flex-grow">
+                        <img src="../news/hero-sleep-joints.webp" alt="Une personne dormant paisiblement dans une chambre éclairée par la lumière du matin" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Sommeil et articulations</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Vous dormez moins de 6 heures ? Vos articulations en paient le prix — ce qu’une étude de 2026 a révélé</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/sleep-joints"><img src="../news/hero-sleep-joints.webp" alt="Une personne dormant paisiblement dans une chambre éclairée par la lumière du matin" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Sommeil et articulations</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/sleep-joints" class="hover:underline">Vous dormez moins de 6 heures ? Vos articulations en paient le prix — ce qu’une étude de 2026 a révélé</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Le sommeil n’est pas seulement du repos : une étude récente publiée en 2026 a montré que le manque de sommeil et le travail de nuit augmentent le risque d’arthrose, même chez les personnes qui ne souffrent pas de douleurs chroniques au départ. Comment cela se produit-il ? Et que pouvez-vous faire dès ce soir ?</p>
-                        <a href="news/sleep-joints" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/strength-after-35" class="flex flex-col flex-grow">
+                        <img src="../news/hero-strength-after-35.webp" alt="Un homme à la fin de la trentaine s’entraînant avec des poids dans une salle lumineuse" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Force et muscles</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Dès 35 ans, votre corps perd ses muscles en silence — et voici ce qui arrête l’hémorragie</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/strength-after-35"><img src="../news/hero-strength-after-35.webp" alt="Un homme à la fin de la trentaine s’entraînant avec des poids dans une salle lumineuse" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Force et muscles</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/strength-after-35" class="hover:underline">Dès 35 ans, votre corps perd ses muscles en silence — et voici ce qui arrête l’hémorragie</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Votre force atteint son sommet entre 25 et 35 ans, puis un déclin silencieux commence, que vous ne ressentez que des années plus tard : de 3 à 8 % de la masse musculaire par décennie. La bonne nouvelle : ce déclin est l’un des processus du vieillissement les plus réversibles — et c’est ce que la science prouve.</p>
-                        <a href="news/strength-after-35" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/anti-fall-exercises" class="flex flex-col flex-grow">
+                        <img src="../news/hero-anti-fall.webp" alt="Une dame âgée s’entraînant à l’équilibre près d’une chaise dans une pièce ensoleillée" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Équilibre et prévention des chutes</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/anti-fall-exercises"><img src="../news/hero-anti-fall.webp" alt="Une dame âgée s’entraînant à l’équilibre près d’une chaise dans une pièce ensoleillée" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 octobre 2026 · Équilibre et prévention des chutes</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/anti-fall-exercises" class="hover:underline">La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">Une personne sur 4 de plus de 65 ans chute chaque année — mais une revue Cochrane de plus de 100 essais prouve que les exercices d’équilibre réduisent le taux de chutes d’environ un quart, et les programmes variés de plus d’un tiers. 5 exercices simples pour commencer chez vous.</p>
-                        <a href="news/anti-fall-exercises" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/opioids-back-pain" class="flex flex-col flex-grow">
+                        <img src="../news/hero-opioids-back.webp" alt="Une femme marchant lentement sur un chemin le matin, la main sur le bas du dos" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">2 novembre 2026 · Douleurs dorsales et médicaments</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Des années d’antalgiques puissants et votre dos vous fait toujours mal : ce qu’une étude de 2026 a révélé</h2>
+                        </div>
+                    </a>
                 </article>
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/opioids-back-pain"><img src="../news/hero-opioids-back.webp" alt="Une femme marchant lentement sur un chemin le matin, la main sur le bas du dos" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">2 novembre 2026 · Douleurs dorsales et médicaments</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/opioids-back-pain" class="hover:underline">Des années d’antalgiques puissants et votre dos vous fait toujours mal : ce qu’une étude de 2026 a révélé</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">70 patients prenant des antalgiques puissants chaque jour depuis 7,8 ans en moyenne, avec un niveau de douleur presque identique à celui de patients qui n’en prennent pas — et une fonction physique légèrement moins bonne. Qu’ont découvert les chercheurs dans le cerveau ? Et quand ces médicaments sont-ils vraiment utiles ?</p>
-                        <a href="news/opioids-back-pain" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/first-line-back-pain" class="flex flex-col flex-grow">
+                        <img src="../news/hero-first-line-back-pain.webp" alt="Un homme pratiquant un exercice doux de renforcement du dos sur un tapis dans une pièce lumineuse" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">9 novembre 2026 · Douleurs dorsales et traitement de première intention</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Avant les antalgiques et avant les radios : quel est le premier traitement du mal de dos selon l’Organisation mondiale de la santé ?</h2>
+                        </div>
+                    </a>
                 </article>
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/first-line-back-pain"><img src="../news/hero-first-line-back-pain.webp" alt="Un homme pratiquant un exercice doux de renforcement du dos sur un tapis dans une pièce lumineuse" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">9 novembre 2026 · Douleurs dorsales et traitement de première intention</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/first-line-back-pain" class="hover:underline">Avant les antalgiques et avant les radios : quel est le premier traitement du mal de dos selon l’Organisation mondiale de la santé ?</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">619 millions de personnes ont souffert du mal de dos en 2020, et ce nombre se dirige vers 843 millions. L’OMS et les recommandations NICE actualisées en 2026 s’accordent : le premier traitement est un programme d’exercices structuré, pas un comprimé ni une radio — alors qu’est-ce qui fonctionne vraiment, et que déconseillent les recommandations ?</p>
-                        <a href="news/first-line-back-pain" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">Lire l’article ←</a>
-                    </div>
-                </article>
-
             </div>
 
             <div id="news-pagination" class="flex flex-col items-center mt-10"></div>
 
+            <section id="editors-picks" class="mt-14 bg-white rounded-3xl shadow-xl border-t-8 border-[#c9a227] p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-teal-900 mb-6">Sélection de la rédaction</h2>
+                <ol class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">1</span>
+                        <div>
+                            <a href="news/weight-loss-drugs-blindness-warning" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Les médicaments amaigrissants peuvent-ils rendre aveugle ? La vérité sur le nouvel avertissement américain et les limites du risque</a>
+                            <p class="text-gray-400 text-sm">18 novembre 2026</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">2</span>
+                        <div>
+                            <a href="news/mediterranean-diet-biological-age" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Régime méditerranéen et âge biologique : votre assiette peut-elle vraiment vous rajeunir ?</a>
+                            <p class="text-gray-400 text-sm">19 novembre 2026 · Nutrition et vieillissement</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">3</span>
+                        <div>
+                            <a href="news/milk-peptides-memory" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Peptides du lait et mémoire : ce qu’ont vraiment montré un nouvel essai coréen et des études antérieures</a>
+                            <p class="text-gray-400 text-sm">19 novembre 2026 · Mémoire et nutrition</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">4</span>
+                        <div>
+                            <a href="news/vitamin-d-sunny-countries" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Le soleil est là, la vitamine manque : pourquoi les habitants des pays ensoleillés souffrent-ils d&#x27;une carence en vitamine D ?</a>
+                            <p class="text-gray-400 text-sm">18 novembre 2026 · Vitamines et santé</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">5</span>
+                        <div>
+                            <a href="news/back-pain-inflammation" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Votre dos vous fait mal ? Le problème est peut-être ailleurs que dans le dos : inflammation, cœur et foie dans 3 études récentes</a>
+                            <p class="text-gray-400 text-sm">18 novembre 2026 · Lombalgie et santé générale</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
             <div id="cms-section" class="mt-16" style="display:none">
                 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6 text-center">Nouveaux articles</h2>
                 <div id="cms-list" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -499,6 +539,8 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   render();
 })();
 </script>
+
+    <script src="../news/news-hub.js"></script>
 
 </body>
 </html>

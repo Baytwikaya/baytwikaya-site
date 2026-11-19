@@ -19,6 +19,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="أخبار في عالم الصحة | بيت الوقاية">
     <meta name="twitter:description" content="مقالات أصلية موثقة بالمصادر العلمية عن النوم والمفاصل، القوة والعضلات، التغذية، والوقاية.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7VGSVX46W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z7VGSVX46W');
+</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
@@ -189,182 +197,213 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     <span class="text-red-700 font-bold whitespace-nowrap text-sm md:text-base">اقرأ المزيد ←</span>
                 </div>
             </a>
-            <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">آخر الأخبار</h2>
+                        <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col mb-10">
+                <a href="news/dark-chocolate-health" class="flex flex-col">
+                    <img src="news/hero-dark-chocolate-health.webp" alt="قطع من الشوكولاتة الداكنة مع حبوب الكاكاو على طاولة خشبية" class="w-full object-cover" style="aspect-ratio:16/9;max-height:480px">
+                    <div class="p-6 md:p-8">
+                        <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · التغذية والقلب</p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-3 leading-snug">الشوكولاتة الداكنة والقلب والمزاج: ماذا قالت ثلاث دراسات في 2026؟</h2>
+                        <p class="text-gray-600 leading-relaxed" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">تحليل شامل لـ25 تجربة سريرية وجد أن فلافانولات الكاكاو تحسّن تدفق الدم وتخفّض الضغط، ودراسة كورية ربطت الشوكولاتة الداكنة بتحسّن المزاج، وبيانات هارفارد ربطتها بانخفاض خطر السكري — مع تحفظات مهمة، منها تمويل إحدى الدراسات من شركة كاكاو.</p>
+                    </div>
+                </a>
+            </article>
+
+            <section id="saved-section" class="mb-10" style="display:none">
+                <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">المقالات المحفوظة</h2>
+                <ul id="saved-list" class="bg-white rounded-3xl shadow-xl p-6 md:p-8 space-y-4"></ul>
+            </section>
+
+<h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">آخر الأخبار</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/dark-chocolate-health" class="flex flex-col flex-grow">
-                        <img src="news/hero-dark-chocolate-health.webp" alt="قطع من الشوكولاتة الداكنة مع حبوب الكاكاو على طاولة خشبية" class="w-full object-cover" style="aspect-ratio:16/10">
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/mediterranean-diet-biological-age" class="flex flex-col flex-grow">
+                        <img src="news/hero-mediterranean-diet-biological-age.webp" alt="مائدة متوسطية فيها زيت زيتون وخضار وسمك وخبز كامل" class="w-full object-cover" style="aspect-ratio:16/10">
                         <div class="p-5 flex flex-col flex-grow">
-                            <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · التغذية والقلب</p>
-                            <h2 class="text-lg font-bold text-teal-900 leading-snug">الشوكولاتة الداكنة والقلب والمزاج: ماذا قالت ثلاث دراسات في 2026؟</h2>
+                            <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · التغذية والشيخوخة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">النظام الغذائي المتوسطي والعمر البيولوجي: هل يجعلك طعامك أصغر سناً فعلاً؟</h2>
                         </div>
                     </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/mediterranean-diet-biological-age"><img src="news/hero-mediterranean-diet-biological-age.webp" alt="مائدة متوسطية فيها زيت زيتون وخضار وسمك وخبز كامل" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · التغذية والشيخوخة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/mediterranean-diet-biological-age" class="hover:underline">النظام الغذائي المتوسطي والعمر البيولوجي: هل يجعلك طعامك أصغر سناً فعلاً؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">مراجعة منهجية في مجلة Nutrition Reviews ربطت الأكل على الطريقة المتوسطية بعمر بيولوجي أصغر وذاكرة أفضل وهشاشة أقل، وتجربة DIRECT PLUS أظهرت فرقاً مفضلاً بمتوسط 8.9 أشهر — لكن الربط ليس إثباتاً بأن الغذاء يُبطئ الشيخوخة.</p>
-                        <a href="news/mediterranean-diet-biological-age" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/milk-peptides-memory" class="flex flex-col flex-grow">
+                        <img src="news/hero-milk-peptides-memory.webp" alt="كوب من الحليب الطازج بجانب كتاب، رمزاً للذاكرة والتغذية" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · الذاكرة والتغذية</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">ببتيدات الحليب والذاكرة: ما الذي أظهرته تجربة كورية جديدة ودراسات سابقة؟</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/milk-peptides-memory"><img src="news/hero-milk-peptides-memory.webp" alt="كوب من الحليب الطازج بجانب كتاب، رمزاً للذاكرة والتغذية" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">19 نوفمبر 2026 · الذاكرة والتغذية</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/milk-peptides-memory" class="hover:underline">ببتيدات الحليب والذاكرة: ما الذي أظهرته تجربة كورية جديدة ودراسات سابقة؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">تجربة كورية شملت 100 بالغ أعلنت تحسن الذاكرة والتركيز والقدرة اللفظية بعد 12 أسبوعاً من ببتيدات الحليب، دون نشر أي أرقام. أما الدليل المنشور، فدراسة يابانية عن ببتيد محدد بجرعة 2.4 ملغ يومياً لمدة 24 أسبوعاً.</p>
-                        <a href="news/milk-peptides-memory" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/vitamin-d-sunny-countries" class="flex flex-col flex-grow">
+                        <img src="news/hero-vitamin-d-sunny-countries.webp" alt="رجل في الأربعينات يقف مبتسماً في ضوء شمس الصباح بجانب نافذة كبيرة، وعلى طاولة خشبية طبق فيه سلمون مشوي وبيض مسلوق وكأس حليب" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · الفيتامينات والصحة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">الشمس موجودة والفيتامين ناقص: لماذا يعاني سكان البلدان المشمسة من نقص فيتامين د؟</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/vitamin-d-sunny-countries"><img src="news/hero-vitamin-d-sunny-countries.webp" alt="رجل في الأربعينات يقف مبتسماً في ضوء شمس الصباح بجانب نافذة كبيرة، وعلى طاولة خشبية طبق فيه سلمون مشوي وبيض مسلوق وكأس حليب" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · الفيتامينات والصحة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/vitamin-d-sunny-countries" class="hover:underline">الشمس موجودة والفيتامين ناقص: لماذا يعاني سكان البلدان المشمسة من نقص فيتامين د؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">مراجعة منهجية 2025 جمعت 35 دراسة على 28,260 شخصاً في الإمارات — بلد فيه 10 ساعات شمس يومياً — فوجدت متوسط فيتامين د 17.63 نانوغرام/مل، ودراسة في دبي على 7,924 مريضاً وجدت 85.4% دون عتبة 30. لماذا لا تكفي الشمس؟</p>
-                        <a href="news/vitamin-d-sunny-countries" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/back-pain-inflammation" class="flex flex-col flex-grow">
+                        <img src="news/hero-back-pain-inflammation.webp" alt="رجل في الأربعينات يمارس تمرين تمدد لطيف للظهر على سجادة في غرفة مضيئة بنور الصباح" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · آلام الظهر والصحة العامة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">ظهرك يؤلمك؟ قد تكون المشكلة أبعد من الظهر: الالتهاب والقلب والكبد في 3 دراسات حديثة</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/back-pain-inflammation"><img src="news/hero-back-pain-inflammation.webp" alt="رجل في الأربعينات يمارس تمرين تمدد لطيف للظهر على سجادة في غرفة مضيئة بنور الصباح" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · آلام الظهر والصحة العامة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/back-pain-inflammation" class="hover:underline">ظهرك يؤلمك؟ قد تكون المشكلة أبعد من الظهر: الالتهاب والقلب والكبد في 3 دراسات حديثة</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">ثلاث دراسات حديثة من 2025 و2026 تربط آلام أسفل الظهر بمؤشر الالتهاب في الدم، وبعادات صحة القلب، وبمؤشر الكبد الدهني. ماذا تقول الأرقام فعلاً؟ وما الذي لم تثبته بعد؟</p>
-                        <a href="news/back-pain-inflammation" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/fats-joints-oa" class="flex flex-col flex-grow">
+                        <img src="news/hero-fats-joints-oa.webp" alt="زيت زيتون وجوز وسمك مشوي وأفوكادو على طاولة خشبية في ضوء الصباح" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية والمفاصل</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">بدّل دهنك تحمِ ركبتك؟ ماذا كشفت دراسة 2026 عن الدهون وخشونة المفاصل؟</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/fats-joints-oa"><img src="news/hero-fats-joints-oa.webp" alt="زيت زيتون وجوز وسمك مشوي وأفوكادو على طاولة خشبية في ضوء الصباح" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية والمفاصل</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/fats-joints-oa" class="hover:underline">بدّل دهنك تحمِ ركبتك؟ ماذا كشفت دراسة 2026 عن الدهون وخشونة المفاصل؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">دراسة 2026 في مجلة Frontiers in Nutrition تابعت أكثر من 93 ألف شخص في ثلاث دول: زيادة حصة الدهون غير المشبعة في الغذاء ارتبطت بانخفاض تشخيصات خشونة المفاصل الجديدة، لكن الرابط صغير والدراسة رصدية لا تثبت أن تبديل الدهون يمنع الخشونة.</p>
-                        <a href="news/fats-joints-oa" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/peanuts-memory" class="flex flex-col flex-grow">
+                        <img src="news/hero-peanuts-memory.webp" alt="وعاء من الكاوكاو المحمص بقشره على طاولة خشبية مع كأس ماء في نور الصباح" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية والذاكرة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">حفنة كاوكاو كل يوم: هل تحسّن الذاكرة وتدفق الدم إلى الدماغ؟ ما كشفته تجربة هولندية في 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/peanuts-memory"><img src="news/hero-peanuts-memory.webp" alt="وعاء من الكاوكاو المحمص بقشره على طاولة خشبية مع كأس ماء في نور الصباح" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية والذاكرة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/peanuts-memory" class="hover:underline">حفنة كاوكاو كل يوم: هل تحسّن الذاكرة وتدفق الدم إلى الدماغ؟ ما كشفته تجربة هولندية في 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">تجربة هولندية على 31 بالغاً بين 60 و75 عاماً: 60 غراماً من الكاوكاو المحمص بقشره دون ملح كل يوم لمدة 16 أسبوعاً رفعت تدفق الدم إلى الدماغ بنسبة 3.6 بالمئة وحسّنت الذاكرة اللفظية بنسبة 5.8 بالمئة، وجعلت مناطق الذاكرة تستجيب للأنسولين بشكل أفضل. ماذا يثبت هذا فعلاً؟</p>
-                        <a href="news/peanuts-memory" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/menopause-bone-cliff" class="flex flex-col flex-grow">
+                        <img src="news/hero-menopause-bone-cliff.webp" alt="امرأة في أواخر الخمسينات ترتدي الحجاب وملابس محتشمة، تمشي بنشاط في حديقة مشمسة" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · صحة المرأة والعظام</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">انقطاع الطمث ليس انحداراً بطيئاً… بل "منحدر" مفاجئ؟ ما كشفته 300 مليون تحليل</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/menopause-bone-cliff"><img src="news/hero-menopause-bone-cliff.webp" alt="امرأة في أواخر الخمسينات ترتدي الحجاب وملابس محتشمة، تمشي بنشاط في حديقة مشمسة" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · صحة المرأة والعظام</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/menopause-bone-cliff" class="hover:underline">انقطاع الطمث ليس انحداراً بطيئاً… بل &quot;منحدر&quot; مفاجئ؟ ما كشفته 300 مليون تحليل</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">دراسة نشرت في مجلة Nature Medicine في أكتوبر 2026 حللت أكثر من 300 مليون تحليل مخبري من أكثر من مليون امرأة، فوجدت أن 52 من 90 تحليلاً روتينياً تتغير فجأة عند الدورة الأخيرة — وأن العظام من أكثر الأجهزة تأثراً. ماذا يعني هذا للوقاية؟</p>
-                        <a href="news/menopause-bone-cliff" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/diabetes-muscle-loss" class="flex flex-col flex-grow">
+                        <img src="news/hero-diabetes-muscle-loss.webp" alt="رجل في الأربعينات يمارس تمارين المقاومة بأثقال خفيفة في غرفة معيشة مضيئة" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · السكري والعضلات</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">هل يقدر السكري من النوع الثاني أن يتراجع بلا خسارة للعضلات؟ ما كشفته تجربة 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/diabetes-muscle-loss"><img src="news/hero-diabetes-muscle-loss.webp" alt="رجل في الأربعينات يمارس تمارين المقاومة بأثقال خفيفة في غرفة معيشة مضيئة" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · السكري والعضلات</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/diabetes-muscle-loss" class="hover:underline">هل يقدر السكري من النوع الثاني أن يتراجع بلا خسارة للعضلات؟ ما كشفته تجربة 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">تجربة RESET for Remission نشرت في أكتوبر 2026: نظام قليل السعرات مع رياضة مشرفة وضع 54 بالمئة من الشباب المصابين بالسكري من النوع الثاني في تراجع بعد 24 أسبوعاً، مع الحفاظ على العضلات — لكن التجربة صغيرة والمتابعة قصيرة.</p>
-                        <a href="news/diabetes-muscle-loss" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/medlife-lifestyle" class="flex flex-col flex-grow">
+                        <img src="news/hero-medlife-lifestyle.webp" alt="رجلان في الخمسينات يتشاركان وجبة متوسطية في الهواء الطلق: زيت زيتون وحمص وعدس وسمك مشوي وخبز كامل" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية وأسلوب الحياة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">ماشي غير الماكلة: أسلوب الحياة المتوسطي كاملاً يقلل خطر الوفاة بنسبة 30 بالمئة — ما كشفته دراسة 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/medlife-lifestyle"><img src="news/hero-medlife-lifestyle.webp" alt="رجلان في الخمسينات يتشاركان وجبة متوسطية في الهواء الطلق: زيت زيتون وحمص وعدس وسمك مشوي وخبز كامل" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · التغذية وأسلوب الحياة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/medlife-lifestyle" class="hover:underline">ماشي غير الماكلة: أسلوب الحياة المتوسطي كاملاً يقلل خطر الوفاة بنسبة 30 بالمئة — ما كشفته دراسة 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">دراسة هولندية تابعت 105,812 شخصاً لمدة 13 سنة، وقاست أسلوب الحياة المتوسطي بمؤشر من 23 عادة: الأكل والحركة والنوم والحياة الاجتماعية. أصحاب أعلى التزام كان خطر الوفاة عندهم أقل بنسبة 30 بالمئة — والفائدة ظهرت عند الجميع، أغنياء وفقراء.</p>
-                        <a href="news/medlife-lifestyle" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/retatrutide-sleep-knee-pain" class="flex flex-col flex-grow">
+                        <img src="news/hero-retatrutide.webp" alt="رجل في الخمسينات يصعد درجات حجرية في حديقة مضيئة بنور الصباح بنشاط" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · السمنة والنوم والمفاصل</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/retatrutide-sleep-knee-pain"><img src="news/hero-retatrutide.webp" alt="رجل في الخمسينات يصعد درجات حجرية في حديقة مضيئة بنور الصباح بنشاط" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">18 نوفمبر 2026 · السمنة والنوم والمفاصل</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/retatrutide-sleep-knee-pain" class="hover:underline">دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">في ObesityWeek 2026: ريتاتروتيد التجريبي خفّض انقطاع التنفس أثناء النوم بنسبة تصل إلى 60.6% وألم خشونة الركبة بنسبة تصل إلى 75.8% — لكن الدواء ما زال تجريبياً، والأرقام «حتى» وليست للجميع. ماذا تعني فعلاً؟</p>
-                        <a href="news/retatrutide-sleep-knee-pain" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/food-and-memory" class="flex flex-col flex-grow">
+                        <img src="news/hero-food-memory.webp" alt="مائدة متوسطية: زيت زيتون وخضار ورقية وتوت وجوز وسمك مشوي وخبز كامل" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">16 نوفمبر 2026 · الغذاء والذاكرة</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">هل يبدأ النسيان من الطبق؟ ماذا كشفت أحدث الدراسات عن الغذاء والذاكرة؟</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/food-and-memory"><img src="news/hero-food-memory.webp" alt="مائدة متوسطية: زيت زيتون وخضار ورقية وتوت وجوز وسمك مشوي وخبز كامل" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">16 نوفمبر 2026 · الغذاء والذاكرة</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/food-and-memory" class="hover:underline">هل يبدأ النسيان من الطبق؟ ماذا كشفت أحدث الدراسات عن الغذاء والذاكرة؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">دراسة كندية نشرت في أكتوبر 2026 وجدت أن الإكثار من الأغذية فائقة المعالجة مرتبط بضرر صامت في أوعية الدماغ، بينما ترتبط الأنماط المتوسطية بذاكرة أقوى — لكن تجربة MIND العشوائية قالت كلمة أخرى. ماذا يقول العلم فعلاً؟</p>
-                        <a href="news/food-and-memory" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/first-line-back-pain" class="flex flex-col flex-grow">
+                        <img src="news/hero-first-line-back-pain.webp" alt="رجل يمارس تمريناً لطيفاً لتقوية الظهر على سجادة في غرفة مضيئة" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">9 نوفمبر 2026 · آلام الظهر والعلاج الأول</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">قبل المسكنات وقبل الأشعة: ما العلاج الأول لآلام الظهر حسب منظمة الصحة العالمية؟</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/first-line-back-pain"><img src="news/hero-first-line-back-pain.webp" alt="رجل يمارس تمريناً لطيفاً لتقوية الظهر على سجادة في غرفة مضيئة" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">9 نوفمبر 2026 · آلام الظهر والعلاج الأول</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/first-line-back-pain" class="hover:underline">قبل المسكنات وقبل الأشعة: ما العلاج الأول لآلام الظهر حسب منظمة الصحة العالمية؟</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">619 مليون شخص عانوا ألم الظهر في 2020، والعدد في طريقه إلى 843 مليوناً. منظمة الصحة العالمية وإرشادات NICE المحدّثة في 2026 تتفقان: العلاج الأول برنامج تمارين منظم، لا قرص ولا أشعة — فما الذي يعمل فعلاً، وما الذي لا تنصح به الإرشادات؟</p>
-                        <a href="news/first-line-back-pain" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/opioids-back-pain" class="flex flex-col flex-grow">
+                        <img src="news/hero-opioids-back.webp" alt="سيدة تمشي ببطء في طريق صباحي واضعة يدها على أسفل ظهرها" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">2 نوفمبر 2026 · آلام الظهر والأدوية</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">سنوات من المسكنات القوية وظهرك ما زال يؤلمك: ما كشفته دراسة 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/opioids-back-pain"><img src="news/hero-opioids-back.webp" alt="سيدة تمشي ببطء في طريق صباحي واضعة يدها على أسفل ظهرها" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">2 نوفمبر 2026 · آلام الظهر والأدوية</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/opioids-back-pain" class="hover:underline">سنوات من المسكنات القوية وظهرك ما زال يؤلمك: ما كشفته دراسة 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">70 مريضاً يتناولون مسكنات قوية يومياً منذ 7.8 سنوات في المتوسط، ومستوى ألمهم مطابق تقريباً لمستوى مرضى لا يتناولونها — مع وظيفة جسدية أسوأ قليلاً. ماذا وجد الباحثون في الدماغ؟ ومتى تكون هذه الأدوية مفيدة فعلاً؟</p>
-                        <a href="news/opioids-back-pain" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/sleep-joints" class="flex flex-col flex-grow">
+                        <img src="news/hero-sleep-joints.webp" alt="شخص ينام بهدوء في غرفة مضيئة بنور الصباح" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · النوم والمفاصل</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/sleep-joints"><img src="news/hero-sleep-joints.webp" alt="شخص ينام بهدوء في غرفة مضيئة بنور الصباح" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · النوم والمفاصل</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/sleep-joints" class="hover:underline">تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">النوم ليس راحة فقط: دراسة حديثة نشرت في 2026 وجدت أن قلة النوم ورديات الليل ترفعان خطر خشونة المفاصل، حتى عند من لا يعانون ألما مزمنا في الأصل. كيف يحدث ذلك؟ وما الذي يمكنك فعله الليلة؟</p>
-                        <a href="news/sleep-joints" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/strength-after-35" class="flex flex-col flex-grow">
+                        <img src="news/hero-strength-after-35.webp" alt="رجل في أواخر الثلاثينات يتدرب بالأثقال في صالة مضيئة" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · القوة والعضلات</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</h2>
+                        </div>
+                    </a>
                 </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
-                    <a href="news/strength-after-35"><img src="news/hero-strength-after-35.webp" alt="رجل في أواخر الثلاثينات يتدرب بالأثقال في صالة مضيئة" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · القوة والعضلات</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/strength-after-35" class="hover:underline">من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">ذروة قوتك تكون بين 25 و35 سنة، ثم يبدأ تراجع هادئ لا تشعر به إلا بعد سنوات: من 3 إلى 8 بالمئة من الكتلة العضلية كل عقد. الخبر الجيد: هذا التراجع من أكثر عمليات الشيخوخة قابلية للعكس — وهذا ما يثبته العلم.</p>
-                        <a href="news/strength-after-35" class="mt-5 inline-block bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
-                </article>
-
-                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
-                    <a href="news/anti-fall-exercises"><img src="news/hero-anti-fall.webp" alt="سيدة مسنة تتدرب على التوازن بجانب كرسي في غرفة مشمسة" class="w-full h-56 object-cover"></a>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · التوازن والوقاية من السقوط</p>
-                        <h2 class="text-2xl font-bold text-teal-900 mb-3 leading-snug"><a href="news/anti-fall-exercises" class="hover:underline">السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم</a></h2>
-                        <p class="text-gray-600 leading-relaxed flex-grow">واحد من كل 4 أشخاص فوق 65 سنة يسقط كل عام — لكن مراجعة كوكرين لأكثر من 100 تجربة تثبت أن تمارين التوازن تخفض معدل السقوط بحوالي الربع، والبرامج المتنوعة بأكثر من الثلث. 5 تمارين بسيطة تبدأ بها من بيتك.</p>
-                        <a href="news/anti-fall-exercises" class="mt-5 inline-block primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-full shadow-md transition text-center">اقرأ المقال ←</a>
-                    </div>
+<article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/anti-fall-exercises" class="flex flex-col flex-grow">
+                        <img src="news/hero-anti-fall.webp" alt="سيدة مسنة تتدرب على التوازن بجانب كرسي في غرفة مشمسة" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 أكتوبر 2026 · التوازن والوقاية من السقوط</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم</h2>
+                        </div>
+                    </a>
                 </article>
             </div>
 
             <div id="news-pagination" class="flex flex-col items-center mt-10"></div>
 
+            <section id="editors-picks" class="mt-14 bg-white rounded-3xl shadow-xl border-t-8 border-[#c9a227] p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-teal-900 mb-6">مختارات المحرر</h2>
+                <ol class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">1</span>
+                        <div>
+                            <a href="news/weight-loss-drugs-blindness-warning" class="font-bold text-teal-900 hover:underline text-lg leading-snug">أدوية التخسيس قد تسبب العمى؟ حقيقة التحذير الأمريكي الجديد وحدود الخطر</a>
+                            <p class="text-gray-400 text-sm">18 نوفمبر 2026</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">2</span>
+                        <div>
+                            <a href="news/mediterranean-diet-biological-age" class="font-bold text-teal-900 hover:underline text-lg leading-snug">النظام الغذائي المتوسطي والعمر البيولوجي: هل يجعلك طعامك أصغر سناً فعلاً؟</a>
+                            <p class="text-gray-400 text-sm">19 نوفمبر 2026 · التغذية والشيخوخة</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">3</span>
+                        <div>
+                            <a href="news/milk-peptides-memory" class="font-bold text-teal-900 hover:underline text-lg leading-snug">ببتيدات الحليب والذاكرة: ما الذي أظهرته تجربة كورية جديدة ودراسات سابقة؟</a>
+                            <p class="text-gray-400 text-sm">19 نوفمبر 2026 · الذاكرة والتغذية</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">4</span>
+                        <div>
+                            <a href="news/vitamin-d-sunny-countries" class="font-bold text-teal-900 hover:underline text-lg leading-snug">الشمس موجودة والفيتامين ناقص: لماذا يعاني سكان البلدان المشمسة من نقص فيتامين د؟</a>
+                            <p class="text-gray-400 text-sm">18 نوفمبر 2026 · الفيتامينات والصحة</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">5</span>
+                        <div>
+                            <a href="news/back-pain-inflammation" class="font-bold text-teal-900 hover:underline text-lg leading-snug">ظهرك يؤلمك؟ قد تكون المشكلة أبعد من الظهر: الالتهاب والقلب والكبد في 3 دراسات حديثة</a>
+                            <p class="text-gray-400 text-sm">18 نوفمبر 2026 · آلام الظهر والصحة العامة</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
             <div id="cms-section" class="mt-16" style="display:none">
                 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6 text-center">مقالات جديدة</h2>
                 <div id="cms-list" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -508,6 +547,8 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   render();
 })();
 </script>
+
+    <script src="news/news-hub.js"></script>
 
 </body>
 </html>
