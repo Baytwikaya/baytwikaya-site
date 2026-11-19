@@ -339,6 +339,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         form.addEventListener('submit', e => {
             e.preventDefault();
             const fd = new FormData(form);
+            if (typeof gtag === 'function') { gtag('event', 'booking_request', { service: fd.get('service') || '' }); }
             const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
             const d = fd.get('date');
             if (d) { lines.push('التاريخ المفضل: ' + d); }
