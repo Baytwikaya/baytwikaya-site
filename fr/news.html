@@ -27,8 +27,8 @@
         .primary-bg { background-color: #0f766e; }
         /* Bandeau d'actualités animé : juste au-dessus du contenu de la page, sous la barre supérieure.
            Animation en CSS uniquement, mise en pause au survol ou au focus, et totalement désactivée si l'utilisateur préfère moins de mouvement. */
-        .news-ticker { background-color: #0f766e; overflow: hidden; }
-        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 30s linear infinite; }
+        .news-ticker { background-color: #0f766e; overflow: hidden; direction: ltr; }
+        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 60s linear infinite; }
         .news-ticker-set { display: flex; }
         .news-ticker:hover .news-ticker-track, .news-ticker:focus-within .news-ticker-track { animation-play-state: paused; }
         .news-ticker-item { display: flex; align-items: center; gap: 10px; padding: 8px 18px; color: #fff; text-decoration: none; white-space: nowrap; }
