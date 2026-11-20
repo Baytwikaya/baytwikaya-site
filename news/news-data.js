@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "winter-illness-why",
+    "img": "hero-winter-illness-why.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "لماذا نمرض أكثر في الشتاء؟ البرد والأنف والهواء الجاف — ما يقوله العلم",
+    "en": "Why do we get sick more in winter? Cold, noses and dry air — what the science says",
+    "fr": "Pourquoi tombe-t-on plus malade en hiver ? Froid, nez et air sec — ce que dit la science"
+  },
+  {
     "slug": "antibiotics-resistance-who",
     "img": "hero-antibiotics-resistance-who.webp",
     "langs": [
