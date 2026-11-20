@@ -8,6 +8,7 @@ var BAYT_NEWS_DATA = [
     "slug": "baxdrostat-blood-pressure",
     "img": "hero-baxdrostat-blood-pressure.webp",
     "langs": [
+      "ar",
       "en",
       "fr"
     ],
