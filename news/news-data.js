@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "guide-hijama-casablanca",
+    "img": "hero-guide-hijama-casablanca.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دليل الحجامة في الدار البيضاء: الأنواع، وكيف تختار مركزاً، وماذا يحدث في الجلسة",
+    "en": "A guide to hijama in Casablanca: types, how to choose a centre, and what happens in a session",
+    "fr": "Guide de la hijama à Casablanca : types, choix du centre et déroulement d'une séance"
+  },
+  {
     "slug": "measles-elimination-lost",
     "img": "hero-measles-elimination-lost.webp",
     "langs": [
