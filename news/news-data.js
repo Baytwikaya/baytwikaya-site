@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "asundexian-stroke-prevention",
+    "img": "hero-asundexian-stroke-prevention.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "أسونديكسيان: دواء جديد يقلل خطر الجلطة الثانية بنسبة 26% — لمن يناسب ولمن لا يناسب؟",
+    "en": "Asundexian: a new drug cuts the risk of a second stroke by 26% — who can take it and who cannot?",
+    "fr": "Asundexian : un nouveau médicament réduit de 26 % le risque d'un second AVC — pour qui, et pour qui pas ?"
+  },
+  {
     "slug": "baxdrostat-blood-pressure",
     "img": "hero-baxdrostat-blood-pressure.webp",
     "langs": [
