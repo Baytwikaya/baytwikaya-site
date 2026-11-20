@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "heat-medicines-shield",
+    "img": "hero-heat-medicines-shield.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحرارة تُضعف الأدوية: مبادرة SHIELD تحذر — دواؤك قد يفقد قوته دون أن تلاحظ",
+    "en": "Heat weakens medicines: the SHIELD warning — your drug may lose its power without you noticing",
+    "fr": "La chaleur affaiblit les médicaments : l’alerte SHIELD — votre traitement peut perdre son efficacité sans que vous le remarquiez"
+  },
+  {
     "slug": "winter-illness-why",
     "img": "hero-winter-illness-why.webp",
     "langs": [
