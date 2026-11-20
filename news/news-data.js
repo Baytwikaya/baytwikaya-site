@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "antibiotics-resistance-who",
+    "img": "hero-antibiotics-resistance-who.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
+    "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
+    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+  },
+  {
     "slug": "melatonin-heart-failure",
     "img": "hero-melatonin-heart-failure.webp",
     "langs": [
