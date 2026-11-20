@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "frozen-bread-blood-sugar",
+    "img": "hero-frozen-bread-blood-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "جمّد خبزك ثم حمّصه: هل يخفض ذلك سكر الدم فعلاً؟ ما كشفته الدراسات",
+    "en": "Freeze your bread, then toast it: does it really lower blood sugar? What the studies found",
+    "fr": "Congelez votre pain puis grillez-le : cela baisse-t-il vraiment la glycémie ? Ce que les études ont montré"
+  },
+  {
     "slug": "heat-medicines-shield",
     "img": "hero-heat-medicines-shield.webp",
     "langs": [
