@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "migraine-smoking-stroke",
+    "img": "hero-migraine-smoking-stroke.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الصداع النصفي مع التدخين: خطر السكتة يتضاعف أكثر من 3 مرات قبل سن الستين",
+    "en": "Migraine plus smoking: stroke risk more than triples before age 60",
+    "fr": "Migraine et tabac : le risque d'AVC multiplié par plus de 3 avant 60 ans"
+  },
+  {
     "slug": "frozen-bread-blood-sugar",
     "img": "hero-frozen-bread-blood-sugar.webp",
     "langs": [
