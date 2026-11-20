@@ -60,9 +60,9 @@ var BAYT_NEWS_DATA = [
       "en",
       "fr"
     ],
-    "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
-    "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
-    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+    "ar": "المضادات الحيوية تفشل: الكليبسيلا المقاومة ارتفعت 72% — تحذير منظمة الصحة العالمية في 2026",
+    "en": "Antibiotics are failing: resistant Klebsiella infections rose 72% — the WHO warning of 2026",
+    "fr": "Les antibiotiques échouent : les infections à Klebsiella résistante ont augmenté de 72 % — l'alerte de l'OMS en 2026"
   },
   {
     "slug": "melatonin-heart-failure",
@@ -72,9 +72,9 @@ var BAYT_NEWS_DATA = [
       "en",
       "fr"
     ],
-    "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
-    "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
-    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+    "ar": "الميلاتونين والقلب: هل يرفع الاستخدام الطويل خطر فشل القلب فعلاً؟ ما قالته الدراسة وما لم تقله",
+    "en": "Melatonin and the heart: does long-term use really raise heart-failure risk? What the study showed — and what it did not",
+    "fr": "Mélatonine et cœur : l'usage prolongé augmente-t-il vraiment le risque d'insuffisance cardiaque ? Ce que l'étude a montré — et ce qu'elle n'a pas montré"
   },
   {
     "slug": "asundexian-stroke-prevention",
