@@ -5,6 +5,17 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "baxdrostat-blood-pressure",
+    "img": "hero-baxdrostat-blood-pressure.webp",
+    "langs": [
+      "en",
+      "fr"
+    ],
+    "ar": "باكسدروستات: دواء ضغط الدم الذي يستمر مفعوله سنتين بعد إيقافه؟ ما كشفته دراسة NEJM في 2026",
+    "en": "Baxdrostat: the blood-pressure pill that keeps working two years after you stop? What the NEJM study found",
+    "fr": "Baxdrostat : le médicament contre l'hypertension qui agit encore deux ans après l'arrêt ? Ce que l'étude du NEJM a montré"
+  },
+  {
     "slug": "guide-hijama-casablanca",
     "img": "hero-guide-hijama-casablanca.webp",
     "langs": [
