@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "optimpacing-heart-pacing",
+    "img": "hero-optimpacing-heart-pacing.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "منظم ضربات قلب يتبع كهرباء القلب الطبيعية: نتائج تجربة OptimPacing",
+    "en": "A pacemaker that follows the heart's natural wiring: what the OptimPacing trial found",
+    "fr": "Un stimulateur cardiaque qui suit le câblage naturel du cœur : ce que l'essai OptimPacing a montré"
+  },
+  {
     "slug": "who-obesity-plan-2030",
     "img": "hero-who-obesity-plan-2030.webp",
     "langs": [
