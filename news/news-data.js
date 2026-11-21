@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "honey-vs-sugar",
+    "img": "hero-honey-vs-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "العسل أم السكر: أيهما أفضل لصحتك؟ ما قاله تحليل 18 تجربة سريرية",
+    "en": "Honey or sugar: which is better for your health? What an analysis of 18 clinical trials found",
+    "fr": "Miel ou sucre : lequel est meilleur pour votre santé ? Ce que l’analyse de 18 essais cliniques a montré"
+  },
+  {
     "slug": "intermittent-fasting-guide",
     "img": "hero-intermittent-fasting-guide.webp",
     "langs": [
