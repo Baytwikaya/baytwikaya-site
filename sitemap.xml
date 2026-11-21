@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/news</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/en/news</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -317,7 +317,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/fr/news</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -778,6 +778,21 @@
   <url>
     <loc>https://baytwikaya.site/fr/news/migraine-smoking-stroke</loc>
     <lastmod>2026-11-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/news/lpa-horizon-zeus-heart-trials</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/lpa-horizon-zeus-heart-trials</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/lpa-horizon-zeus-heart-trials</loc>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "lpa-horizon-zeus-heart-trials",
+    "img": "hero-lpa-horizon-zeus-heart-trials.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواءان للقلب خفّضا الأرقام ولم يمنعا الجلطات: ما الذي كشفته تجربتا HORIZON وZEUS؟",
+    "en": "Two heart drugs cut the numbers but not the heart attacks: what the HORIZON and ZEUS trials found",
+    "fr": "Deux médicaments pour le cœur ont fait baisser les chiffres sans prévenir les infarctus : que révèlent les essais HORIZON et ZEUS ?"
+  },
+  {
     "slug": "migraine-smoking-stroke",
     "img": "hero-migraine-smoking-stroke.webp",
     "langs": [
