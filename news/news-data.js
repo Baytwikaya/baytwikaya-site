@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "survodutide-heart-safety",
+    "img": "hero-survodutide-heart-safety.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سورفودوتيد: دواء جديد للسمنة يجتاز اختبار سلامة القلب — ماذا نعرف عنه؟",
+    "en": "Survodutide: a new obesity drug passes its heart-safety test — what do we know?",
+    "fr": "Survodutide : un nouveau médicament contre l'obésité passe le test de sécurité cardiaque — que sait-on ?"
+  },
+  {
     "slug": "optimpacing-heart-pacing",
     "img": "hero-optimpacing-heart-pacing.webp",
     "langs": [
