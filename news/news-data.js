@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "fatty-liver-reversal-diet",
+    "img": "hero-fatty-liver-reversal-diet.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الكبد الدهني: هل يمكن عكسه بالغذاء؟ ما قالته تجربتان عشوائيتان في 2026",
+    "en": "Fatty liver: can food reverse it? What two randomised trials said in 2026",
+    "fr": "Stéatose hépatique : l'alimentation peut-elle l'inverser ? Ce que deux essais randomisés ont montré en 2026"
+  },
+  {
     "slug": "survodutide-heart-safety",
     "img": "hero-survodutide-heart-safety.webp",
     "langs": [
