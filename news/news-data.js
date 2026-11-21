@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "single-pill-hypertension-catch",
+    "img": "hero-single-pill-hypertension-catch.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حبة واحدة للضغط بدل ثلاث: كيف ضاعفت تجربة جديدة نسبة السيطرة على ضغط الدم؟",
+    "en": "One pill for blood pressure instead of three: how a new trial more than doubled blood-pressure control",
+    "fr": "Un seul comprimé contre l'hypertension au lieu de trois : comment un nouvel essai a plus que doublé le contrôle de la tension"
+  },
+  {
     "slug": "lpa-horizon-zeus-heart-trials",
     "img": "hero-lpa-horizon-zeus-heart-trials.webp",
     "langs": [
