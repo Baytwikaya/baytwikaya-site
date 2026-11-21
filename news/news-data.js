@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "who-obesity-plan-2030",
+    "img": "hero-who-obesity-plan-2030.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "منظمة الصحة العالمية و21 دولة يتعهدون بخفض السمنة 5% بحلول 2030: ما الخطة؟",
+    "en": "WHO and 21 countries pledge to cut obesity by 5% by 2030: what is the plan?",
+    "fr": "L'OMS et 21 pays s'engagent à réduire l'obésité de 5 % d'ici 2030 : quel est le plan ?"
+  },
+  {
     "slug": "single-pill-hypertension-catch",
     "img": "hero-single-pill-hypertension-catch.webp",
     "langs": [
