@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "intermittent-fasting-guide",
+    "img": "hero-intermittent-fasting-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الصيام المتقطع 16:8: هل ينقص الوزن فعلاً بعد سنة؟ ما قالته التجارب",
+    "en": "Intermittent fasting 16:8: does it really cut weight after a year? What the trials found",
+    "fr": "Jeûne intermittent 16:8 : fait-il vraiment perdre du poids après un an ? Ce que les essais ont montré"
+  },
+  {
     "slug": "fatty-liver-reversal-diet",
     "img": "hero-fatty-liver-reversal-diet.webp",
     "langs": [
