@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "gut-bacteria-visceral-fat",
+    "img": "hero-gut-bacteria-visceral-fat.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بكتيريا في الأمعاء تساعد على حرق الدهون الحشوية: اكتشاف جديد — لكنه حتى الآن في الفئران فقط",
+    "en": "A gut bacterium helps burn visceral fat: a new discovery — but so far only in mice",
+    "fr": "Une bactérie intestinale aide à brûler la graisse viscérale : une découverte — mais pour l’instant chez la souris seulement"
+  },
+  {
     "slug": "chronic-loneliness-dementia",
     "img": "hero-chronic-loneliness-dementia.webp",
     "langs": [
