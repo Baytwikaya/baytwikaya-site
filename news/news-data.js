@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "chronic-loneliness-dementia",
+    "img": "hero-chronic-loneliness-dementia.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الوحدة المزمنة ترفع خطر الخرف بنسبة 38%: الوحدة العابرة لا تفعل ذلك",
+    "en": "Chronic loneliness raises dementia risk by 38%: occasional loneliness does not",
+    "fr": "La solitude chronique augmente le risque de démence de 38 % : la solitude occasionnelle, non"
+  },
+  {
     "slug": "daraxonrasib-pancreatic-cancer",
     "img": "hero-daraxonrasib-pancreatic-cancer.webp",
     "langs": [
