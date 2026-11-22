@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "food-myths-everyday",
+    "img": "hero-food-myths-everyday.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "خرافات غذائية نصدقها كل يوم: الكربوهيدرات والسعرات والدهون — ما الحقيقة؟",
+    "en": "Food myths we believe every day: carbs, calories and fats — what is the truth?",
+    "fr": "Des idées reçues sur l’alimentation que l’on croit chaque jour : glucides, calories et graisses — quelle est la vérité ?"
+  },
+  {
     "slug": "night-light-heart",
     "img": "hero-night-light-heart.webp",
     "langs": [
