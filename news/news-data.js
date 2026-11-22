@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "daraxonrasib-pancreatic-cancer",
+    "img": "hero-daraxonrasib-pancreatic-cancer.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواء جديد مع العلاج الكيميائي يقلّص أورام سرطان البنكرياس لدى 60% من المرضى: ما الذي كشفته التجربة؟",
+    "en": "A new drug with chemotherapy shrank pancreatic cancer tumours in 60% of patients: what did the trial find?",
+    "fr": "Un nouveau médicament avec la chimiothérapie réduit les tumeurs du cancer du pancréas chez 60 % des patients : que révèle l’essai ?"
+  },
+  {
     "slug": "honey-vs-sugar",
     "img": "hero-honey-vs-sugar.webp",
     "langs": [
