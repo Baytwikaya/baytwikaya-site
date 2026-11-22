@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "diabetes-brain-thinning",
+    "img": "hero-diabetes-brain-thinning.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "السكري من النوع الثاني يُرقّق قشرة الدماغ بسرعة أكبر: ضبط السكر يحمي الدماغ أيضاً",
+    "en": "Type 2 diabetes thins the brain’s cortex faster: controlling blood sugar protects the brain too",
+    "fr": "Le diabète de type 2 amincit le cortex cérébral plus vite : contrôler sa glycémie protège aussi le cerveau"
+  },
+  {
     "slug": "walking-pace-steps-longevity",
     "img": "hero-walking-pace-steps-longevity.webp",
     "langs": [
