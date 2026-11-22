@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "night-light-heart",
+    "img": "hero-night-light-heart.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "النوم مع الضوء مضاءً يهدد صحة القلب: ماذا وجدت دراسة شملت أكثر من 70 ألف شخص؟",
+    "en": "Sleeping with the light on threatens heart health: what did a study of more than 70,000 people find?",
+    "fr": "Dormir avec la lumière allumée menace la santé du cœur : que révèle une étude de plus de 70 000 personnes ?"
+  },
+  {
     "slug": "gut-bacteria-visceral-fat",
     "img": "hero-gut-bacteria-visceral-fat.webp",
     "langs": [
