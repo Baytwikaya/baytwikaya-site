@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "coffee-heart-disease",
+    "img": "hero-coffee-heart-disease.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "القهوة والقلب: كوبان إلى ثلاثة أكواب يومياً يرتبطان بانخفاض خطر أمراض القلب بنسبة 15%",
+    "en": "Coffee and the heart: two to three cups a day linked to a 15% lower risk of cardiovascular disease",
+    "fr": "Le café et le cœur : deux à trois tasses par jour associées à un risque de maladie cardiovasculaire réduit de 15 %"
+  },
+  {
     "slug": "food-myths-everyday",
     "img": "hero-food-myths-everyday.webp",
     "langs": [
