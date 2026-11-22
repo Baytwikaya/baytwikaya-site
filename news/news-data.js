@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "walking-pace-steps-longevity",
+    "img": "hero-walking-pace-steps-longevity.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سرعة المشي مهمة بقدر عدد الخطوات: أقل من 5,000 خطوة سريعة تعادل 7,500 خطوة بطيئة",
+    "en": "Walking pace matters as much as step count: under 5,000 brisk steps match 7,500 slow ones",
+    "fr": "L’allure de la marche compte autant que le nombre de pas : moins de 5 000 pas rapides équivalent à 7 500 pas lents"
+  },
+  {
     "slug": "coffee-heart-disease",
     "img": "hero-coffee-heart-disease.webp",
     "langs": [
