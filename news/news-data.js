@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "mrna-flu-vaccine-mflusiva",
+    "img": "hero-mrna-flu-vaccine-mflusiva.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "أول لقاح إنفلونزا بتقنية mRNA يدخل الاستخدام التجاري: ماذا كشفت التجربة عن فعاليته؟",
+    "en": "First mRNA flu vaccine enters commercial use: what did the trial reveal about its effectiveness?",
+    "fr": "Premier vaccin contre la grippe à ARNm en usage commercial : que révèle l’essai sur son efficacité ?"
+  },
+  {
     "slug": "spine-bones-brain-health",
     "img": "hero-spine-bones-brain-health.webp",
     "langs": [
