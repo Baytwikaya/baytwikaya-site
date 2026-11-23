@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "belly-fat-alzheimer-proteins",
+    "img": "hero-belly-fat-alzheimer-proteins.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دهون البطن ترتبط بتراكم بروتينات ألزهايمر في الدماغ: ماذا كشفت دراسة جديدة؟",
+    "en": "Belly fat linked to Alzheimer proteins building up in the brain: what did the new study find?",
+    "fr": "La graisse abdominale liée à l’accumulation des protéines d’Alzheimer dans le cerveau : que révèle la nouvelle étude ?"
+  },
+  {
     "slug": "hepatitis-a-morocco-rise",
     "img": "hero-hepatitis-a-morocco-rise.webp",
     "langs": [

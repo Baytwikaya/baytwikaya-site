@@ -1,5 +1,5 @@
 /* بيت الوقاية - Service Worker */
-const CACHE_NAME = 'baytwikaya-v126';
+const CACHE_NAME = 'baytwikaya-v127';
 const PRECACHE_URLS = [
     './',
     'faq',
