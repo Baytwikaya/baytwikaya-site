@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "scoliosis-children-adam-test",
+    "img": "hero-scoliosis-children-adam-test.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "علامات صامتة قد تكشف إصابة طفلك بالجنف: اختبار آدم البسيط في المنزل",
+    "en": "Silent signs that may reveal scoliosis in your child: the simple Adam's test at home",
+    "fr": "Des signes silencieux qui peuvent révéler une scoliose chez votre enfant : le test d'Adam, simple à faire à la maison"
+  },
+  {
     "slug": "mrna-flu-vaccine-mflusiva",
     "img": "hero-mrna-flu-vaccine-mflusiva.webp",
     "langs": [
