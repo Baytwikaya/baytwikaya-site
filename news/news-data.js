@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "eggs-cholesterol-saturated-fat",
+    "img": "hero-eggs-cholesterol.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بيضتان في اليوم وينخفض الكولسترول السيئ؟ دراسة 2025 تقلب فهمنا للبيض والدهون المشبعة",
+    "en": "Two eggs a day and lower LDL cholesterol? A 2025 study upends what we thought about eggs and saturated fat",
+    "fr": "Deux œufs par jour et un mauvais cholestérol en baisse ? Une étude de 2025 bouleverse notre compréhension des œufs et des graisses saturées"
+  },
+  {
     "slug": "diabetes-brain-thinning",
     "img": "hero-diabetes-brain-thinning.webp",
     "langs": [
