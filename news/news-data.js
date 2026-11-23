@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "hepatitis-a-morocco-rise",
+    "img": "hero-hepatitis-a-morocco-rise.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التهاب الكبد أ في المغرب: قفزة كبيرة بعد الجائحة وتركّز الإصابات في جهتين",
+    "en": "Hepatitis A in Morocco: cases surge after the pandemic and cluster in two regions",
+    "fr": "Hépatite A au Maroc : les cas bondissent après la pandémie et se concentrent dans deux régions"
+  },
+  {
     "slug": "eggs-cholesterol-saturated-fat",
     "img": "hero-eggs-cholesterol.webp",
     "langs": [
