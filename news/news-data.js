@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "spine-bones-brain-health",
+    "img": "hero-spine-bones-brain-health.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "كثافة عظام العمود الفقري ترتبط بصحة الدماغ والذاكرة: ماذا وجدت دراسة جونز هوبكنز؟",
+    "en": "Spine bone density linked to brain health and memory: what the Johns Hopkins study found",
+    "fr": "La densité osseuse de la colonne vertébrale liée à la santé du cerveau et à la mémoire : ce qu’a trouvé l’étude Johns Hopkins"
+  },
+  {
     "slug": "belly-fat-alzheimer-proteins",
     "img": "hero-belly-fat-alzheimer-proteins.webp",
     "langs": [
