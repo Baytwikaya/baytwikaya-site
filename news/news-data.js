@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "turmeric-knee-osteoarthritis-cochrane",
+    "img": "hero-turmeric-knee-osteoarthritis-cochrane.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "هل يخفف الكركم آلام خشونة الركبة؟ مراجعة كوكرين تشكك في فعاليته",
+    "en": "Does turmeric ease knee osteoarthritis pain? A Cochrane review doubts the benefit",
+    "fr": "Le curcuma soulage-t-il l'arthrose du genou ? Une revue Cochrane en doute"
+  },
+  {
     "slug": "sleep-appetite-alzheimer-early-signs",
     "img": "hero-sleep-appetite-alzheimer-early-signs.webp",
     "langs": [
