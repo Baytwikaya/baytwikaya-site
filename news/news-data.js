@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "man-flu-real-men-viruses",
+    "img": "hero-man-flu-real-men-viruses.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "«إنفلونزا الرجال» حقيقية؟ دراسة على الفئران تجد أن الذكور يعانون مضاعفات فيروسية أشد",
+    "en": "Is 'man flu' real? A mouse study finds males suffer worse viral complications than females",
+    "fr": "La « grippe de l’homme » est-elle réelle ? Une étude sur des souris montre des complications virales plus graves chez les mâles"
+  },
+  {
     "slug": "turmeric-knee-osteoarthritis-cochrane",
     "img": "hero-turmeric-knee-osteoarthritis-cochrane.webp",
     "langs": [
