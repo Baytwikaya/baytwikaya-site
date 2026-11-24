@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "long-sitting-heart-exercise",
+    "img": "hero-long-sitting-heart-exercise.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الجلوس الطويل يضر القلب حتى مع ممارسة الرياضة: ما كشفته دراسة التوائم في كولورادو",
+    "en": "Long sitting harms the heart even if you exercise: what the Colorado twin study found",
+    "fr": "Rester assis longtemps nuit au cœur même si vous faites du sport : ce qu’a révélé l’étude des jumeaux du Colorado"
+  },
+  {
     "slug": "scoliosis-children-adam-test",
     "img": "hero-scoliosis-children-adam-test.webp",
     "langs": [

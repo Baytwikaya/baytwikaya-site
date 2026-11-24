@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/news</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/en/news</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -317,7 +317,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/fr/news</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -1108,6 +1108,21 @@
   <url>
     <loc>https://baytwikaya.site/fr/news/scoliosis-children-adam-test</loc>
     <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/news/long-sitting-heart-exercise</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/long-sitting-heart-exercise</loc>
+    <lastmod>2026-11-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/long-sitting-heart-exercise</loc>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
