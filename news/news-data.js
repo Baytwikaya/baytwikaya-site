@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "gut-bacteria-selenium-cartilage-damage",
+    "img": "hero-gut-bacteria-selenium-cartilage-damage.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بكتيريا الأمعاء واضطراب السيلينيوم: مؤشرات جديدة مرتبطة بتلف الغضاريف في خشونة المفاصل",
+    "en": "Gut bacteria changes and selenium disorder: new markers linked to cartilage damage in osteoarthritis",
+    "fr": "Changements des bactéries intestinales et trouble du sélénium : de nouveaux marqueurs liés aux lésions du cartilage dans l'arthrose"
+  },
+  {
     "slug": "man-flu-real-men-viruses",
     "img": "hero-man-flu-real-men-viruses.webp",
     "langs": [
