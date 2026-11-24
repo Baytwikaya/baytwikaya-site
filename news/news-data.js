@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "sleep-appetite-alzheimer-early-signs",
+    "img": "hero-sleep-appetite-alzheimer-early-signs.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "قبل أن تضعف الذاكرة: تغيّرات النوم والشهية قد تكشف بدايات ألزهايمر",
+    "en": "Before memory fades: sleep and appetite changes may reveal the beginnings of Alzheimer's",
+    "fr": "Avant que la mémoire ne s'affaiblisse : les changements du sommeil et de l'appétit peuvent révéler les débuts d'Alzheimer"
+  },
+  {
     "slug": "long-sitting-heart-exercise",
     "img": "hero-long-sitting-heart-exercise.webp",
     "langs": [
