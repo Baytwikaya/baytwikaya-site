@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "inclisiran-cholesterol-shot-heart-events",
+    "img": "hero-inclisiran-cholesterol-shot-heart-events.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حقنة مرتين في السنة تخفّض خطر النوبات القلبية والسكتات؟ ما أثبتته تجربة ORION-4 في 2026",
+    "en": "A twice-yearly cholesterol shot that cuts heart attacks and strokes? What the ORION-4 trial proved in 2026",
+    "fr": "Une injection deux fois par an qui réduit crises cardiaques et AVC ? Ce que l’essai ORION-4 a prouvé en 2026"
+  },
+  {
     "slug": "nasal-mrna-drops-memory-mice",
     "img": "hero-nasal-mrna-drops-memory-mice.webp",
     "langs": [
