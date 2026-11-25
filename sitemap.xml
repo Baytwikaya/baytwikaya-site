@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/news</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/en/news</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -317,7 +317,7 @@
   </url>
   <url>
     <loc>https://baytwikaya.site/fr/news</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -1183,6 +1183,21 @@
   <url>
     <loc>https://baytwikaya.site/fr/news/gut-bacteria-selenium-cartilage-damage</loc>
     <lastmod>2026-11-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/news/pfas-breast-cancer-aggressive</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/pfas-breast-cancer-aggressive</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/pfas-breast-cancer-aggressive</loc>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

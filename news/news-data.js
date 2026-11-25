@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "pfas-breast-cancer-aggressive",
+    "img": "hero-pfas-breast-cancer-aggressive.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "مواد كيميائية «أبدية» في الماء والأواني مرتبطة بسرطان ثدي أكثر عدوانية؟ ما كشفته دراسة أمريكية في 2026",
+    "en": "“Forever chemicals” in water and cookware linked to more aggressive breast cancer? What a 2026 US study found",
+    "fr": "Des produits chimiques « éternels » dans l’eau et les ustensiles liés à un cancer du sein plus agressif ? Ce qu’a révélé une étude américaine en 2026"
+  },
+  {
     "slug": "gut-bacteria-selenium-cartilage-damage",
     "img": "hero-gut-bacteria-selenium-cartilage-damage.webp",
     "langs": [
