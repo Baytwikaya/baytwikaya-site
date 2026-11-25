@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "nasal-mrna-drops-memory-mice",
+    "img": "hero-nasal-mrna-drops-memory-mice.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "قطرات أنفية تجريبية تعيد للفئران المسنّة ذاكرة الشباب — لكنها ليست علاجا لألزهايمر بعد",
+    "en": "Experimental nasal drops restore young memory in old mice — but they are not an Alzheimer's treatment yet",
+    "fr": "Des gouttes nasales expérimentales rendent aux vieilles souris leur mémoire de jeunesse — mais ce n'est pas encore un traitement contre Alzheimer"
+  },
+  {
     "slug": "pfas-breast-cancer-aggressive",
     "img": "hero-pfas-breast-cancer-aggressive.webp",
     "langs": [
