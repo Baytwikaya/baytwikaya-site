@@ -5,6 +5,462 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "hijama-back-pain-guide",
+    "img": "hero-hijama-back-pain-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحجامة لآلام الظهر: دليل شامل",
+    "en": "Cupping for Back Pain: A Complete Guide",
+    "fr": "La hijama pour le mal de dos : guide complet"
+  },
+  {
+    "slug": "knee-osteoarthritis-guide",
+    "img": "hero-knee-osteoarthritis-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "خشونة الركبة: الدليل الشامل",
+    "en": "Knee Osteoarthritis: The Complete Guide",
+    "fr": "L'arthrose du genou : guide complet"
+  },
+  {
+    "slug": "hypertension-guide",
+    "img": "hero-hypertension-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "ارتفاع ضغط الدم: الدليل الشامل",
+    "en": "High Blood Pressure: The Complete Guide",
+    "fr": "Hypertension artérielle : le guide complet"
+  },
+  {
+    "slug": "moroccan-diet-guide",
+    "img": "hero-moroccan-diet-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "المطبخ المغربي الصحي: الدليل الشامل",
+    "en": "The Healthy Moroccan Kitchen: The Complete Guide",
+    "fr": "La cuisine marocaine saine : le guide complet"
+  },
+  {
+    "slug": "sleep-apnea-guide",
+    "img": "hero-sleep-apnea-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "انقطاع النفس أثناء النوم: الدليل الشامل",
+    "en": "Sleep Apnea: The Complete Guide",
+    "fr": "Apnée du sommeil : le guide complet"
+  },
+  {
+    "slug": "hijama-points-map-guide",
+    "img": "hero-hijama-points-map-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "خريطة مواضع الحجامة: دليل شامل",
+    "en": "The Cupping Points Map: A Complete Guide",
+    "fr": "La carte des points de hijama : guide complet"
+  },
+  {
+    "slug": "hijama-safety-contraindications",
+    "img": "hero-hijama-safety-contraindications.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "متى تكون الحجامة غير آمنة؟ موانع وتحذيرات",
+    "en": "When Is Cupping Unsafe? Contraindications and Warnings",
+    "fr": "Quand la hijama est-elle dangereuse ? Contre-indications et avertissements"
+  },
+  {
+    "slug": "hijama-sports-recovery",
+    "img": "hero-hijama-sports-recovery.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحجامة والاستشفاء الرياضي: دليل شامل",
+    "en": "Cupping and Sports Recovery: A Complete Guide",
+    "fr": "La hijama et la récupération sportive : guide complet"
+  },
+  {
+    "slug": "hijama-migraine-headache",
+    "img": "hero-hijama-migraine-headache.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحجامة والصداع النصفي: دليل شامل",
+    "en": "Cupping and Migraine: A Complete Guide",
+    "fr": "La hijama et la migraine : guide complet"
+  },
+  {
+    "slug": "hijama-history-evidence",
+    "img": "hero-hijama-history-evidence.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحجامة عبر التاريخ والأدلة الحديثة",
+    "en": "Cupping Through History and Modern Evidence",
+    "fr": "La hijama à travers l'histoire et les preuves modernes"
+  },
+  {
+    "slug": "frozen-shoulder-guide",
+    "img": "hero-frozen-shoulder-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الكتف المتجمدة: الدليل الشامل للأسباب والأعراض والعلاج",
+    "en": "Frozen shoulder: the complete guide to causes, symptoms and treatment",
+    "fr": "L'épaule gelée : le guide complet des causes, des symptômes et du traitement"
+  },
+  {
+    "slug": "sciatica-guide",
+    "img": "hero-sciatica-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "عرق النسا: الدليل الشامل للأسباب والأعراض والعلاج",
+    "en": "Sciatica: the complete guide to causes, symptoms and treatment",
+    "fr": "La sciatique : le guide complet des causes, des symptômes et du traitement"
+  },
+  {
+    "slug": "osteoporosis-prevention-guide",
+    "img": "hero-osteoporosis-prevention-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "هشاشة العظام: دليل الوقاية الشامل قبل أول كسر",
+    "en": "Osteoporosis prevention: the complete guide before the first fracture",
+    "fr": "Prévention de l'ostéoporose : le guide complet avant la première fracture"
+  },
+  {
+    "slug": "herniated-disc-guide",
+    "img": "hero-herniated-disc-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الانزلاق الغضروفي: الدليل الشامل للأسباب والأعراض والعلاج",
+    "en": "Herniated disc: the complete guide to causes, symptoms and treatment",
+    "fr": "La hernie discale : le guide complet des causes, des symptômes et du traitement"
+  },
+  {
+    "slug": "neck-pain-guide",
+    "img": "hero-neck-pain-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "آلام الرقبة: الدليل الشامل للأسباب والأعراض والعلاج",
+    "en": "Neck pain: the complete guide to causes, symptoms and treatment",
+    "fr": "La douleur du cou : le guide complet des causes, des symptômes et du traitement"
+  },
+  {
+    "slug": "ankle-sprain-guide",
+    "img": "hero-ankle-sprain-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التواء الكاحل: الدليل الشامل للأسباب والأعراض والعلاج",
+    "en": "Ankle sprain: the complete guide to causes, symptoms and treatment",
+    "fr": "L'entorse de la cheville : le guide complet des causes, des symptômes et du traitement"
+  },
+  {
+    "slug": "olive-oil-health-guide",
+    "img": "hero-olive-oil-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "زيت الزيتون والصحة: الدليل الشامل",
+    "en": "Olive Oil and Health: The Complete Guide",
+    "fr": "L'huile d'olive et la santé : le guide complet"
+  },
+  {
+    "slug": "sardines-omega3-guide",
+    "img": "hero-sardines-omega3-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "السردين وأوميغا 3: الدليل الشامل",
+    "en": "Sardines and Omega-3: The Complete Guide",
+    "fr": "Les sardines et les oméga-3 : le guide complet"
+  },
+  {
+    "slug": "dates-nutrition-guide",
+    "img": "hero-dates-nutrition-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التمر والتغذية: الدليل الشامل",
+    "en": "Dates and Nutrition: The Complete Guide",
+    "fr": "Les dattes et la nutrition : le guide complet"
+  },
+  {
+    "slug": "protein-after-50-guide",
+    "img": "hero-protein-after-50-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "البروتين بعد الخمسين: الدليل الشامل",
+    "en": "Protein After Fifty: The Complete Guide",
+    "fr": "Les protéines après cinquante ans : le guide complet"
+  },
+  {
+    "slug": "gut-microbiome-guide",
+    "img": "hero-gut-microbiome-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "ميكروبيوم الأمعاء: الدليل الشامل",
+    "en": "The Gut Microbiome: The Complete Guide",
+    "fr": "Le microbiome intestinal : le guide complet"
+  },
+  {
+    "slug": "salt-health-guide",
+    "img": "hero-salt-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الملح والصحة: الدليل الشامل",
+    "en": "Salt and Health: The Complete Guide",
+    "fr": "Le sel et la santé : le guide complet"
+  },
+  {
+    "slug": "iron-deficiency-guide",
+    "img": "hero-iron-deficiency-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "نقص الحديد وفقر الدم: الدليل الشامل",
+    "en": "Iron Deficiency and Anemia: The Complete Guide",
+    "fr": "Carence en fer et anémie : le guide complet"
+  },
+  {
+    "slug": "insomnia-guide",
+    "img": "hero-insomnia-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الأرق: الدليل الشامل",
+    "en": "Insomnia: The Complete Guide",
+    "fr": "Insomnie : le guide complet"
+  },
+  {
+    "slug": "circadian-rhythm-guide",
+    "img": "hero-circadian-rhythm-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الساعة البيولوجية: الدليل الشامل",
+    "en": "The Body Clock (Circadian Rhythm): The Complete Guide",
+    "fr": "L'horloge biologique (rythme circadien) : le guide complet"
+  },
+  {
+    "slug": "walking-health-guide",
+    "img": "hero-walking-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "المشي والصحة: الدليل الشامل",
+    "en": "Walking and Health: The Complete Guide",
+    "fr": "La marche et la santé : le guide complet"
+  },
+  {
+    "slug": "swimming-health-guide",
+    "img": "hero-swimming-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "السباحة والصحة: الدليل الشامل",
+    "en": "Swimming and Health: The Complete Guide",
+    "fr": "La natation et la santé : le guide complet"
+  },
+  {
+    "slug": "stretching-flexibility-guide",
+    "img": "hero-stretching-flexibility-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التمدد والمرونة: الدليل الشامل",
+    "en": "Stretching and Flexibility: The Complete Guide",
+    "fr": "Étirements et souplesse : le guide complet"
+  },
+  {
+    "slug": "cholesterol-guide",
+    "img": "hero-cholesterol-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الكوليسترول: الدليل الشامل",
+    "en": "Cholesterol: The Complete Guide",
+    "fr": "Le cholestérol : le guide complet"
+  },
+  {
+    "slug": "liver-health-guide",
+    "img": "hero-liver-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "صحة الكبد: الدليل الشامل",
+    "en": "Liver Health: The Complete Guide",
+    "fr": "Santé du foie : le guide complet"
+  },
+  {
+    "slug": "metabolic-syndrome-guide",
+    "img": "hero-metabolic-syndrome-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "المتلازمة الأيضية: الدليل الشامل",
+    "en": "Metabolic Syndrome: The Complete Guide",
+    "fr": "Syndrome métabolique : le guide complet"
+  },
+  {
+    "slug": "kidney-health-guide",
+    "img": "hero-kidney-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "صحة الكلى: الدليل الشامل",
+    "en": "Kidney Health: The Complete Guide",
+    "fr": "Santé des reins : le guide complet"
+  },
+  {
+    "slug": "stress-cortisol-guide",
+    "img": "hero-stress-cortisol-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التوتر والكورتيزول: الدليل الشامل لفهم التوتر وإدارته يوميا",
+    "en": "Stress and Cortisol: The Complete Guide to Understanding and Managing Stress Every Day",
+    "fr": "Stress et cortisol : le guide complet pour comprendre et gérer le stress au quotidien"
+  },
+  {
+    "slug": "healthy-aging-guide",
+    "img": "hero-healthy-aging-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الشيخوخة الصحية: الدليل الشامل للحفاظ على القوة والذاكرة والاستقلالية",
+    "en": "Healthy Ageing: The Complete Guide to Preserving Strength, Memory and Independence",
+    "fr": "Vieillissement en bonne santé : le guide complet pour préserver force, mémoire et autonomie"
+  },
+  {
+    "slug": "pregnancy-nutrition-guide",
+    "img": "hero-pregnancy-nutrition-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تغذية الحامل: الدليل الشامل لغذاء متوازن وحمل آمن",
+    "en": "Pregnancy Nutrition: The Complete Guide to Balanced Food and a Safe Pregnancy",
+    "fr": "Nutrition de la femme enceinte : le guide complet pour une alimentation équilibrée et une grossesse en sécurité"
+  },
+  {
+    "slug": "children-posture-screens-guide",
+    "img": "hero-children-posture-screens-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "وضعية الأطفال والشاشات: الدليل الشامل لحماية الظهر والنوم والنظر",
+    "en": "Children's Posture and Screens: The Complete Guide to Protecting the Back, Sleep and Eyesight",
+    "fr": "Posture des enfants et écrans : le guide complet pour protéger le dos, le sommeil et la vue"
+  },
+  {
+    "slug": "ramadan-fasting-health-guide",
+    "img": "hero-ramadan-fasting-health-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الصيام في رمضان والصحة: الدليل الشامل لصيام صحي وآمن",
+    "en": "Ramadan Fasting and Health: The Complete Guide to Healthy and Safe Fasting",
+    "fr": "Le jeûne du Ramadan et la santé : le guide complet pour un jeûne sain et sûr"
+  },
+  {
+    "slug": "type2-diabetes-prevention-guide",
+    "img": "hero-type2-diabetes-prevention-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الوقاية من السكري من النوع الثاني: الدليل الشامل لحماية صحتك",
+    "en": "Preventing Type 2 Diabetes: The Complete Guide to Protecting Your Health",
+    "fr": "Prévention du diabète de type 2 : le guide complet pour protéger votre santé"
+  },
+  {
     "slug": "inclisiran-cholesterol-shot-heart-events",
     "img": "hero-inclisiran-cholesterol-shot-heart-events.webp",
     "langs": [
