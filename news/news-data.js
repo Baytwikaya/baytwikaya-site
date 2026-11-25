@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "air-pollution-dementia-risk",
+    "img": "hero-air-pollution-dementia-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تلوث الهواء يسرّع الخرف: خطر أعلى بنسبة 25% في المناطق الأكثر تلوثاً — ماذا كشفت دراسة 2026؟",
+    "en": "Air pollution speeds up dementia: 25% higher risk in the most polluted areas — what a 2026 study found",
+    "fr": "La pollution de l'air accélère la démence : un risque supérieur de 25 % dans les zones les plus polluées — ce qu'a révélé une étude de 2026"
+  },
+  {
     "slug": "hijama-back-pain-guide",
     "img": "hero-hijama-back-pain-guide.webp",
     "langs": [
