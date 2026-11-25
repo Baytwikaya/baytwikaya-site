@@ -360,6 +360,37 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </section>
 
+    <!-- Latest articles section -->
+    <section class="py-20 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest articles</h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">A growing health library: <span id="home-news-count" class="font-bold text-teal-700"></span> on health, nutrition and medicine, in plain language with scientific sources.</p>
+            </div>
+            <div id="home-news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div class="text-center mt-10">
+                <a href="news" class="inline-flex items-center justify-center gap-2 bg-[#0d9488] hover:bg-teal-700 text-white px-8 py-3 rounded-full font-bold text-lg shadow-md transition">View all articles →</a>
+            </div>
+        </div>
+    </section>
+    <script src="../news/news-data.js"></script>
+    <script>
+    (function(){
+      var grid = document.getElementById('home-news-grid');
+      var countEl = document.getElementById('home-news-count');
+      if(!grid || typeof BAYT_NEWS_DATA === 'undefined') return;
+      var list = BAYT_NEWS_DATA.filter(function(a){ return a.langs.indexOf('en') !== -1; });
+      if(countEl) countEl.textContent = list.length + ' articles';
+      list.slice(0,6).forEach(function(a){
+        var card = document.createElement('article');
+        card.className = 'bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col hover:shadow-xl transition';
+        var title = a.en || a.ar || a.fr || a.slug;
+        card.innerHTML = '<a href="news/' + a.slug + '"><img src="../news/' + a.img + '" alt="" class="w-full h-44 object-cover" loading="lazy"></a><div class="p-5 flex flex-col flex-grow"><h3 class="text-lg font-bold text-gray-900 leading-relaxed mb-3 flex-grow"><a href="news/' + a.slug + '" class="hover:text-teal-700 transition">' + title + '</a></h3><a href="news/' + a.slug + '" class="inline-flex items-center gap-1 text-teal-700 font-bold">Read the article →</a></div>';
+        grid.appendChild(card);
+      });
+    })();
+    </script>
+
     <!-- App promotion section with custom banner background -->
     <section class="relative py-20 bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000');">
         <!-- Dark plum overlay for text aesthetics -->
