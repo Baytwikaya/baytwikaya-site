@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "erythritol-stroke-risk",
+    "img": "hero-erythritol-stroke-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بديل السكر «الإريثريتول» وخطر السكتة الدماغية: ما الذي وجدته دراسة جينية جديدة؟",
+    "en": "The sugar substitute erythritol and stroke risk: what a new genetic study found",
+    "fr": "L'édulcorant érythritol et le risque d'AVC : ce qu'une nouvelle étude génétique a trouvé"
+  },
+  {
     "slug": "air-pollution-dementia-risk",
     "img": "hero-air-pollution-dementia-risk.webp",
     "langs": [
