@@ -264,6 +264,15 @@
   }
   #toast.show{opacity:1; transform:translate(-50%, 0)}
 </style>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "83ee3272-f71f-4f26-8d5d-3ca2423038e7",
+    });
+  });
+</script>
 </head>
 <body class="lang-fr">
   <!-- shared sakura artwork (drawn once, used in both corners) -->

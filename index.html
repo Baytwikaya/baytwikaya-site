@@ -136,6 +136,15 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 @keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
 @media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
 </style>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "83ee3272-f71f-4f26-8d5d-3ca2423038e7",
+    });
+  });
+</script>
 </head>
 <body class="text-gray-800 antialiased relative flex flex-col min-h-screen">
 

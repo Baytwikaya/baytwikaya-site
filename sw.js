@@ -1,5 +1,6 @@
+importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 /* بيت الوقاية - Service Worker */
-const CACHE_NAME = 'baytwikaya-v155';
+const CACHE_NAME = 'baytwikaya-v156';
 const PRECACHE_URLS = [
     './',
     'faq',

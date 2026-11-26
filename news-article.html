@@ -27,6 +27,15 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 </style>
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <meta name="theme-color" content="#0f766e">
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "83ee3272-f71f-4f26-8d5d-3ca2423038e7",
+    });
+  });
+</script>
 </head>
 <body class="text-gray-800 antialiased flex flex-col min-h-screen">
 
