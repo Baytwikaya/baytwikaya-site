@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "blood-sugar-young-adults-brain",
+    "img": "hero-blood-sugar-young-adults-brain.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سكر الدم يرتفع بهدوء منذ الشباب: كيف يؤثر في ذاكرتك في منتصف العمر قبل السكري؟",
+    "en": "Blood sugar creeps up from young adulthood: how it affects your midlife memory before diabetes",
+    "fr": "La glycémie grimpe doucement dès le jeune âge : comment affecte-t-elle votre mémoire à la cinquantaine, avant le diabète ?"
+  },
+  {
     "slug": "obesity-definition-dementia-risk",
     "img": "hero-obesity-definition-dementia-risk.webp",
     "langs": [
