@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "paxlovid-long-covid-risk",
+    "img": "hero-paxlovid-long-covid-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "باكسلوفيد وكوفيد الطويل: هل يقلل الدواء خطر الأعراض المستمرة؟ ما أثبتته أكبر دراسة واقعية",
+    "en": "Paxlovid and long COVID: can the drug cut the risk of lingering symptoms? What the largest real-world study found",
+    "fr": "Paxlovid et Covid long : le médicament peut-il réduire le risque de symptômes persistants ? Ce qu'a montré la plus grande étude en vie réelle"
+  },
+  {
     "slug": "blood-sugar-young-adults-brain",
     "img": "hero-blood-sugar-young-adults-brain.webp",
     "langs": [
