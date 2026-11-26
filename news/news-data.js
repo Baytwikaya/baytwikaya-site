@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "obesity-definition-dementia-risk",
+    "img": "hero-obesity-definition-dementia-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "مؤشر كتلة الجسم وحده قد يُخفي خطر الخرف: تعريف جديد للسمنة يكشف المزيد من المعرضين للخطر",
+    "en": "BMI alone may miss dementia risk: a new obesity definition flags more people at risk",
+    "fr": "L'IMC seul peut masquer le risque de démence : une nouvelle définition de l'obésité identifie davantage de personnes à risque"
+  },
+  {
     "slug": "erythritol-stroke-risk",
     "img": "hero-erythritol-stroke-risk.webp",
     "langs": [
