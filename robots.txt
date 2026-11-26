@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://baytwikaya.site/sitemap.xml
+Sitemap: https://baytwikaya.site/news-sitemap.xml
