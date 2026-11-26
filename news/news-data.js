@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "exercise-after-70-strength-walking",
+    "img": "hero-exercise-after-70-strength-walking.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بعد السبعين: سنة من التمارين تقوّي العضلات وتسرّع المشي — حتى دون زيادة كتلة العضلات",
+    "en": "After 70: a year of exercise builds strength and speeds up walking — even without bigger muscles",
+    "fr": "Après 70 ans : un an d'exercice renforce les muscles et accélère la marche — même sans prendre de masse musculaire"
+  },
+  {
     "slug": "paxlovid-long-covid-risk",
     "img": "hero-paxlovid-long-covid-risk.webp",
     "langs": [
