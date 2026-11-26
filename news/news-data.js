@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "gut-diet-osteoarthritis-risk",
+    "img": "hero-gut-diet-osteoarthritis-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "غذاء صديق للأمعاء ومفاصل أقوى: هل يحمي نمط أكلك ركبتيك من الخشونة؟",
+    "en": "A gut-friendly diet and stronger joints: can the way you eat protect your knees from osteoarthritis?",
+    "fr": "Une alimentation favorable à l'intestin et des articulations plus solides : votre façon de manger peut-elle protéger vos genoux de l'arthrose ?"
+  },
+  {
     "slug": "exercise-after-70-strength-walking",
     "img": "hero-exercise-after-70-strength-walking.webp",
     "langs": [
