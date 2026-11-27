@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "alzheimer-brain-activity-arc-score",
+    "img": "hero-alzheimer-brain-activity-arc-score.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "نشاط دماغك قد يتنبأ بألزهايمر قبل سنوات من أول نسيان",
+    "en": "Could your brain activity predict Alzheimer's years before the first forgotten name?",
+    "fr": "L'activité de votre cerveau pourrait-elle prédire Alzheimer des années avant le premier oubli ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "ألزهايمر وصحة الدماغ",
+      "en": "Alzheimer's and brain health",
+      "fr": "Alzheimer et santé du cerveau"
+    }
+  },
+  {
     "slug": "stem-cells-knee-osteoarthritis-osca",
     "img": "hero-stem-cells-knee-osteoarthritis-osca.webp",
     "langs": [
