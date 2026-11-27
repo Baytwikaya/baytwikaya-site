@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "hpv-viral-load-cervical-lesions",
+    "img": "hero-hpv-viral-load-cervical-lesions.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "فيروس الورم الحليمي: هل يكشف مسار الحمل الفيروسي خطر سرطان عنق الرحم؟",
+    "en": "HPV viral load: can its trajectory over time predict cervical cancer risk?",
+    "fr": "Charge virale du HPV : son évolution dans le temps peut-elle prédire le risque de cancer du col de l'utérus ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "صحة المرأة وسرطان عنق الرحم",
+      "en": "Women's health and cervical cancer",
+      "fr": "Santé des femmes et cancer du col de l'utérus"
+    }
+  },
+  {
     "slug": "ovarian-cancer-rna-blood-test",
     "img": "hero-ovarian-cancer-rna-blood-test.webp",
     "langs": [
