@@ -75,6 +75,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('consent', 'default', {'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'});
   gtag('config', 'G-Z7VGSVX46W');
 </script>
 <style>
@@ -561,5 +562,34 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         });
     })();
     </script>
+<!-- Cookie consent (Consent Mode v2) -->
+<div id="bayt-cookie-banner" dir="rtl" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#0b3d2e;color:#fff;box-shadow:0 -2px 12px rgba(0,0,0,.25);">
+  <div style="max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:13.5px;line-height:1.6;">
+    <p style="margin:0;flex:1 1 280px;">نستعمل ملفات تعريف الارتباط (الكوكيز) لتحسين تجربتك وقياس الزيارات وعرض إعلانات مناسبة. يمكنك القبول أو الرفض. <a href="/privacy.html" style="color:#e7c65a;text-decoration:underline;">سياسة الخصوصية</a></p>
+    <button type="button" data-cookie-choice="accepted" style="cursor:pointer;border:0;border-radius:999px;background:#c9a227;color:#1a1a1a;font-weight:700;font-size:13.5px;padding:8px 18px;">قبول الكل</button>
+    <button type="button" data-cookie-choice="declined" style="cursor:pointer;border:1px solid rgba(255,255,255,.7);border-radius:999px;background:transparent;color:#fff;font-weight:700;font-size:13.5px;padding:8px 18px;">رفض</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='bayt-cookie-consent';
+  function setConsent(v){ if(typeof gtag==='function'){ gtag('consent','update',{'analytics_storage':v,'ad_storage':v,'ad_user_data':v,'ad_personalization':v}); } }
+  var banner=document.getElementById('bayt-cookie-banner');
+  if(!banner){ return; }
+  var saved=null;
+  try{ saved=localStorage.getItem(KEY); }catch(e){}
+  if(saved==='accepted'){ setConsent('granted'); return; }
+  if(saved==='declined'){ setConsent('denied'); return; }
+  banner.style.display='block';
+  banner.addEventListener('click',function(ev){
+    var b=ev.target.closest ? ev.target.closest('[data-cookie-choice]') : null;
+    if(!b){ return; }
+    var choice=b.getAttribute('data-cookie-choice');
+    try{ localStorage.setItem(KEY,choice); }catch(e){}
+    setConsent(choice==='accepted'?'granted':'denied');
+    banner.style.display='none';
+  });
+})();
+</script>
 </body>
 </html>
