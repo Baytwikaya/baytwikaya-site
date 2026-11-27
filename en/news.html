@@ -38,7 +38,7 @@
         /* Animated news ticker: directly above the page content, below the top bar.
            CSS-only motion; it pauses on hover or focus, and is fully disabled when reduced motion is preferred. */
         .news-ticker { background-color: #0f766e; overflow: hidden; direction: ltr; }
-        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 60s linear infinite; }
+        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 120s linear infinite; }
         .news-ticker-set { display: flex; }
         .news-ticker:hover .news-ticker-track, .news-ticker:focus-within .news-ticker-track { animation-play-state: paused; }
         .news-ticker-item { display: flex; align-items: center; gap: 10px; padding: 8px 18px; color: #fff; text-decoration: none; white-space: nowrap; }
@@ -366,8 +366,15 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <main class="flex-grow py-12 px-4 w-full">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4">Health world news</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Original articles backed by scientific sources: reliable information, practical advice, and links to the original research</p>
+<!-- BAYT-NEWS-TABS: dynamic news tabs (Top / Latest / For you) — DO NOT REMOVE. Wired by news/news-hub.js. When updating hero/grid/picks/ticker, leave this block untouched. -->
+<div id="news-tabs" class="flex flex-wrap items-center justify-center gap-2 mb-4" role="tablist">
+  <button type="button" data-tab="top" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Top stories</button>
+  <button type="button" data-tab="latest" role="tab" aria-selected="true" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Latest <span id="news-latest-badge" class="ml-1 inline-flex items-center justify-center min-w-6 h-6 px-1.5 rounded-full bg-red-600 text-white text-xs font-extrabold" style="display:none"></span></button>
+  <button type="button" data-tab="foryou" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">For you</button>
+</div>
+<p id="news-tab-note" class="hidden text-gray-600 text-sm md:text-base mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3"></p>
+<!-- /BAYT-NEWS-TABS -->
+                <p class="text-gray-600 text-base max-w-2xl mx-auto">Original articles backed by scientific sources: reliable information, practical advice, and links to the original research</p>
             </div>
 
                         <!-- BREAKING: breaking-news slot — update when an important health story drops; to hide temporarily add style="display:none" to the <a> tag -->
@@ -402,14 +409,6 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Latest news</h2>
 
-<!-- BAYT-NEWS-TABS: dynamic news tabs (Top / Latest / For you) — DO NOT REMOVE. Wired by news/news-hub.js. When updating hero/grid/picks/ticker, leave this block untouched. -->
-<div id="news-tabs" class="flex flex-wrap items-center gap-2 mb-4" role="tablist">
-  <button type="button" data-tab="top" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Top stories</button>
-  <button type="button" data-tab="latest" role="tab" aria-selected="true" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Latest <span id="news-latest-badge" class="ml-1 inline-flex items-center justify-center min-w-6 h-6 px-1.5 rounded-full bg-red-600 text-white text-xs font-extrabold" style="display:none"></span></button>
-  <button type="button" data-tab="foryou" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">For you</button>
-</div>
-<p id="news-tab-note" class="hidden text-gray-600 text-sm md:text-base mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3"></p>
-<!-- /BAYT-NEWS-TABS -->
 
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
@@ -1510,8 +1509,6 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
 </script>
 
 
-    <script src="../news/news-data.js"></script>
-    <script src="../news/news-hub.js"></script>
 
 <!-- BAYT-NEWS-SEARCH: floating site search (free, client-side) + voice input — DO NOT REMOVE. Wired by news/news-hub.js. -->
 <div id="bayt-search" style="position:fixed;left:0;right:0;bottom:16px;z-index:100000;pointer-events:none;">
@@ -1565,5 +1562,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   });
 })();
 </script>
+    <script src="../news/news-data.js"></script>
+    <script src="../news/news-hub.js"></script>
 </body>
 </html>

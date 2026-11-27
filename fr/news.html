@@ -38,7 +38,7 @@
         /* Bandeau d'actualités animé : juste au-dessus du contenu de la page, sous la barre supérieure.
            Animation en CSS uniquement, mise en pause au survol ou au focus, et totalement désactivée si l'utilisateur préfère moins de mouvement. */
         .news-ticker { background-color: #0f766e; overflow: hidden; direction: ltr; }
-        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 60s linear infinite; }
+        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 120s linear infinite; }
         .news-ticker-set { display: flex; }
         .news-ticker:hover .news-ticker-track, .news-ticker:focus-within .news-ticker-track { animation-play-state: paused; }
         .news-ticker-item { display: flex; align-items: center; gap: 10px; padding: 8px 18px; color: #fff; text-decoration: none; white-space: nowrap; }
@@ -366,8 +366,15 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <main class="flex-grow py-12 px-4 w-full">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4">Actualités du monde de la santé</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Des articles originaux étayés par des sources scientifiques : une information fiable, un conseil pratique et les liens vers les recherches originales</p>
+<!-- BAYT-NEWS-TABS: dynamic news tabs (Top / Latest / For you) — DO NOT REMOVE. Wired by news/news-hub.js. When updating hero/grid/picks/ticker, leave this block untouched. -->
+<div id="news-tabs" class="flex flex-wrap items-center justify-center gap-2 mb-4" role="tablist">
+  <button type="button" data-tab="top" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">À la une</button>
+  <button type="button" data-tab="latest" role="tab" aria-selected="true" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Dernières <span id="news-latest-badge" class="ml-1 inline-flex items-center justify-center min-w-6 h-6 px-1.5 rounded-full bg-red-600 text-white text-xs font-extrabold" style="display:none"></span></button>
+  <button type="button" data-tab="foryou" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Pour vous</button>
+</div>
+<p id="news-tab-note" class="hidden text-gray-600 text-sm md:text-base mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3"></p>
+<!-- /BAYT-NEWS-TABS -->
+                <p class="text-gray-600 text-base max-w-2xl mx-auto">Des articles originaux étayés par des sources scientifiques : une information fiable, un conseil pratique et les liens vers les recherches originales</p>
             </div>
                         <!-- FLASH : encadré d’actualité urgente — à mettre à jour quand une info santé importante tombe ; pour le masquer temporairement, ajoutez style="display:none" à la balise <a> -->
             <a href="news/weight-loss-drugs-blindness-warning" id="breaking-news" class="block mb-8 rounded-2xl overflow-hidden shadow-xl border-2 border-red-600">
@@ -401,14 +408,6 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Dernières actualités</h2>
 
-<!-- BAYT-NEWS-TABS: dynamic news tabs (Top / Latest / For you) — DO NOT REMOVE. Wired by news/news-hub.js. When updating hero/grid/picks/ticker, leave this block untouched. -->
-<div id="news-tabs" class="flex flex-wrap items-center gap-2 mb-4" role="tablist">
-  <button type="button" data-tab="top" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">À la une</button>
-  <button type="button" data-tab="latest" role="tab" aria-selected="true" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Dernières <span id="news-latest-badge" class="ml-1 inline-flex items-center justify-center min-w-6 h-6 px-1.5 rounded-full bg-red-600 text-white text-xs font-extrabold" style="display:none"></span></button>
-  <button type="button" data-tab="foryou" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">Pour vous</button>
-</div>
-<p id="news-tab-note" class="hidden text-gray-600 text-sm md:text-base mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3"></p>
-<!-- /BAYT-NEWS-TABS -->
 
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
@@ -1508,8 +1507,6 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
 </script>
 
 
-    <script src="../news/news-data.js"></script>
-    <script src="../news/news-hub.js"></script>
 
 <!-- BAYT-NEWS-SEARCH: floating site search (free, client-side) + voice input — DO NOT REMOVE. Wired by news/news-hub.js. -->
 <div id="bayt-search" style="position:fixed;left:0;right:0;bottom:16px;z-index:100000;pointer-events:none;">
@@ -1563,5 +1560,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
   });
 })();
 </script>
+    <script src="../news/news-data.js"></script>
+    <script src="../news/news-hub.js"></script>
 </body>
 </html>
