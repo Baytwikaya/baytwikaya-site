@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "stem-cells-knee-osteoarthritis-osca",
+    "img": "hero-stem-cells-knee-osteoarthritis-osca.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حقنة خلايا جذعية للركبة: هل تُصلح الغضروف فعلاً؟",
+    "en": "A stem-cell injection for the knee: can it really repair cartilage?",
+    "fr": "Une injection de cellules souches pour le genou : peut-elle vraiment réparer le cartilage ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "خشونة الركبة والعلاج التجديدي",
+      "en": "Knee osteoarthritis and regenerative therapy",
+      "fr": "Arthrose du genou et thérapie régénérative"
+    }
+  },
+  {
     "slug": "whole-wheat-bread-gut-blood-sugar",
     "img": "hero-whole-wheat-bread-gut-blood-sugar.webp",
     "langs": [
