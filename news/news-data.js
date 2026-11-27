@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "ovarian-cancer-rna-blood-test",
+    "img": "hero-ovarian-cancer-rna-blood-test.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تحليل دم يكشف سرطان المبيض قبل سنوات من ظهور الورم؟",
+    "en": "Could a blood test detect ovarian cancer years before a tumour appears?",
+    "fr": "Un test sanguin pourrait-il détecter le cancer de l'ovaire des années avant l'apparition de la tumeur ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "السرطان والكشف المبكر",
+      "en": "Cancer and early detection",
+      "fr": "Cancer et dépistage précoce"
+    }
+  },
+  {
     "slug": "alzheimer-brain-activity-arc-score",
     "img": "hero-alzheimer-brain-activity-arc-score.webp",
     "langs": [
