@@ -14,7 +14,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الخبز الكامل وسكر الدم: هل تصنع بكتيريا أمعائك الفرق؟",
     "en": "Whole-Wheat Bread and Blood Sugar: Could Your Gut Bacteria Make the Difference?",
-    "fr": "Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?"
+    "fr": "Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "التغذية وسكر الدم",
+      "en": "Nutrition and blood sugar",
+      "fr": "Nutrition et glycémie"
+    }
   },
   {
     "slug": "gut-diet-osteoarthritis-risk",
@@ -26,7 +32,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "غذاء صديق للأمعاء ومفاصل أقوى: هل يحمي نمط أكلك ركبتيك من الخشونة؟",
     "en": "A gut-friendly diet and stronger joints: can the way you eat protect your knees from osteoarthritis?",
-    "fr": "Une alimentation favorable à l'intestin et des articulations plus solides : votre façon de manger peut-elle protéger vos genoux de l'arthrose ?"
+    "fr": "Une alimentation favorable à l'intestin et des articulations plus solides : votre façon de manger peut-elle protéger vos genoux de l'arthrose ?",
+    "date": "2026-11-26",
+    "cat": {
+      "ar": "التغذية والمفاصل",
+      "en": "Nutrition and joints",
+      "fr": "Nutrition et articulations"
+    }
   },
   {
     "slug": "exercise-after-70-strength-walking",
@@ -38,7 +50,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بعد السبعين: سنة من التمارين تقوّي العضلات وتسرّع المشي — حتى دون زيادة كتلة العضلات",
     "en": "After 70: a year of exercise builds strength and speeds up walking — even without bigger muscles",
-    "fr": "Après 70 ans : un an d'exercice renforce les muscles et accélère la marche — même sans prendre de masse musculaire"
+    "fr": "Après 70 ans : un an d'exercice renforce les muscles et accélère la marche — même sans prendre de masse musculaire",
+    "date": "2026-11-26",
+    "cat": {
+      "ar": "الرياضة وكبار السن",
+      "en": "Exercise and older adults",
+      "fr": "Exercice et seniors"
+    }
   },
   {
     "slug": "paxlovid-long-covid-risk",
@@ -50,7 +68,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "باكسلوفيد وكوفيد الطويل: هل يقلل الدواء خطر الأعراض المستمرة؟ ما أثبتته أكبر دراسة واقعية",
     "en": "Paxlovid and long COVID: can the drug cut the risk of lingering symptoms? What the largest real-world study found",
-    "fr": "Paxlovid et Covid long : le médicament peut-il réduire le risque de symptômes persistants ? Ce qu'a montré la plus grande étude en vie réelle"
+    "fr": "Paxlovid et Covid long : le médicament peut-il réduire le risque de symptômes persistants ? Ce qu'a montré la plus grande étude en vie réelle",
+    "date": "2026-11-26",
+    "cat": {
+      "ar": "كوفيد الطويل والأدوية",
+      "en": "Long COVID and medicines",
+      "fr": "Covid long et médicaments"
+    }
   },
   {
     "slug": "blood-sugar-young-adults-brain",
@@ -62,7 +86,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "سكر الدم يرتفع بهدوء منذ الشباب: كيف يؤثر في ذاكرتك في منتصف العمر قبل السكري؟",
     "en": "Blood sugar creeps up from young adulthood: how it affects your midlife memory before diabetes",
-    "fr": "La glycémie grimpe doucement dès le jeune âge : comment affecte-t-elle votre mémoire à la cinquantaine, avant le diabète ?"
+    "fr": "La glycémie grimpe doucement dès le jeune âge : comment affecte-t-elle votre mémoire à la cinquantaine, avant le diabète ?",
+    "date": "2026-11-26",
+    "cat": {
+      "ar": "السكر وصحة الدماغ",
+      "en": "Blood sugar and brain health",
+      "fr": "Glycémie et santé du cerveau"
+    }
   },
   {
     "slug": "obesity-definition-dementia-risk",
@@ -74,7 +104,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "مؤشر كتلة الجسم وحده قد يُخفي خطر الخرف: تعريف جديد للسمنة يكشف المزيد من المعرضين للخطر",
     "en": "BMI alone may miss dementia risk: a new obesity definition flags more people at risk",
-    "fr": "L'IMC seul peut masquer le risque de démence : une nouvelle définition de l'obésité identifie davantage de personnes à risque"
+    "fr": "L'IMC seul peut masquer le risque de démence : une nouvelle définition de l'obésité identifie davantage de personnes à risque",
+    "date": "2026-11-26",
+    "cat": {
+      "ar": "السمنة وصحة الدماغ",
+      "en": "Obesity and brain health",
+      "fr": "Obésité et santé du cerveau"
+    }
   },
   {
     "slug": "erythritol-stroke-risk",
@@ -86,7 +122,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بديل السكر «الإريثريتول» وخطر السكتة الدماغية: ما الذي وجدته دراسة جينية جديدة؟",
     "en": "The sugar substitute erythritol and stroke risk: what a new genetic study found",
-    "fr": "L'édulcorant érythritol et le risque d'AVC : ce qu'une nouvelle étude génétique a trouvé"
+    "fr": "L'édulcorant érythritol et le risque d'AVC : ce qu'une nouvelle étude génétique a trouvé",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "السكر والقلب والدماغ",
+      "en": "Sugar, heart and brain",
+      "fr": "Sucre, cœur et cerveau"
+    }
   },
   {
     "slug": "air-pollution-dementia-risk",
@@ -98,7 +140,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "تلوث الهواء يسرّع الخرف: خطر أعلى بنسبة 25% في المناطق الأكثر تلوثاً — ماذا كشفت دراسة 2026؟",
     "en": "Air pollution speeds up dementia: 25% higher risk in the most polluted areas — what a 2026 study found",
-    "fr": "La pollution de l'air accélère la démence : un risque supérieur de 25 % dans les zones les plus polluées — ce qu'a révélé une étude de 2026"
+    "fr": "La pollution de l'air accélère la démence : un risque supérieur de 25 % dans les zones les plus polluées — ce qu'a révélé une étude de 2026",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "تلوث الهواء وصحة الدماغ",
+      "en": "Air pollution and brain health",
+      "fr": "Pollution de l'air et santé du cerveau"
+    }
   },
   {
     "slug": "hijama-back-pain-guide",
@@ -110,7 +158,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الحجامة لآلام الظهر: دليل شامل",
     "en": "Cupping for Back Pain: A Complete Guide",
-    "fr": "La hijama pour le mal de dos : guide complet"
+    "fr": "La hijama pour le mal de dos : guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة وآلام الظهر",
+      "en": "Hijama and back pain",
+      "fr": "Hijama et mal du dos"
+    }
   },
   {
     "slug": "knee-osteoarthritis-guide",
@@ -122,7 +176,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "خشونة الركبة: الدليل الشامل",
     "en": "Knee Osteoarthritis: The Complete Guide",
-    "fr": "L'arthrose du genou : guide complet"
+    "fr": "L'arthrose du genou : guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "خشونة الركبة والمفاصل",
+      "en": "Knee osteoarthritis and joints",
+      "fr": "Arthrose du genou et articulations"
+    }
   },
   {
     "slug": "hypertension-guide",
@@ -134,7 +194,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "ارتفاع ضغط الدم: الدليل الشامل",
     "en": "High Blood Pressure: The Complete Guide",
-    "fr": "Hypertension artérielle : le guide complet"
+    "fr": "Hypertension artérielle : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة القلب والشرايين",
+      "en": "Heart and blood vessel health",
+      "fr": "Santé du cœur et des vaisseaux"
+    }
   },
   {
     "slug": "moroccan-diet-guide",
@@ -146,7 +212,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "المطبخ المغربي الصحي: الدليل الشامل",
     "en": "The Healthy Moroccan Kitchen: The Complete Guide",
-    "fr": "La cuisine marocaine saine : le guide complet"
+    "fr": "La cuisine marocaine saine : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية الصحية",
+      "en": "Healthy nutrition",
+      "fr": "Nutrition saine"
+    }
   },
   {
     "slug": "sleep-apnea-guide",
@@ -158,7 +230,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "انقطاع النفس أثناء النوم: الدليل الشامل",
     "en": "Sleep Apnea: The Complete Guide",
-    "fr": "Apnée du sommeil : le guide complet"
+    "fr": "Apnée du sommeil : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "النوم والصحة",
+      "en": "Sleep and health",
+      "fr": "Sommeil et santé"
+    }
   },
   {
     "slug": "hijama-points-map-guide",
@@ -170,7 +248,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "خريطة مواضع الحجامة: دليل شامل",
     "en": "The Cupping Points Map: A Complete Guide",
-    "fr": "La carte des points de hijama : guide complet"
+    "fr": "La carte des points de hijama : guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة ومواضعها",
+      "en": "Hijama and its points",
+      "fr": "Hijama et ses points"
+    }
   },
   {
     "slug": "hijama-safety-contraindications",
@@ -182,7 +266,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "متى تكون الحجامة غير آمنة؟ موانع وتحذيرات",
     "en": "When Is Cupping Unsafe? Contraindications and Warnings",
-    "fr": "Quand la hijama est-elle dangereuse ? Contre-indications et avertissements"
+    "fr": "Quand la hijama est-elle dangereuse ? Contre-indications et avertissements",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "سلامة الحجامة",
+      "en": "Cupping safety",
+      "fr": "Sécurité de la hijama"
+    }
   },
   {
     "slug": "hijama-sports-recovery",
@@ -194,7 +284,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الحجامة والاستشفاء الرياضي: دليل شامل",
     "en": "Cupping and Sports Recovery: A Complete Guide",
-    "fr": "La hijama et la récupération sportive : guide complet"
+    "fr": "La hijama et la récupération sportive : guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة والرياضة",
+      "en": "Hijama and sport",
+      "fr": "Hijama et sport"
+    }
   },
   {
     "slug": "hijama-migraine-headache",
@@ -206,7 +302,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الحجامة والصداع النصفي: دليل شامل",
     "en": "Cupping and Migraine: A Complete Guide",
-    "fr": "La hijama et la migraine : guide complet"
+    "fr": "La hijama et la migraine : guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة والصداع",
+      "en": "Hijama and headache",
+      "fr": "Hijama et maux de tête"
+    }
   },
   {
     "slug": "hijama-history-evidence",
@@ -218,7 +320,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الحجامة عبر التاريخ والأدلة الحديثة",
     "en": "Cupping Through History and Modern Evidence",
-    "fr": "La hijama à travers l'histoire et les preuves modernes"
+    "fr": "La hijama à travers l'histoire et les preuves modernes",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة والتاريخ",
+      "en": "Hijama and history",
+      "fr": "Hijama et histoire"
+    }
   },
   {
     "slug": "frozen-shoulder-guide",
@@ -230,7 +338,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الكتف المتجمدة: الدليل الشامل للأسباب والأعراض والعلاج",
     "en": "Frozen shoulder: the complete guide to causes, symptoms and treatment",
-    "fr": "L'épaule gelée : le guide complet des causes, des symptômes et du traitement"
+    "fr": "L'épaule gelée : le guide complet des causes, des symptômes et du traitement",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة العظام والمفاصل",
+      "en": "Bone and joint health",
+      "fr": "Santé des os et des articulations"
+    }
   },
   {
     "slug": "sciatica-guide",
@@ -242,7 +356,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "عرق النسا: الدليل الشامل للأسباب والأعراض والعلاج",
     "en": "Sciatica: the complete guide to causes, symptoms and treatment",
-    "fr": "La sciatique : le guide complet des causes, des symptômes et du traitement"
+    "fr": "La sciatique : le guide complet des causes, des symptômes et du traitement",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة وآلام الظهر",
+      "en": "Hijama and back pain",
+      "fr": "Hijama et douleurs du dos"
+    }
   },
   {
     "slug": "osteoporosis-prevention-guide",
@@ -254,7 +374,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "هشاشة العظام: دليل الوقاية الشامل قبل أول كسر",
     "en": "Osteoporosis prevention: the complete guide before the first fracture",
-    "fr": "Prévention de l'ostéoporose : le guide complet avant la première fracture"
+    "fr": "Prévention de l'ostéoporose : le guide complet avant la première fracture",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة العظام والمفاصل",
+      "en": "Bone and joint health",
+      "fr": "Santé des os et des articulations"
+    }
   },
   {
     "slug": "herniated-disc-guide",
@@ -266,7 +392,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الانزلاق الغضروفي: الدليل الشامل للأسباب والأعراض والعلاج",
     "en": "Herniated disc: the complete guide to causes, symptoms and treatment",
-    "fr": "La hernie discale : le guide complet des causes, des symptômes et du traitement"
+    "fr": "La hernie discale : le guide complet des causes, des symptômes et du traitement",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الحجامة وآلام الظهر",
+      "en": "Hijama and back pain",
+      "fr": "Hijama et douleurs du dos"
+    }
   },
   {
     "slug": "neck-pain-guide",
@@ -278,7 +410,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "آلام الرقبة: الدليل الشامل للأسباب والأعراض والعلاج",
     "en": "Neck pain: the complete guide to causes, symptoms and treatment",
-    "fr": "La douleur du cou : le guide complet des causes, des symptômes et du traitement"
+    "fr": "La douleur du cou : le guide complet des causes, des symptômes et du traitement",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة العظام والمفاصل",
+      "en": "Bone and joint health",
+      "fr": "Santé des os et des articulations"
+    }
   },
   {
     "slug": "ankle-sprain-guide",
@@ -290,7 +428,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "التواء الكاحل: الدليل الشامل للأسباب والأعراض والعلاج",
     "en": "Ankle sprain: the complete guide to causes, symptoms and treatment",
-    "fr": "L'entorse de la cheville : le guide complet des causes, des symptômes et du traitement"
+    "fr": "L'entorse de la cheville : le guide complet des causes, des symptômes et du traitement",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة العظام والمفاصل",
+      "en": "Bone and joint health",
+      "fr": "Santé des os et des articulations"
+    }
   },
   {
     "slug": "olive-oil-health-guide",
@@ -302,7 +446,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "زيت الزيتون والصحة: الدليل الشامل",
     "en": "Olive Oil and Health: The Complete Guide",
-    "fr": "L'huile d'olive et la santé : le guide complet"
+    "fr": "L'huile d'olive et la santé : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية الصحية",
+      "en": "Healthy nutrition",
+      "fr": "Nutrition saine"
+    }
   },
   {
     "slug": "sardines-omega3-guide",
@@ -314,7 +464,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "السردين وأوميغا 3: الدليل الشامل",
     "en": "Sardines and Omega-3: The Complete Guide",
-    "fr": "Les sardines et les oméga-3 : le guide complet"
+    "fr": "Les sardines et les oméga-3 : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية الصحية",
+      "en": "Healthy nutrition",
+      "fr": "Nutrition saine"
+    }
   },
   {
     "slug": "dates-nutrition-guide",
@@ -326,7 +482,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "التمر والتغذية: الدليل الشامل",
     "en": "Dates and Nutrition: The Complete Guide",
-    "fr": "Les dattes et la nutrition : le guide complet"
+    "fr": "Les dattes et la nutrition : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية الصحية",
+      "en": "Healthy nutrition",
+      "fr": "Nutrition saine"
+    }
   },
   {
     "slug": "protein-after-50-guide",
@@ -338,7 +500,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "البروتين بعد الخمسين: الدليل الشامل",
     "en": "Protein After Fifty: The Complete Guide",
-    "fr": "Les protéines après cinquante ans : le guide complet"
+    "fr": "Les protéines après cinquante ans : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الصحة مع التقدم في العمر",
+      "en": "Health with ageing",
+      "fr": "La santé avec l'âge"
+    }
   },
   {
     "slug": "gut-microbiome-guide",
@@ -350,7 +518,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "ميكروبيوم الأمعاء: الدليل الشامل",
     "en": "The Gut Microbiome: The Complete Guide",
-    "fr": "Le microbiome intestinal : le guide complet"
+    "fr": "Le microbiome intestinal : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الجهاز الهضمي",
+      "en": "Digestive health",
+      "fr": "Santé digestive"
+    }
   },
   {
     "slug": "salt-health-guide",
@@ -362,7 +536,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الملح والصحة: الدليل الشامل",
     "en": "Salt and Health: The Complete Guide",
-    "fr": "Le sel et la santé : le guide complet"
+    "fr": "Le sel et la santé : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية الصحية",
+      "en": "Healthy nutrition",
+      "fr": "Nutrition saine"
+    }
   },
   {
     "slug": "iron-deficiency-guide",
@@ -374,7 +554,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "نقص الحديد وفقر الدم: الدليل الشامل",
     "en": "Iron Deficiency and Anemia: The Complete Guide",
-    "fr": "Carence en fer et anémie : le guide complet"
+    "fr": "Carence en fer et anémie : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "التغذية والصحة",
+      "en": "Nutrition and health",
+      "fr": "Nutrition et santé"
+    }
   },
   {
     "slug": "insomnia-guide",
@@ -386,7 +572,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الأرق: الدليل الشامل",
     "en": "Insomnia: The Complete Guide",
-    "fr": "Insomnie : le guide complet"
+    "fr": "Insomnie : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "النوم والصحة",
+      "en": "Sleep and health",
+      "fr": "Sommeil et santé"
+    }
   },
   {
     "slug": "circadian-rhythm-guide",
@@ -398,7 +590,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الساعة البيولوجية: الدليل الشامل",
     "en": "The Body Clock (Circadian Rhythm): The Complete Guide",
-    "fr": "L'horloge biologique (rythme circadien) : le guide complet"
+    "fr": "L'horloge biologique (rythme circadien) : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "النوم والصحة",
+      "en": "Sleep and health",
+      "fr": "Sommeil et santé"
+    }
   },
   {
     "slug": "walking-health-guide",
@@ -410,7 +608,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "المشي والصحة: الدليل الشامل",
     "en": "Walking and Health: The Complete Guide",
-    "fr": "La marche et la santé : le guide complet"
+    "fr": "La marche et la santé : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "النشاط البدني والصحة",
+      "en": "Physical activity and health",
+      "fr": "Activité physique et santé"
+    }
   },
   {
     "slug": "swimming-health-guide",
@@ -422,7 +626,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "السباحة والصحة: الدليل الشامل",
     "en": "Swimming and Health: The Complete Guide",
-    "fr": "La natation et la santé : le guide complet"
+    "fr": "La natation et la santé : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "النشاط البدني والصحة",
+      "en": "Physical activity and health",
+      "fr": "Activité physique et santé"
+    }
   },
   {
     "slug": "stretching-flexibility-guide",
@@ -434,7 +644,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "التمدد والمرونة: الدليل الشامل",
     "en": "Stretching and Flexibility: The Complete Guide",
-    "fr": "Étirements et souplesse : le guide complet"
+    "fr": "Étirements et souplesse : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "اللياقة والحركة",
+      "en": "Fitness and movement",
+      "fr": "Forme et mouvement"
+    }
   },
   {
     "slug": "cholesterol-guide",
@@ -446,7 +662,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الكوليسترول: الدليل الشامل",
     "en": "Cholesterol: The Complete Guide",
-    "fr": "Le cholestérol : le guide complet"
+    "fr": "Le cholestérol : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة القلب والشرايين",
+      "en": "Heart and blood vessel health",
+      "fr": "Santé du cœur et des vaisseaux"
+    }
   },
   {
     "slug": "liver-health-guide",
@@ -458,7 +680,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "صحة الكبد: الدليل الشامل",
     "en": "Liver Health: The Complete Guide",
-    "fr": "Santé du foie : le guide complet"
+    "fr": "Santé du foie : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الجهاز الهضمي",
+      "en": "Digestive health",
+      "fr": "Santé digestive"
+    }
   },
   {
     "slug": "metabolic-syndrome-guide",
@@ -470,7 +698,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "المتلازمة الأيضية: الدليل الشامل",
     "en": "Metabolic Syndrome: The Complete Guide",
-    "fr": "Syndrome métabolique : le guide complet"
+    "fr": "Syndrome métabolique : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الأيض والسكري",
+      "en": "Metabolic and diabetes health",
+      "fr": "Santé métabolique et diabète"
+    }
   },
   {
     "slug": "kidney-health-guide",
@@ -482,7 +716,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "صحة الكلى: الدليل الشامل",
     "en": "Kidney Health: The Complete Guide",
-    "fr": "Santé des reins : le guide complet"
+    "fr": "Santé des reins : le guide complet",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الكلى والمسالك البولية",
+      "en": "Kidney and urinary health",
+      "fr": "Santé des reins et des voies urinaires"
+    }
   },
   {
     "slug": "stress-cortisol-guide",
@@ -494,7 +734,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "التوتر والكورتيزول: الدليل الشامل لفهم التوتر وإدارته يوميا",
     "en": "Stress and Cortisol: The Complete Guide to Understanding and Managing Stress Every Day",
-    "fr": "Stress et cortisol : le guide complet pour comprendre et gérer le stress au quotidien"
+    "fr": "Stress et cortisol : le guide complet pour comprendre et gérer le stress au quotidien",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الصحة النفسية والتوتر",
+      "en": "Mental health and stress",
+      "fr": "Santé mentale et stress"
+    }
   },
   {
     "slug": "healthy-aging-guide",
@@ -506,7 +752,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الشيخوخة الصحية: الدليل الشامل للحفاظ على القوة والذاكرة والاستقلالية",
     "en": "Healthy Ageing: The Complete Guide to Preserving Strength, Memory and Independence",
-    "fr": "Vieillissement en bonne santé : le guide complet pour préserver force, mémoire et autonomie"
+    "fr": "Vieillissement en bonne santé : le guide complet pour préserver force, mémoire et autonomie",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الشيخوخة الصحية",
+      "en": "Healthy ageing",
+      "fr": "Vieillissement en bonne santé"
+    }
   },
   {
     "slug": "pregnancy-nutrition-guide",
@@ -518,7 +770,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "تغذية الحامل: الدليل الشامل لغذاء متوازن وحمل آمن",
     "en": "Pregnancy Nutrition: The Complete Guide to Balanced Food and a Safe Pregnancy",
-    "fr": "Nutrition de la femme enceinte : le guide complet pour une alimentation équilibrée et une grossesse en sécurité"
+    "fr": "Nutrition de la femme enceinte : le guide complet pour une alimentation équilibrée et une grossesse en sécurité",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الأم والطفل",
+      "en": "Mother and child health",
+      "fr": "Santé de la mère et de l'enfant"
+    }
   },
   {
     "slug": "children-posture-screens-guide",
@@ -530,7 +788,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "وضعية الأطفال والشاشات: الدليل الشامل لحماية الظهر والنوم والنظر",
     "en": "Children's Posture and Screens: The Complete Guide to Protecting the Back, Sleep and Eyesight",
-    "fr": "Posture des enfants et écrans : le guide complet pour protéger le dos, le sommeil et la vue"
+    "fr": "Posture des enfants et écrans : le guide complet pour protéger le dos, le sommeil et la vue",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "صحة الأطفال",
+      "en": "Children's health",
+      "fr": "Santé des enfants"
+    }
   },
   {
     "slug": "ramadan-fasting-health-guide",
@@ -542,7 +806,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الصيام في رمضان والصحة: الدليل الشامل لصيام صحي وآمن",
     "en": "Ramadan Fasting and Health: The Complete Guide to Healthy and Safe Fasting",
-    "fr": "Le jeûne du Ramadan et la santé : le guide complet pour un jeûne sain et sûr"
+    "fr": "Le jeûne du Ramadan et la santé : le guide complet pour un jeûne sain et sûr",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الصيام والصحة",
+      "en": "Fasting and health",
+      "fr": "Jeûne et santé"
+    }
   },
   {
     "slug": "type2-diabetes-prevention-guide",
@@ -554,7 +824,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الوقاية من السكري من النوع الثاني: الدليل الشامل لحماية صحتك",
     "en": "Preventing Type 2 Diabetes: The Complete Guide to Protecting Your Health",
-    "fr": "Prévention du diabète de type 2 : le guide complet pour protéger votre santé"
+    "fr": "Prévention du diabète de type 2 : le guide complet pour protéger votre santé",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "السكري والوقاية",
+      "en": "Diabetes and prevention",
+      "fr": "Diabète et prévention"
+    }
   },
   {
     "slug": "inclisiran-cholesterol-shot-heart-events",
@@ -566,7 +842,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "حقنة مرتين في السنة تخفّض خطر النوبات القلبية والسكتات؟ ما أثبتته تجربة ORION-4 في 2026",
     "en": "A twice-yearly cholesterol shot that cuts heart attacks and strokes? What the ORION-4 trial proved in 2026",
-    "fr": "Une injection deux fois par an qui réduit crises cardiaques et AVC ? Ce que l’essai ORION-4 a prouvé en 2026"
+    "fr": "Une injection deux fois par an qui réduit crises cardiaques et AVC ? Ce que l’essai ORION-4 a prouvé en 2026",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الكوليسترول والقلب",
+      "en": "Cholesterol and the heart",
+      "fr": "Cholestérol et cœur"
+    }
   },
   {
     "slug": "nasal-mrna-drops-memory-mice",
@@ -578,7 +860,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "قطرات أنفية تجريبية تعيد للفئران المسنّة ذاكرة الشباب — لكنها ليست علاجا لألزهايمر بعد",
     "en": "Experimental nasal drops restore young memory in old mice — but they are not an Alzheimer's treatment yet",
-    "fr": "Des gouttes nasales expérimentales rendent aux vieilles souris leur mémoire de jeunesse — mais ce n'est pas encore un traitement contre Alzheimer"
+    "fr": "Des gouttes nasales expérimentales rendent aux vieilles souris leur mémoire de jeunesse — mais ce n'est pas encore un traitement contre Alzheimer",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "الذاكرة وألزهايمر",
+      "en": "Memory and Alzheimer's",
+      "fr": "Mémoire et Alzheimer"
+    }
   },
   {
     "slug": "pfas-breast-cancer-aggressive",
@@ -590,7 +878,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "مواد كيميائية «أبدية» في الماء والأواني مرتبطة بسرطان ثدي أكثر عدوانية؟ ما كشفته دراسة أمريكية في 2026",
     "en": "“Forever chemicals” in water and cookware linked to more aggressive breast cancer? What a 2026 US study found",
-    "fr": "Des produits chimiques « éternels » dans l’eau et les ustensiles liés à un cancer du sein plus agressif ? Ce qu’a révélé une étude américaine en 2026"
+    "fr": "Des produits chimiques « éternels » dans l’eau et les ustensiles liés à un cancer du sein plus agressif ? Ce qu’a révélé une étude américaine en 2026",
+    "date": "2026-11-25",
+    "cat": {
+      "ar": "المواد الكيميائية والسرطان",
+      "en": "Chemicals and cancer",
+      "fr": "Produits chimiques et cancer"
+    }
   },
   {
     "slug": "gut-bacteria-selenium-cartilage-damage",
@@ -602,7 +896,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بكتيريا الأمعاء واضطراب السيلينيوم: مؤشرات جديدة مرتبطة بتلف الغضاريف في خشونة المفاصل",
     "en": "Gut bacteria changes and selenium disorder: new markers linked to cartilage damage in osteoarthritis",
-    "fr": "Changements des bactéries intestinales et trouble du sélénium : de nouveaux marqueurs liés aux lésions du cartilage dans l'arthrose"
+    "fr": "Changements des bactéries intestinales et trouble du sélénium : de nouveaux marqueurs liés aux lésions du cartilage dans l'arthrose",
+    "date": "2026-11-24",
+    "cat": {
+      "ar": "الأمعاء والمفاصل",
+      "en": "Gut and joints",
+      "fr": "Intestin et articulations"
+    }
   },
   {
     "slug": "man-flu-real-men-viruses",
@@ -614,7 +914,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "«إنفلونزا الرجال» حقيقية؟ دراسة على الفئران تجد أن الذكور يعانون مضاعفات فيروسية أشد",
     "en": "Is 'man flu' real? A mouse study finds males suffer worse viral complications than females",
-    "fr": "La « grippe de l’homme » est-elle réelle ? Une étude sur des souris montre des complications virales plus graves chez les mâles"
+    "fr": "La « grippe de l’homme » est-elle réelle ? Une étude sur des souris montre des complications virales plus graves chez les mâles",
+    "date": "2026-11-24",
+    "cat": {
+      "ar": "الإنفلونزا والمناعة",
+      "en": "Flu and immunity",
+      "fr": "Grippe et immunité"
+    }
   },
   {
     "slug": "turmeric-knee-osteoarthritis-cochrane",
@@ -626,7 +932,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "هل يخفف الكركم آلام خشونة الركبة؟ مراجعة كوكرين تشكك في فعاليته",
     "en": "Does turmeric ease knee osteoarthritis pain? A Cochrane review doubts the benefit",
-    "fr": "Le curcuma soulage-t-il l'arthrose du genou ? Une revue Cochrane en doute"
+    "fr": "Le curcuma soulage-t-il l'arthrose du genou ? Une revue Cochrane en doute",
+    "date": "2026-11-24",
+    "cat": {
+      "ar": "خشونة الركبة",
+      "en": "Knee osteoarthritis",
+      "fr": "Arthrose du genou"
+    }
   },
   {
     "slug": "sleep-appetite-alzheimer-early-signs",
@@ -638,7 +950,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "قبل أن تضعف الذاكرة: تغيّرات النوم والشهية قد تكشف بدايات ألزهايمر",
     "en": "Before memory fades: sleep and appetite changes may reveal the beginnings of Alzheimer's",
-    "fr": "Avant que la mémoire ne s'affaiblisse : les changements du sommeil et de l'appétit peuvent révéler les débuts d'Alzheimer"
+    "fr": "Avant que la mémoire ne s'affaiblisse : les changements du sommeil et de l'appétit peuvent révéler les débuts d'Alzheimer",
+    "date": "2026-11-24",
+    "cat": {
+      "ar": "النوم والذاكرة",
+      "en": "Sleep and memory",
+      "fr": "Sommeil et mémoire"
+    }
   },
   {
     "slug": "long-sitting-heart-exercise",
@@ -650,7 +968,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الجلوس الطويل يضر القلب حتى مع ممارسة الرياضة: ما كشفته دراسة التوائم في كولورادو",
     "en": "Long sitting harms the heart even if you exercise: what the Colorado twin study found",
-    "fr": "Rester assis longtemps nuit au cœur même si vous faites du sport : ce qu’a révélé l’étude des jumeaux du Colorado"
+    "fr": "Rester assis longtemps nuit au cœur même si vous faites du sport : ce qu’a révélé l’étude des jumeaux du Colorado",
+    "date": "2026-11-24",
+    "cat": {
+      "ar": "القلب والحركة",
+      "en": "Heart and movement",
+      "fr": "Cœur et mouvement"
+    }
   },
   {
     "slug": "scoliosis-children-adam-test",
@@ -662,7 +986,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "علامات صامتة قد تكشف إصابة طفلك بالجنف: اختبار آدم البسيط في المنزل",
     "en": "Silent signs that may reveal scoliosis in your child: the simple Adam's test at home",
-    "fr": "Des signes silencieux qui peuvent révéler une scoliose chez votre enfant : le test d'Adam, simple à faire à la maison"
+    "fr": "Des signes silencieux qui peuvent révéler une scoliose chez votre enfant : le test d'Adam, simple à faire à la maison",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "صحة الأطفال والعمود الفقري",
+      "en": "Children's health and the spine",
+      "fr": "Santé des enfants et colonne vertébrale"
+    }
   },
   {
     "slug": "mrna-flu-vaccine-mflusiva",
@@ -674,7 +1004,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "أول لقاح إنفلونزا بتقنية mRNA يدخل الاستخدام التجاري: ماذا كشفت التجربة عن فعاليته؟",
     "en": "First mRNA flu vaccine enters commercial use: what did the trial reveal about its effectiveness?",
-    "fr": "Premier vaccin contre la grippe à ARNm en usage commercial : que révèle l’essai sur son efficacité ?"
+    "fr": "Premier vaccin contre la grippe à ARNm en usage commercial : que révèle l’essai sur son efficacité ?",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "اللقاحات والإنفلونزا",
+      "en": "Vaccines and flu",
+      "fr": "Vaccins et grippe"
+    }
   },
   {
     "slug": "spine-bones-brain-health",
@@ -686,7 +1022,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "كثافة عظام العمود الفقري ترتبط بصحة الدماغ والذاكرة: ماذا وجدت دراسة جونز هوبكنز؟",
     "en": "Spine bone density linked to brain health and memory: what the Johns Hopkins study found",
-    "fr": "La densité osseuse de la colonne vertébrale liée à la santé du cerveau et à la mémoire : ce qu’a trouvé l’étude Johns Hopkins"
+    "fr": "La densité osseuse de la colonne vertébrale liée à la santé du cerveau et à la mémoire : ce qu’a trouvé l’étude Johns Hopkins",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "العظام والدماغ",
+      "en": "Bones and the brain",
+      "fr": "Os et cerveau"
+    }
   },
   {
     "slug": "belly-fat-alzheimer-proteins",
@@ -698,7 +1040,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "دهون البطن ترتبط بتراكم بروتينات ألزهايمر في الدماغ: ماذا كشفت دراسة جديدة؟",
     "en": "Belly fat linked to Alzheimer proteins building up in the brain: what did the new study find?",
-    "fr": "La graisse abdominale liée à l’accumulation des protéines d’Alzheimer dans le cerveau : que révèle la nouvelle étude ?"
+    "fr": "La graisse abdominale liée à l’accumulation des protéines d’Alzheimer dans le cerveau : que révèle la nouvelle étude ?",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "السمنة والدماغ",
+      "en": "Obesity and the brain",
+      "fr": "Obésité et cerveau"
+    }
   },
   {
     "slug": "hepatitis-a-morocco-rise",
@@ -710,7 +1058,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "التهاب الكبد أ في المغرب: قفزة كبيرة بعد الجائحة وتركّز الإصابات في جهتين",
     "en": "Hepatitis A in Morocco: cases surge after the pandemic and cluster in two regions",
-    "fr": "Hépatite A au Maroc : les cas bondissent après la pandémie et se concentrent dans deux régions"
+    "fr": "Hépatite A au Maroc : les cas bondissent après la pandémie et se concentrent dans deux régions",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "الكبد واللقاحات",
+      "en": "Liver and vaccines",
+      "fr": "Foie et vaccins"
+    }
   },
   {
     "slug": "eggs-cholesterol-saturated-fat",
@@ -722,7 +1076,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بيضتان في اليوم وينخفض الكولسترول السيئ؟ دراسة 2025 تقلب فهمنا للبيض والدهون المشبعة",
     "en": "Two eggs a day and lower LDL cholesterol? A 2025 study upends what we thought about eggs and saturated fat",
-    "fr": "Deux œufs par jour et un mauvais cholestérol en baisse ? Une étude de 2025 bouleverse notre compréhension des œufs et des graisses saturées"
+    "fr": "Deux œufs par jour et un mauvais cholestérol en baisse ? Une étude de 2025 bouleverse notre compréhension des œufs et des graisses saturées",
+    "date": "2026-11-23",
+    "cat": {
+      "ar": "البيض والكولسترول",
+      "en": "Eggs and cholesterol",
+      "fr": "Œufs et cholestérol"
+    }
   },
   {
     "slug": "diabetes-brain-thinning",
@@ -734,7 +1094,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "السكري من النوع الثاني يُرقّق قشرة الدماغ بسرعة أكبر: ضبط السكر يحمي الدماغ أيضاً",
     "en": "Type 2 diabetes thins the brain’s cortex faster: controlling blood sugar protects the brain too",
-    "fr": "Le diabète de type 2 amincit le cortex cérébral plus vite : contrôler sa glycémie protège aussi le cerveau"
+    "fr": "Le diabète de type 2 amincit le cortex cérébral plus vite : contrôler sa glycémie protège aussi le cerveau",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "السكري والدماغ",
+      "en": "Diabetes and the brain",
+      "fr": "Diabète et cerveau"
+    }
   },
   {
     "slug": "walking-pace-steps-longevity",
@@ -746,7 +1112,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "سرعة المشي مهمة بقدر عدد الخطوات: أقل من 5,000 خطوة سريعة تعادل 7,500 خطوة بطيئة",
     "en": "Walking pace matters as much as step count: under 5,000 brisk steps match 7,500 slow ones",
-    "fr": "L’allure de la marche compte autant que le nombre de pas : moins de 5 000 pas rapides équivalent à 7 500 pas lents"
+    "fr": "L’allure de la marche compte autant que le nombre de pas : moins de 5 000 pas rapides équivalent à 7 500 pas lents",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "المشي وطول العمر",
+      "en": "Walking and longevity",
+      "fr": "Marche et longévité"
+    }
   },
   {
     "slug": "coffee-heart-disease",
@@ -758,7 +1130,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "القهوة والقلب: كوبان إلى ثلاثة أكواب يومياً يرتبطان بانخفاض خطر أمراض القلب بنسبة 15%",
     "en": "Coffee and the heart: two to three cups a day linked to a 15% lower risk of cardiovascular disease",
-    "fr": "Le café et le cœur : deux à trois tasses par jour associées à un risque de maladie cardiovasculaire réduit de 15 %"
+    "fr": "Le café et le cœur : deux à trois tasses par jour associées à un risque de maladie cardiovasculaire réduit de 15 %",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "القهوة والقلب",
+      "en": "Coffee and the heart",
+      "fr": "Café et cœur"
+    }
   },
   {
     "slug": "food-myths-everyday",
@@ -770,7 +1148,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "خرافات غذائية نصدقها كل يوم: الكربوهيدرات والسعرات والدهون — ما الحقيقة؟",
     "en": "Food myths we believe every day: carbs, calories and fats — what is the truth?",
-    "fr": "Des idées reçues sur l’alimentation que l’on croit chaque jour : glucides, calories et graisses — quelle est la vérité ?"
+    "fr": "Des idées reçues sur l’alimentation que l’on croit chaque jour : glucides, calories et graisses — quelle est la vérité ?",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "التغذية والخرافات",
+      "en": "Nutrition and food myths",
+      "fr": "Nutrition et idées reçues"
+    }
   },
   {
     "slug": "night-light-heart",
@@ -782,7 +1166,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "النوم مع الضوء مضاءً يهدد صحة القلب: ماذا وجدت دراسة شملت أكثر من 70 ألف شخص؟",
     "en": "Sleeping with the light on threatens heart health: what did a study of more than 70,000 people find?",
-    "fr": "Dormir avec la lumière allumée menace la santé du cœur : que révèle une étude de plus de 70 000 personnes ?"
+    "fr": "Dormir avec la lumière allumée menace la santé du cœur : que révèle une étude de plus de 70 000 personnes ?",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "النوم والقلب",
+      "en": "Sleep and the heart",
+      "fr": "Sommeil et cœur"
+    }
   },
   {
     "slug": "gut-bacteria-visceral-fat",
@@ -794,7 +1184,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بكتيريا في الأمعاء تساعد على حرق الدهون الحشوية: اكتشاف جديد — لكنه حتى الآن في الفئران فقط",
     "en": "A gut bacterium helps burn visceral fat: a new discovery — but so far only in mice",
-    "fr": "Une bactérie intestinale aide à brûler la graisse viscérale : une découverte — mais pour l’instant chez la souris seulement"
+    "fr": "Une bactérie intestinale aide à brûler la graisse viscérale : une découverte — mais pour l’instant chez la souris seulement",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "بكتيريا الأمعاء والسمنة",
+      "en": "Gut bacteria and obesity",
+      "fr": "Bactéries intestinales et obésité"
+    }
   },
   {
     "slug": "chronic-loneliness-dementia",
@@ -806,7 +1202,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الوحدة المزمنة ترفع خطر الخرف بنسبة 38%: الوحدة العابرة لا تفعل ذلك",
     "en": "Chronic loneliness raises dementia risk by 38%: occasional loneliness does not",
-    "fr": "La solitude chronique augmente le risque de démence de 38 % : la solitude occasionnelle, non"
+    "fr": "La solitude chronique augmente le risque de démence de 38 % : la solitude occasionnelle, non",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "الوحدة والخرف",
+      "en": "Loneliness and dementia",
+      "fr": "Solitude et démence"
+    }
   },
   {
     "slug": "daraxonrasib-pancreatic-cancer",
@@ -818,7 +1220,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "دواء جديد مع العلاج الكيميائي يقلّص أورام سرطان البنكرياس لدى 60% من المرضى: ما الذي كشفته التجربة؟",
     "en": "A new drug with chemotherapy shrank pancreatic cancer tumours in 60% of patients: what did the trial find?",
-    "fr": "Un nouveau médicament avec la chimiothérapie réduit les tumeurs du cancer du pancréas chez 60 % des patients : que révèle l’essai ?"
+    "fr": "Un nouveau médicament avec la chimiothérapie réduit les tumeurs du cancer du pancréas chez 60 % des patients : que révèle l’essai ?",
+    "date": "2026-11-22",
+    "cat": {
+      "ar": "السرطان والأدوية",
+      "en": "Cancer and medicines",
+      "fr": "Cancer et médicaments"
+    }
   },
   {
     "slug": "honey-vs-sugar",
@@ -830,7 +1238,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "العسل أم السكر: أيهما أفضل لصحتك؟ ما قاله تحليل 18 تجربة سريرية",
     "en": "Honey or sugar: which is better for your health? What an analysis of 18 clinical trials found",
-    "fr": "Miel ou sucre : lequel est meilleur pour votre santé ? Ce que l’analyse de 18 essais cliniques a montré"
+    "fr": "Miel ou sucre : lequel est meilleur pour votre santé ? Ce que l’analyse de 18 essais cliniques a montré",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "التغذية",
+      "en": "Nutrition",
+      "fr": "Nutrition"
+    }
   },
   {
     "slug": "intermittent-fasting-guide",
@@ -842,7 +1256,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الصيام المتقطع 16:8: هل ينقص الوزن فعلاً بعد سنة؟ ما قالته التجارب",
     "en": "Intermittent fasting 16:8: does it really cut weight after a year? What the trials found",
-    "fr": "Jeûne intermittent 16:8 : fait-il vraiment perdre du poids après un an ? Ce que les essais ont montré"
+    "fr": "Jeûne intermittent 16:8 : fait-il vraiment perdre du poids après un an ? Ce que les essais ont montré",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "التغذية والوزن",
+      "en": "Nutrition and weight",
+      "fr": "Nutrition et poids"
+    }
   },
   {
     "slug": "fatty-liver-reversal-diet",
@@ -854,7 +1274,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الكبد الدهني: هل يمكن عكسه بالغذاء؟ ما قالته تجربتان عشوائيتان في 2026",
     "en": "Fatty liver: can food reverse it? What two randomised trials said in 2026",
-    "fr": "Stéatose hépatique : l'alimentation peut-elle l'inverser ? Ce que deux essais randomisés ont montré en 2026"
+    "fr": "Stéatose hépatique : l'alimentation peut-elle l'inverser ? Ce que deux essais randomisés ont montré en 2026",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "الكبد والتغذية",
+      "en": "Liver and nutrition",
+      "fr": "Foie et nutrition"
+    }
   },
   {
     "slug": "survodutide-heart-safety",
@@ -866,7 +1292,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "سورفودوتيد: دواء جديد للسمنة يجتاز اختبار سلامة القلب — ماذا نعرف عنه؟",
     "en": "Survodutide: a new obesity drug passes its heart-safety test — what do we know?",
-    "fr": "Survodutide : un nouveau médicament contre l'obésité passe le test de sécurité cardiaque — que sait-on ?"
+    "fr": "Survodutide : un nouveau médicament contre l'obésité passe le test de sécurité cardiaque — que sait-on ?",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "السمنة والأدوية",
+      "en": "Obesity and medicines",
+      "fr": "Obésité et médicaments"
+    }
   },
   {
     "slug": "optimpacing-heart-pacing",
@@ -878,7 +1310,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "منظم ضربات قلب يتبع كهرباء القلب الطبيعية: نتائج تجربة OptimPacing",
     "en": "A pacemaker that follows the heart's natural wiring: what the OptimPacing trial found",
-    "fr": "Un stimulateur cardiaque qui suit le câblage naturel du cœur : ce que l'essai OptimPacing a montré"
+    "fr": "Un stimulateur cardiaque qui suit le câblage naturel du cœur : ce que l'essai OptimPacing a montré",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "القلب",
+      "en": "Heart",
+      "fr": "Cœur"
+    }
   },
   {
     "slug": "who-obesity-plan-2030",
@@ -890,7 +1328,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "منظمة الصحة العالمية و21 دولة يتعهدون بخفض السمنة 5% بحلول 2030: ما الخطة؟",
     "en": "WHO and 21 countries pledge to cut obesity by 5% by 2030: what is the plan?",
-    "fr": "L'OMS et 21 pays s'engagent à réduire l'obésité de 5 % d'ici 2030 : quel est le plan ?"
+    "fr": "L'OMS et 21 pays s'engagent à réduire l'obésité de 5 % d'ici 2030 : quel est le plan ?",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "السمنة والصحة العامة",
+      "en": "Obesity and public health",
+      "fr": "Obésité et santé publique"
+    }
   },
   {
     "slug": "single-pill-hypertension-catch",
@@ -902,7 +1346,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "حبة واحدة للضغط بدل ثلاث: كيف ضاعفت تجربة جديدة نسبة السيطرة على ضغط الدم؟",
     "en": "One pill for blood pressure instead of three: how a new trial more than doubled blood-pressure control",
-    "fr": "Un seul comprimé contre l'hypertension au lieu de trois : comment un nouvel essai a plus que doublé le contrôle de la tension"
+    "fr": "Un seul comprimé contre l'hypertension au lieu de trois : comment un nouvel essai a plus que doublé le contrôle de la tension",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "ضغط الدم",
+      "en": "Blood pressure",
+      "fr": "Tension artérielle"
+    }
   },
   {
     "slug": "lpa-horizon-zeus-heart-trials",
@@ -914,7 +1364,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "دواءان للقلب خفّضا الأرقام ولم يمنعا الجلطات: ما الذي كشفته تجربتا HORIZON وZEUS؟",
     "en": "Two heart drugs cut the numbers but not the heart attacks: what the HORIZON and ZEUS trials found",
-    "fr": "Deux médicaments pour le cœur ont fait baisser les chiffres sans prévenir les infarctus : que révèlent les essais HORIZON et ZEUS ?"
+    "fr": "Deux médicaments pour le cœur ont fait baisser les chiffres sans prévenir les infarctus : que révèlent les essais HORIZON et ZEUS ?",
+    "date": "2026-11-21",
+    "cat": {
+      "ar": "القلب والأدوية",
+      "en": "Heart and medicines",
+      "fr": "Cœur et médicaments"
+    }
   },
   {
     "slug": "migraine-smoking-stroke",
@@ -926,7 +1382,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الصداع النصفي مع التدخين: خطر السكتة يتضاعف أكثر من 3 مرات قبل سن الستين",
     "en": "Migraine plus smoking: stroke risk more than triples before age 60",
-    "fr": "Migraine et tabac : le risque d'AVC multiplié par plus de 3 avant 60 ans"
+    "fr": "Migraine et tabac : le risque d'AVC multiplié par plus de 3 avant 60 ans",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "الصداع النصفي والسكتة",
+      "en": "Migraine and stroke",
+      "fr": "Migraine et AVC"
+    }
   },
   {
     "slug": "frozen-bread-blood-sugar",
@@ -938,7 +1400,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "جمّد خبزك ثم حمّصه: هل يخفض ذلك سكر الدم فعلاً؟ ما كشفته الدراسات",
     "en": "Freeze your bread, then toast it: does it really lower blood sugar? What the studies found",
-    "fr": "Congelez votre pain puis grillez-le : cela baisse-t-il vraiment la glycémie ? Ce que les études ont montré"
+    "fr": "Congelez votre pain puis grillez-le : cela baisse-t-il vraiment la glycémie ? Ce que les études ont montré",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "التغذية وسكر الدم",
+      "en": "Food and blood sugar",
+      "fr": "Alimentation et glycémie"
+    }
   },
   {
     "slug": "heat-medicines-shield",
@@ -950,7 +1418,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الحرارة تُضعف الأدوية: مبادرة SHIELD تحذر — دواؤك قد يفقد قوته دون أن تلاحظ",
     "en": "Heat weakens medicines: the SHIELD warning — your drug may lose its power without you noticing",
-    "fr": "La chaleur affaiblit les médicaments : l’alerte SHIELD — votre traitement peut perdre son efficacité sans que vous le remarquiez"
+    "fr": "La chaleur affaiblit les médicaments : l’alerte SHIELD — votre traitement peut perdre son efficacité sans que vous le remarquiez",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "الأدوية والمناخ",
+      "en": "Medicines and climate",
+      "fr": "Médicaments et climat"
+    }
   },
   {
     "slug": "winter-illness-why",
@@ -962,7 +1436,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "لماذا نمرض أكثر في الشتاء؟ البرد والأنف والهواء الجاف — ما يقوله العلم",
     "en": "Why do we get sick more in winter? Cold, noses and dry air — what the science says",
-    "fr": "Pourquoi tombe-t-on plus malade en hiver ? Froid, nez et air sec — ce que dit la science"
+    "fr": "Pourquoi tombe-t-on plus malade en hiver ? Froid, nez et air sec — ce que dit la science",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "الشتاء والمناعة",
+      "en": "Winter and immunity",
+      "fr": "Hiver et immunité"
+    }
   },
   {
     "slug": "antibiotics-resistance-who",
@@ -974,7 +1454,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "المضادات الحيوية تفشل: الكليبسيلا المقاومة ارتفعت 72% — تحذير منظمة الصحة العالمية في 2026",
     "en": "Antibiotics are failing: resistant Klebsiella infections rose 72% — the WHO warning of 2026",
-    "fr": "Les antibiotiques échouent : les infections à Klebsiella résistante ont augmenté de 72 % — l'alerte de l'OMS en 2026"
+    "fr": "Les antibiotiques échouent : les infections à Klebsiella résistante ont augmenté de 72 % — l'alerte de l'OMS en 2026",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "المضادات الحيوية والعدوى",
+      "en": "Antibiotics and infections",
+      "fr": "Antibiotiques et infections"
+    }
   },
   {
     "slug": "melatonin-heart-failure",
@@ -986,7 +1472,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الميلاتونين والقلب: هل يرفع الاستخدام الطويل خطر فشل القلب فعلاً؟ ما قالته الدراسة وما لم تقله",
     "en": "Melatonin and the heart: does long-term use really raise heart-failure risk? What the study showed — and what it did not",
-    "fr": "Mélatonine et cœur : l'usage prolongé augmente-t-il vraiment le risque d'insuffisance cardiaque ? Ce que l'étude a montré — et ce qu'elle n'a pas montré"
+    "fr": "Mélatonine et cœur : l'usage prolongé augmente-t-il vraiment le risque d'insuffisance cardiaque ? Ce que l'étude a montré — et ce qu'elle n'a pas montré",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "النوم والقلب",
+      "en": "Sleep and the heart",
+      "fr": "Sommeil et cœur"
+    }
   },
   {
     "slug": "asundexian-stroke-prevention",
@@ -998,7 +1490,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "أسونديكسيان: دواء جديد يقلل خطر الجلطة الثانية بنسبة 26% — لمن يناسب ولمن لا يناسب؟",
     "en": "Asundexian: a new drug cuts the risk of a second stroke by 26% — who can take it and who cannot?",
-    "fr": "Asundexian : un nouveau médicament réduit de 26 % le risque d'un second AVC — pour qui, et pour qui pas ?"
+    "fr": "Asundexian : un nouveau médicament réduit de 26 % le risque d'un second AVC — pour qui, et pour qui pas ?",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "السكتة الدماغية والأدوية",
+      "en": "Stroke and medicines",
+      "fr": "AVC et médicaments"
+    }
   },
   {
     "slug": "baxdrostat-blood-pressure",
@@ -1010,7 +1508,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "باكسدروستات: دواء ضغط الدم الذي يستمر مفعوله سنتين بعد إيقافه؟ ما كشفته دراسة NEJM في 2026",
     "en": "Baxdrostat: the blood-pressure pill that keeps working two years after you stop? What the NEJM study found",
-    "fr": "Baxdrostat : le médicament contre l'hypertension qui agit encore deux ans après l'arrêt ? Ce que l'étude du NEJM a montré"
+    "fr": "Baxdrostat : le médicament contre l'hypertension qui agit encore deux ans après l'arrêt ? Ce que l'étude du NEJM a montré",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "ضغط الدم والأدوية",
+      "en": "Blood pressure and medicines",
+      "fr": "Tension artérielle et médicaments"
+    }
   },
   {
     "slug": "guide-hijama-casablanca",
@@ -1022,7 +1526,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "دليل الحجامة في الدار البيضاء: الأنواع، وكيف تختار مركزاً، وماذا يحدث في الجلسة",
     "en": "A guide to hijama in Casablanca: types, how to choose a centre, and what happens in a session",
-    "fr": "Guide de la hijama à Casablanca : types, choix du centre et déroulement d'une séance"
+    "fr": "Guide de la hijama à Casablanca : types, choix du centre et déroulement d'une séance",
+    "date": "2026-11-20",
+    "cat": {
+      "ar": "الحجامة",
+      "en": "Cupping",
+      "fr": "Hijama"
+    }
   },
   {
     "slug": "measles-elimination-lost",
@@ -1034,7 +1544,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الولايات المتحدة تفقد صفة القضاء على الحصبة بعد 26 عاماً وسط تفشٍّ قياسي",
     "en": "The US has officially lost its measles elimination status after 26 years amid a record outbreak",
-    "fr": "Les États-Unis perdent officiellement leur statut d’élimination de la rougeole après 26 ans, en pleine flambée record"
+    "fr": "Les États-Unis perdent officiellement leur statut d’élimination de la rougeole après 26 ans, en pleine flambée record",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "اللقاحات والصحة العامة",
+      "en": "Vaccines and public health",
+      "fr": "Vaccins et santé publique"
+    }
   },
   {
     "slug": "cartilage-gel-knee",
@@ -1046,7 +1562,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "هلام قابل للحقن يعيد بناء الغضروف في الركبة؟ ما كشفته دراسة على الأغنام في 2024",
     "en": "Injectable gel regrows knee cartilage? What a 2024 sheep study actually showed",
-    "fr": "Un gel injectable régénère le cartilage du genou ? Ce qu’a vraiment montré une étude sur des moutons en 2024"
+    "fr": "Un gel injectable régénère le cartilage du genou ? Ce qu’a vraiment montré une étude sur des moutons en 2024",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "المفاصل والغضروف",
+      "en": "Joints and cartilage",
+      "fr": "Articulations et cartilage"
+    }
   },
   {
     "slug": "alzheimer-blood-test-emtbr-tau",
@@ -1058,7 +1580,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "تحليل دم جديد يقيس تقدّم الزهايمر بدقة أكبر؟ ما كشفته دراسة JAMA في 2026",
     "en": "A new blood test measures how far Alzheimer’s has spread — what the JAMA study found",
-    "fr": "Un nouveau test sanguin mesure la progression d’Alzheimer — ce que révèle l’étude du JAMA"
+    "fr": "Un nouveau test sanguin mesure la progression d’Alzheimer — ce que révèle l’étude du JAMA",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "الزهايمر والدماغ",
+      "en": "Alzheimer’s and the brain",
+      "fr": "Alzheimer et cerveau"
+    }
   },
   {
     "slug": "fibromyalgia-pea-alc",
@@ -1070,7 +1598,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "مكمّل غذائي للألم المزمن؟ ما كشفته دراسة جديدة عن الفيبروميالجيا بعد 12 شهراً",
     "en": "A supplement for fibromyalgia? What a 12-month study found — and what it cannot prove",
-    "fr": "Un complément contre la fibromyalgie ? Ce qu’une étude de 12 mois a trouvé — et ce qu’elle ne peut pas prouver"
+    "fr": "Un complément contre la fibromyalgie ? Ce qu’une étude de 12 mois a trouvé — et ce qu’elle ne peut pas prouver",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "الألم المزمن والفيبروميالجيا",
+      "en": "Chronic pain and fibromyalgia",
+      "fr": "Douleur chronique et fibromyalgie"
+    }
   },
   {
     "slug": "flavour-nutrient-learning",
@@ -1082,7 +1616,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "لماذا يتحسّن طعم القهوة والشوكولاتة مع الوقت؟ الدماغ يتعلم النكهات من المعدة",
     "en": "Why coffee and chocolate start to taste better: your brain learns flavours from your gut",
-    "fr": "Pourquoi le café et le chocolat ont meilleur goût avec le temps : le cerveau apprend les saveurs depuis l’estomac"
+    "fr": "Pourquoi le café et le chocolat ont meilleur goût avec le temps : le cerveau apprend les saveurs depuis l’estomac",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "الدماغ والتغذية",
+      "en": "Brain and nutrition",
+      "fr": "Cerveau et nutrition"
+    }
   },
   {
     "slug": "dark-chocolate-health",
@@ -1094,7 +1634,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الشوكولاتة الداكنة والقلب والمزاج: ماذا قالت ثلاث دراسات في 2026؟",
     "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
-    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "التغذية والقلب",
+      "en": "Nutrition and the heart",
+      "fr": "Nutrition et cœur"
+    }
   },
   {
     "slug": "mediterranean-diet-biological-age",
@@ -1106,7 +1652,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "النظام الغذائي المتوسطي والعمر البيولوجي: هل يجعلك طعامك أصغر سناً فعلاً؟",
     "en": "The Mediterranean diet and biological age: can what you eat really make you younger?",
-    "fr": "Régime méditerranéen et âge biologique : votre assiette peut-elle vraiment vous rajeunir ?"
+    "fr": "Régime méditerranéen et âge biologique : votre assiette peut-elle vraiment vous rajeunir ?",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "التغذية والشيخوخة",
+      "en": "Nutrition and ageing",
+      "fr": "Nutrition et vieillissement"
+    }
   },
   {
     "slug": "milk-peptides-memory",
@@ -1118,7 +1670,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "ببتيدات الحليب والذاكرة: ما الذي أظهرته تجربة كورية جديدة ودراسات سابقة؟",
     "en": "Milk peptides and memory: what a new Korean trial and earlier studies actually showed",
-    "fr": "Peptides du lait et mémoire : ce qu’ont vraiment montré un nouvel essai coréen et des études antérieures"
+    "fr": "Peptides du lait et mémoire : ce qu’ont vraiment montré un nouvel essai coréen et des études antérieures",
+    "date": "2026-11-19",
+    "cat": {
+      "ar": "الذاكرة والتغذية",
+      "en": "Memory and nutrition",
+      "fr": "Mémoire et nutrition"
+    }
   },
   {
     "slug": "weight-loss-drugs-blindness-warning",
@@ -1130,7 +1688,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "أدوية التخسيس قد تسبب العمى؟ حقيقة التحذير الأمريكي الجديد وحدود الخطر",
     "en": "Can weight-loss drugs cause blindness? The truth about the new US warning and the limits of the risk",
-    "fr": "Les médicaments amaigrissants peuvent-ils rendre aveugle ? La vérité sur le nouvel avertissement américain et les limites du risque"
+    "fr": "Les médicaments amaigrissants peuvent-ils rendre aveugle ? La vérité sur le nouvel avertissement américain et les limites du risque",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "أدوية التخسيس والبصر",
+      "en": "Weight-loss drugs and vision",
+      "fr": "Médicaments amaigrissants et vision"
+    }
   },
   {
     "slug": "vitamin-d-sunny-countries",
@@ -1142,7 +1706,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الشمس موجودة والفيتامين ناقص: لماذا يعاني سكان البلدان المشمسة من نقص فيتامين د؟",
     "en": "The sun is there, but the vitamin is missing: why do people in sunny countries suffer from vitamin D deficiency?",
-    "fr": "Le soleil est là, la vitamine manque : pourquoi les habitants des pays ensoleillés souffrent-ils d'une carence en vitamine D ?"
+    "fr": "Le soleil est là, la vitamine manque : pourquoi les habitants des pays ensoleillés souffrent-ils d'une carence en vitamine D ?",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "الفيتامينات والصحة",
+      "en": "Vitamins and health",
+      "fr": "Vitamines et santé"
+    }
   },
   {
     "slug": "back-pain-inflammation",
@@ -1154,7 +1724,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "ظهرك يؤلمك؟ قد تكون المشكلة أبعد من الظهر: الالتهاب والقلب والكبد في 3 دراسات حديثة",
     "en": "Does your back hurt? The problem may lie beyond your back: inflammation, heart and liver in 3 recent studies",
-    "fr": "Votre dos vous fait mal ? Le problème est peut-être ailleurs que dans le dos : inflammation, cœur et foie dans 3 études récentes"
+    "fr": "Votre dos vous fait mal ? Le problème est peut-être ailleurs que dans le dos : inflammation, cœur et foie dans 3 études récentes",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "آلام الظهر والصحة العامة",
+      "en": "Low back pain and general health",
+      "fr": "Lombalgie et santé générale"
+    }
   },
   {
     "slug": "fats-joints-oa",
@@ -1166,7 +1742,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بدّل دهنك تحمِ ركبتك؟ ماذا كشفت دراسة 2026 عن الدهون وخشونة المفاصل؟",
     "en": "Change your fat to protect your knee? What a 2026 study revealed about fats and osteoarthritis",
-    "fr": "Changez vos graisses pour protéger vos genoux ? Ce qu'une étude de 2026 a révélé sur les graisses et l'arthrose"
+    "fr": "Changez vos graisses pour protéger vos genoux ? Ce qu'une étude de 2026 a révélé sur les graisses et l'arthrose",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "التغذية والمفاصل",
+      "en": "Nutrition and joints",
+      "fr": "Nutrition et articulations"
+    }
   },
   {
     "slug": "peanuts-memory",
@@ -1178,7 +1760,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "حفنة كاوكاو كل يوم: هل تحسّن الذاكرة وتدفق الدم إلى الدماغ؟ ما كشفته تجربة هولندية في 2026",
     "en": "A Handful of Peanuts a Day: Can It Improve Memory and Blood Flow to the Brain? What a Dutch Trial Found in 2026",
-    "fr": "Une poignée de cacahuètes par jour : peut-elle améliorer la mémoire et le flux sanguin vers le cerveau ? Ce qu’un essai néerlandais a révélé en 2026"
+    "fr": "Une poignée de cacahuètes par jour : peut-elle améliorer la mémoire et le flux sanguin vers le cerveau ? Ce qu’un essai néerlandais a révélé en 2026",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "التغذية والذاكرة",
+      "en": "Nutrition and memory",
+      "fr": "Nutrition et mémoire"
+    }
   },
   {
     "slug": "menopause-bone-cliff",
@@ -1190,7 +1778,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "انقطاع الطمث ليس انحداراً بطيئاً… بل \"منحدر\" مفاجئ؟ ما كشفته 300 مليون تحليل",
     "en": "Menopause is not a slow decline… but a sudden \"cliff\"? What 300 million lab tests revealed",
-    "fr": "La ménopause n'est pas un déclin lent… mais une « falaise » soudaine ? Ce que 300 millions d'analyses ont révélé"
+    "fr": "La ménopause n'est pas un déclin lent… mais une « falaise » soudaine ? Ce que 300 millions d'analyses ont révélé",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "صحة المرأة والعظام",
+      "en": "Women's health and bones",
+      "fr": "Santé des femmes et os"
+    }
   },
   {
     "slug": "diabetes-muscle-loss",
@@ -1202,7 +1796,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "هل يقدر السكري من النوع الثاني أن يتراجع بلا خسارة للعضلات؟ ما كشفته تجربة 2026",
     "en": "Can type 2 diabetes go into remission without losing muscle? What a 2026 trial revealed",
-    "fr": "Le diabète de type 2 peut-il régresser sans perte musculaire ? Ce qu'a révélé un essai de 2026"
+    "fr": "Le diabète de type 2 peut-il régresser sans perte musculaire ? Ce qu'a révélé un essai de 2026",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "السكري والعضلات",
+      "en": "Diabetes and muscles",
+      "fr": "Diabète et muscles"
+    }
   },
   {
     "slug": "medlife-lifestyle",
@@ -1214,7 +1814,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "ماشي غير الماكلة: أسلوب الحياة المتوسطي كاملاً يقلل خطر الوفاة بنسبة 30 بالمئة — ما كشفته دراسة 2026",
     "en": "Not just the food: the full Mediterranean lifestyle cuts the risk of death by 30% — what a 2026 study revealed",
-    "fr": "Pas seulement l’alimentation : le mode de vie méditerranéen complet réduit le risque de décès de 30 % — ce qu’une étude de 2026 a révélé"
+    "fr": "Pas seulement l’alimentation : le mode de vie méditerranéen complet réduit le risque de décès de 30 % — ce qu’une étude de 2026 a révélé",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "التغذية وأسلوب الحياة",
+      "en": "Nutrition and lifestyle",
+      "fr": "Nutrition et mode de vie"
+    }
   },
   {
     "slug": "retatrutide-sleep-knee-pain",
@@ -1226,7 +1832,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
     "en": "One obesity drug for better sleep and less knee pain? What retatrutide's 2026 results revealed",
-    "fr": "Un seul médicament contre l'obésité améliore le sommeil et soulage la douleur du genou ? Ce qu'ont révélé les résultats du rétatrutide en 2026"
+    "fr": "Un seul médicament contre l'obésité améliore le sommeil et soulage la douleur du genou ? Ce qu'ont révélé les résultats du rétatrutide en 2026",
+    "date": "2026-11-18",
+    "cat": {
+      "ar": "السمنة والنوم والمفاصل",
+      "en": "Obesity, sleep and joints",
+      "fr": "Obésité, sommeil et articulations"
+    }
   },
   {
     "slug": "food-and-memory",
@@ -1238,7 +1850,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "هل يبدأ النسيان من الطبق؟ ماذا كشفت أحدث الدراسات عن الغذاء والذاكرة؟",
     "en": "Does forgetting start on the plate? What the latest studies say about food and memory",
-    "fr": "L'oubli commence-t-il dans l'assiette ? Ce que les dernières études révèlent sur l'alimentation et la mémoire"
+    "fr": "L'oubli commence-t-il dans l'assiette ? Ce que les dernières études révèlent sur l'alimentation et la mémoire",
+    "date": "2026-11-16",
+    "cat": {
+      "ar": "الغذاء والذاكرة",
+      "en": "Food and memory",
+      "fr": "Alimentation et mémoire"
+    }
   },
   {
     "slug": "first-line-back-pain",
@@ -1250,7 +1868,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "قبل المسكنات وقبل الأشعة: ما العلاج الأول لآلام الظهر حسب منظمة الصحة العالمية؟",
     "en": "Before painkillers and before scans: what is the first treatment for back pain according to the World Health Organization?",
-    "fr": "Avant les antalgiques et avant les radios : quel est le premier traitement du mal de dos selon l’Organisation mondiale de la santé ?"
+    "fr": "Avant les antalgiques et avant les radios : quel est le premier traitement du mal de dos selon l’Organisation mondiale de la santé ?",
+    "date": "2026-11-09",
+    "cat": {
+      "ar": "آلام الظهر والعلاج الأول",
+      "en": "Back pain and first-line treatment",
+      "fr": "Douleurs dorsales et traitement de première intention"
+    }
   },
   {
     "slug": "opioids-back-pain",
@@ -1262,7 +1886,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "سنوات من المسكنات القوية وظهرك ما زال يؤلمك: ما كشفته دراسة 2026",
     "en": "Years of strong painkillers and your back still hurts: what a 2026 study revealed",
-    "fr": "Des années d’antalgiques puissants et votre dos vous fait toujours mal : ce qu’une étude de 2026 a révélé"
+    "fr": "Des années d’antalgiques puissants et votre dos vous fait toujours mal : ce qu’une étude de 2026 a révélé",
+    "date": "2026-11-02",
+    "cat": {
+      "ar": "آلام الظهر والأدوية",
+      "en": "Back pain and medicines",
+      "fr": "Douleurs dorsales et médicaments"
+    }
   },
   {
     "slug": "sleep-joints",
@@ -1274,7 +1904,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "تنام أقل من 6 ساعات؟ مفاصلك تدفع الثمن — ما كشفته دراسة 2026",
     "en": "Sleeping less than 6 hours? Your joints pay the price — what a 2026 study revealed",
-    "fr": "Vous dormez moins de 6 heures ? Vos articulations en paient le prix — ce qu’une étude de 2026 a révélé"
+    "fr": "Vous dormez moins de 6 heures ? Vos articulations en paient le prix — ce qu’une étude de 2026 a révélé",
+    "date": "2026-10-27",
+    "cat": {
+      "ar": "النوم والمفاصل",
+      "en": "Sleep and joints",
+      "fr": "Sommeil et articulations"
+    }
   },
   {
     "slug": "strength-after-35",
@@ -1286,7 +1922,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "من سن 35 وجسمك يخسر عضلاته بصمت — وهذا ما يوقف النزيف",
     "en": "From age 35, your body silently loses muscle — and this is what stops the bleed",
-    "fr": "Dès 35 ans, votre corps perd ses muscles en silence — et voici ce qui arrête l’hémorragie"
+    "fr": "Dès 35 ans, votre corps perd ses muscles en silence — et voici ce qui arrête l’hémorragie",
+    "date": "2026-10-27",
+    "cat": {
+      "ar": "القوة والعضلات",
+      "en": "Strength and muscles",
+      "fr": "Force et muscles"
+    }
   },
   {
     "slug": "anti-fall-exercises",
@@ -1298,7 +1940,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "السقوط ليس حتمياً بعد الستين: 5 تمارين تحمي توازنك — وهذا ما أثبته العلم",
     "en": "Falling is not inevitable after sixty: 5 exercises that protect your balance — and what science has proven",
-    "fr": "La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé"
+    "fr": "La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé",
+    "date": "2026-10-27",
+    "cat": {
+      "ar": "التوازن والوقاية من السقوط",
+      "en": "Balance and fall prevention",
+      "fr": "Équilibre et prévention des chutes"
+    }
   }
 ];
 

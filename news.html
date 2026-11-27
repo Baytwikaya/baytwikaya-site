@@ -409,6 +409,16 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
 <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">آخر الأخبار</h2>
 
+<!-- BAYT-NEWS-TABS: dynamic news tabs (Top / Latest / For you) — DO NOT REMOVE. Wired by news/news-hub.js. When updating hero/grid/picks/ticker, leave this block untouched. -->
+<div id="news-tabs" class="flex flex-wrap items-center gap-2 mb-4" role="tablist">
+  <button type="button" data-tab="top" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">أهم الأخبار</button>
+  <button type="button" data-tab="latest" role="tab" aria-selected="true" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">الأحدث <span id="news-latest-badge" class="ml-1 inline-flex items-center justify-center min-w-6 h-6 px-1.5 rounded-full bg-red-600 text-white text-xs font-extrabold" style="display:none"></span></button>
+  <button type="button" data-tab="foryou" role="tab" aria-selected="false" class="px-4 py-2 rounded-full font-bold transition bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50">مخصص لك</button>
+</div>
+<p id="news-tab-note" class="hidden text-gray-600 text-sm md:text-base mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3"></p>
+<!-- /BAYT-NEWS-TABS -->
+
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
 <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
                     <a href="news/whole-wheat-bread-gut-blood-sugar" class="flex flex-col flex-grow">
@@ -1505,54 +1515,32 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
 })();
 </script>
 
-<script>
-/* ترقيم صفحات الأخبار على طريقة ووردبريس: 9 مقالات في الصفحة (3 صفوف × 3 أعمدة)،
-   زر ذهبي «مقالات قديمة» للمقالات الأقدم وزر «المقالات الأحدث» للرجوع. يعيد الترقيم
-   الأرقام في سطر، وزري التنقل صغيران في سطر تحتهما. يعيد الترقيم
-   تلقائيا عند إضافة مقال جديد في أعلى الشبكة، فلا حاجة لتعديله عند كل نشر. */
-(function(){
-  var PER_PAGE = 9;
-  var grid = document.getElementById('news-grid');
-  var nav = document.getElementById('news-pagination');
-  if(!grid || !nav) return;
-  var cards = Array.prototype.slice.call(grid.querySelectorAll('article'));
-  var pages = Math.max(1, Math.ceil(cards.length / PER_PAGE));
-  var current = 1;
-  if(pages <= 1){ nav.style.display = 'none'; return; }
-  function btn(label, page, disabled, active, gold, small){
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.textContent = label;
-    b.className = (small ? 'px-3 py-1 text-sm ' : 'px-4 py-2 ') + 'rounded-full font-bold transition ' + (active ? 'primary-bg text-white shadow-md' : (gold && !disabled ? 'bg-[#c9a227] hover:bg-[#b08d1e] text-white shadow-md' : 'bg-white text-teal-900 border border-teal-200 shadow hover:bg-amber-50'));
-    if(disabled){ b.disabled = true; b.className += ' opacity-50 cursor-not-allowed'; }
-    b.addEventListener('click', function(){ go(page); });
-    return b;
-  }
-  function render(){
-    cards.forEach(function(c, i){
-      c.style.display = (i >= (current-1)*PER_PAGE && i < current*PER_PAGE) ? '' : 'none';
-    });
-    nav.innerHTML = '';
-    var rowNums = document.createElement('div');
-    rowNums.className = 'flex flex-wrap items-center justify-center gap-2';
-    for(var p = 1; p <= pages; p++) rowNums.appendChild(btn(String(p), p, false, p === current));
-    var rowNav = document.createElement('div');
-    rowNav.className = 'flex flex-wrap items-center justify-center gap-2 mt-3';
-    rowNav.appendChild(btn('‹ المقالات الأحدث', current-1, current === 1, false, false, true));
-    rowNav.appendChild(btn('مقالات قديمة ›', current+1, current === pages, false, true, true));
-    nav.appendChild(rowNums);
-    nav.appendChild(rowNav);
-  }
-  function go(p){
-    if(p < 1 || p > pages) return;
-    current = p; render();
-    grid.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-  render();
-})();
-</script>
 
+    <script src="news/news-data.js"></script>
     <script src="news/news-hub.js"></script>
+
+<!-- BAYT-NEWS-SEARCH: floating site search (free, client-side) + voice input — DO NOT REMOVE. Wired by news/news-hub.js. -->
+<div id="bayt-search" style="position:fixed;left:0;right:0;bottom:16px;z-index:100000;pointer-events:none;">
+  <div style="max-width:640px;margin:0 auto;padding:0 12px;pointer-events:auto;">
+    <div id="bayt-search-panel" class="hidden bg-white rounded-3xl shadow-2xl border border-teal-100 overflow-hidden mb-2">
+      <div class="flex items-center gap-2 p-3 border-b border-gray-100">
+        <input id="bayt-search-input" type="search" placeholder="اسأل عن أي خبر..." aria-label="ابحث في مقالاتنا" class="flex-1 min-w-0 border-0 outline-none text-base text-teal-900 placeholder-gray-400 bg-transparent">
+        <button id="bayt-search-mic" type="button" aria-label="بحث صوتي" class="shrink-0 w-10 h-10 rounded-full bg-teal-700 text-white flex items-center justify-center hover:bg-teal-800 transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3"/></svg></button>
+        <button id="bayt-search-close" type="button" aria-label="إغلاق" class="shrink-0 w-10 h-10 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <p id="bayt-search-status" class="px-4 pt-2 text-sm text-gray-500"></p>
+      <div id="bayt-search-suggest" class="flex flex-wrap items-center gap-2 px-4 py-3"></div>
+      <div id="bayt-search-results" class="px-4 pb-3 max-h-80 overflow-y-auto"></div>
+      <p class="px-4 pb-3 text-xs text-gray-400">نبحث فقط في مقالات موقعنا</p>
+    </div>
+    <div id="bayt-search-bar" role="button" tabindex="0" aria-expanded="false" class="w-full flex items-center gap-3 bg-white rounded-full shadow-2xl border border-teal-100 px-4 py-3 cursor-pointer hover:shadow-xl transition">
+      <span class="shrink-0 text-teal-700 flex items-center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+      <span class="flex-1 text-gray-400 text-base">اسأل عن أي خبر...</span>
+      <button id="bayt-search-bar-mic" type="button" aria-label="بحث صوتي" class="shrink-0 w-9 h-9 rounded-full bg-teal-700 text-white flex items-center justify-center hover:bg-teal-800 transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3"/></svg></button>
+    </div>
+  </div>
+</div>
+<!-- /BAYT-NEWS-SEARCH -->
 
 <!-- Cookie consent (Consent Mode v2) -->
 <div id="bayt-cookie-banner" dir="rtl" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#0b3d2e;color:#fff;box-shadow:0 -2px 12px rgba(0,0,0,.25);">

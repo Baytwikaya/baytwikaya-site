@@ -113,6 +113,23 @@
     refreshSaveButtons();
   }
 
+  /* ---- reading history (for the hub's "For you" tab) ---- */
+  function trackRead() {
+    var consent = null;
+    try { consent = window.localStorage.getItem('bayt-cookie-consent'); } catch (e) { /* ignore */ }
+    if (consent !== 'accepted') return;
+    var slug = articleSlug();
+    if (!slug) return;
+    var KEY = 'bayt-read-history';
+    var items = [];
+    try { items = JSON.parse(window.localStorage.getItem(KEY) || '[]'); } catch (e) { items = []; }
+    if (!Array.isArray(items)) items = [];
+    items = items.filter(function (s) { return s !== slug; });
+    items.unshift(slug);
+    items = items.slice(0, 20);
+    try { window.localStorage.setItem(KEY, JSON.stringify(items)); } catch (e) { /* storage unavailable */ }
+  }
+
   /* ---- share buttons ---- */
   function shareUrl(kind) {
     var url = canonicalUrl();
@@ -230,4 +247,5 @@
   readingTime();
   wireShare();
   buildRelated();
+  trackRead();
 })();
