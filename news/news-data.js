@@ -5,6 +5,18 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "whole-wheat-bread-gut-blood-sugar",
+    "img": "hero-whole-wheat-bread-gut-blood-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الخبز الكامل وسكر الدم: هل تصنع بكتيريا أمعائك الفرق؟",
+    "en": "Whole-Wheat Bread and Blood Sugar: Could Your Gut Bacteria Make the Difference?",
+    "fr": "Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?"
+  },
+  {
     "slug": "gut-diet-osteoarthritis-risk",
     "img": "hero-gut-diet-osteoarthritis-risk.webp",
     "langs": [
