@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "aging-brain-nighttime-cleaning-sleep",
+    "img": "hero-aging-brain-nighttime-cleaning-sleep.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "النوم والدماغ",
+      "en": "Sleep and the brain",
+      "fr": "Sommeil et cerveau"
+    },
+    "ar": "الدماغ المتقدم في السن ينظف نفسه أثناء النوم ببطء أكبر",
+    "en": "The Ageing Brain Cleans Itself More Slowly During Sleep",
+    "fr": "Le cerveau vieillissant se nettoie plus lentement pendant le sommeil"
+  },
+  {
     "slug": "stopping-statins-after-70",
     "img": "hero-stopping-statins-after-70.webp",
     "langs": [
