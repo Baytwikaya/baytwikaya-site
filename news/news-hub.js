@@ -98,6 +98,44 @@
   var inSub = /^(\/en\/|\/fr\/)/.test(window.location.pathname || '');
   var imgPrefix = inSub ? '../news/' : 'news/';
 
+  /* ---------- news ticker: built from the same data, both sets identical ----------
+     The two ticker sets are generated from DATA (newest first) so they can never
+     drift apart. A new article appears in the ticker automatically as soon as its
+     entry is added to news-data.js — never hand-edit ticker items in the hubs.
+     Set 2 is aria-hidden (a visual duplicate for the seamless -50% loop), so its
+     links stay out of keyboard tab order (tabindex="-1"), exactly as the static
+     markup did. Items already in the sets (dashboard/CMS articles appended
+     before this script ran) are kept after the data items, in both sets. */
+  (function renderTicker() {
+    var t1 = document.getElementById('ticker-set-1');
+    var t2 = document.getElementById('ticker-set-2');
+    if (!t1 || !t2) return;
+    function makeItem(a, tabIndex) {
+      var link = document.createElement('a');
+      link.className = 'news-ticker-item';
+      link.href = 'news/' + a.slug;
+      if (tabIndex) link.setAttribute('tabindex', '-1');
+      var img = document.createElement('img');
+      img.src = imgPrefix + a.img;
+      img.alt = '';
+      var span = document.createElement('span');
+      span.textContent = a[lang];
+      link.appendChild(img);
+      link.appendChild(span);
+      return link;
+    }
+    var frag1 = document.createDocumentFragment();
+    var frag2 = document.createDocumentFragment();
+    DATA.forEach(function (a) {
+      frag1.appendChild(makeItem(a, false));
+      frag2.appendChild(makeItem(a, true));
+    });
+    /* Data items first, then any items already present (dashboard articles),
+       so both sets keep the same order. */
+    t1.insertBefore(frag1, t1.firstChild);
+    t2.insertBefore(frag2, t2.firstChild);
+  })();
+
   /* ---------- helpers ---------- */
   function todayCasablanca() {
     try {
@@ -120,6 +158,74 @@
     if (a.cat) return a.cat[lang] || a.cat.ar || '';
     return '';
   }
+
+  /* ---------- hero (breaking-news) + editors' pick #1: AUTOMATIC ----------
+     The hero always shows the LATEST WARNING article from news-data.js
+     (title contains تحذير / warning / avertissement, or a warning
+     category). A new warning article becomes the hero automatically as
+     soon as its entry is added to news-data.js — never hand-edit the
+     hero in the hubs, and never pin it to one article. The same article
+     is used for editors' pick #1 so hero and pick #1 never show two
+     different articles.
+     OWNER RULE (28 Nov 2026): warnings about the three core services —
+     hijama / cupping, acupuncture, bone alignment — are NEVER shown
+     automatically. He must review any such warning first. If the latest
+     warning is about one of those, it is skipped and the latest warning
+     about another topic is shown. If no warning exists, fall back to
+     the latest article that is not a service warning.
+     Ties on the same date: prefer the article whose Arabic title
+     contains تحذير (primary language, strongest warning signal). */
+  var WARN_RE = /تحذير|warning|avertissement/i;
+  var SERVICE_WARN_RE = /hijama|حجامة|cupping|acupuncture|acuponcture|الوخز بالإبر|تقويم العظام|bone alignment|alignement des os|osteopath/i;
+  function isWarning(a) {
+    var t = (a.ar || '') + ' ' + (a.en || '') + ' ' + (a.fr || '');
+    var c = a.cat ? (a.cat.ar || '') + ' ' + (a.cat.en || '') + ' ' + (a.cat.fr || '') : '';
+    return WARN_RE.test(t) || WARN_RE.test(c);
+  }
+  function isServiceWarning(a) {
+    var hay = [a.slug, a.ar, a.en, a.fr, a.cat && a.cat.ar, a.cat && a.cat.en, a.cat && a.cat.fr].join(' ');
+    return SERVICE_WARN_RE.test(hay);
+  }
+  function pickHeroArticle() {
+    var warns = DATA.filter(function (a) { return isWarning(a) && !isServiceWarning(a); });
+    if (!warns.length) {
+      var ok = DATA.filter(function (a) { return !isServiceWarning(a); });
+      return ok[0] || DATA[0] || null;
+    }
+    var maxDate = warns[0].date;
+    var top = warns.filter(function (a) { return a.date === maxDate; });
+    for (var i = 0; i < top.length; i++) {
+      if (/تحذير/.test(top[i].ar || '')) return top[i];
+    }
+    return top[0];
+  }
+  (function renderHero() {
+    var article = pickHeroArticle();
+    if (!article) return;
+    var title = article[lang] || article.ar || '';
+    var href = 'news/' + article.slug;
+    var cat = catOf(article);
+    var desc = cat ? cat + ' · ' + formatDate(article.date) : formatDate(article.date);
+    var hero = document.getElementById('breaking-news');
+    if (hero) {
+      hero.setAttribute('href', href);
+      var titleEl = hero.querySelector('div.bg-red-600 span.font-bold');
+      if (titleEl) titleEl.textContent = title;
+      var descEl = hero.querySelector('div.bg-red-50 span.text-red-900');
+      if (descEl) descEl.textContent = desc;
+    }
+    var picks = document.getElementById('editors-picks');
+    if (picks) {
+      var first = picks.querySelector('ol li');
+      if (first) {
+        var link = first.querySelector('a');
+        if (link) { link.setAttribute('href', href); link.textContent = title; }
+        var dateEl = first.querySelector('p');
+        if (dateEl) dateEl.textContent = formatDate(article.date);
+      }
+    }
+  })();
+
   function norm(s) {
     s = (s || '').toLowerCase();
     s = s.replace(/[أإآٱ]/g, 'ا').replace(/ة/g, 'ه').replace(/ى/g, 'ي').replace(/ؤ/g, 'و').replace(/ئ/g, 'ي');
