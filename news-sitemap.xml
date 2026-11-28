@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://baytwikaya.site/news/sugar-rationing-first-1000-days-aging</loc>
+    <news:news>
+      <news:publication>
+        <news:name>بيت الوقاية</news:name>
+        <news:language>ar</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-28</news:publication_date>
+      <news:title>تقنين السكر في الألف يوم الأولى: شيخوخة بيولوجية أبطأ بعد عقود</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/en/news/sugar-rationing-first-1000-days-aging</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bayt Wiqaya</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-28</news:publication_date>
+      <news:title>Sugar Rationing in the First 1,000 Days: Slower Biological Ageing Decades Later</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://baytwikaya.site/fr/news/sugar-rationing-first-1000-days-aging</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Bayt Wiqaya</news:name>
+        <news:language>fr</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-28</news:publication_date>
+      <news:title>Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://baytwikaya.site/news/aging-brain-nighttime-cleaning-sleep</loc>
     <news:news>
       <news:publication>

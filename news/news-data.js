@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "sugar-rationing-first-1000-days-aging",
+    "img": "hero-sugar-rationing-first-1000-days-aging.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "التغذية والشيخوخة",
+      "en": "Nutrition and ageing",
+      "fr": "Nutrition et vieillissement"
+    },
+    "ar": "تقنين السكر في الألف يوم الأولى: شيخوخة بيولوجية أبطأ بعد عقود",
+    "en": "Sugar Rationing in the First 1,000 Days: Slower Biological Ageing Decades Later",
+    "fr": "Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard"
+  },
+  {
     "slug": "aging-brain-nighttime-cleaning-sleep",
     "img": "hero-aging-brain-nighttime-cleaning-sleep.webp",
     "langs": [
