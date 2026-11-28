@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "cannabis-occasional-use-stroke-risk",
+    "img": "hero-cannabis-occasional-use-stroke-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "القنب والسكتة الدماغية",
+      "en": "Cannabis and stroke",
+      "fr": "Cannabis et AVC"
+    },
+    "ar": "القنب حتى من حين إلى آخر: خطر أعلى للسكتة الدماغية وأمراض القلب",
+    "en": "Cannabis, Even Occasionally: Higher Odds of Stroke and Heart Disease",
+    "fr": "Le cannabis, même occasionnel : un risque accru d'AVC et de maladies cardiaques"
+  },
+  {
     "slug": "semaglutide-longevity-mice",
     "img": "hero-semaglutide-longevity-mice.webp",
     "langs": [
