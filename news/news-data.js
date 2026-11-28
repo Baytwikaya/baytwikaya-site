@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "semaglutide-longevity-mice",
+    "img": "hero-semaglutide-longevity-mice.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سيماغلوتايد يطيل عمر الفئران بنسبة 12%: هل تقترب أدوية السكري من إبطاء الشيخوخة؟",
+    "en": "Semaglutide extends mouse lifespan by 12%: are diabetes drugs nearing a way to slow ageing?",
+    "fr": "Le sémaglutide prolonge la vie des souris de 12 % : les médicaments du diabète vont-ils ralentir le vieillissement ?",
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "السكري والشيخوخة",
+      "en": "Diabetes and ageing",
+      "fr": "Diabète et vieillissement"
+    }
+  },
+  {
     "slug": "hpv-viral-load-cervical-lesions",
     "img": "hero-hpv-viral-load-cervical-lesions.webp",
     "langs": [
