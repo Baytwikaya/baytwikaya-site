@@ -5,6 +5,24 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "stopping-statins-after-70",
+    "img": "hero-stopping-statins-after-70.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "الكوليسترول والقلب",
+      "en": "Cholesterol and the heart",
+      "fr": "Cholestérol et cœur"
+    },
+    "ar": "إيقاف الستاتينات بعد السبعين: آمن عند عامين لكن الأحداث أعلى قليلا",
+    "en": "Stopping Statins After 70: Safe at Two Years, but Events Ran Slightly Higher",
+    "fr": "Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d'événements"
+  },
+  {
     "slug": "cannabis-occasional-use-stroke-risk",
     "img": "hero-cannabis-occasional-use-stroke-risk.webp",
     "langs": [
